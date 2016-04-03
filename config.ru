@@ -1,4 +1,5 @@
 require 'rack/jekyll'
+require "rack/rewrite"
 require 'yaml'
 
 use Rack::Rewrite do

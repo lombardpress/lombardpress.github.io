@@ -7,3 +7,5 @@ gem 'rake'
 gem 'puma'
 
 gem 'jekyll-babel'
+
+gem 'rack-rewrite'
