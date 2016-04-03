@@ -2,7 +2,7 @@
 layout: post
 title:  Collecting Sentences Commentary Digitized Images in One Viewer
 date:   2015-04-07
-permalink: /collecting-sentences-commentary-digitized-images-in-one-viewer
+
 ---
 
 Interested in Sentences commentaries, interested in manuscripts? Be sure to checkout the dedicated image viewer for digitized images of manuscripts containing Sentences commentaries. [http://images.scta.info](http://images.scta.info). This viewer uses metadata served by the Sentences Commentary Text Archive database [http://scta.info](http://scta.info) to aggregate images from libraries across the world into one viewer.
