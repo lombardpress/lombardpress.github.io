@@ -1,0 +1,30 @@
+---
+layout: page
+title: LombardPress
+permalink: /
+---
+
+<div class="home">
+<p>LombardPress is the publishing component of digital ecosystem design to help faciliate a new kind of editing of historical texts.</p>
+
+<p>The primary focus of LombardPress is to faciliate the publication, dissemination, and study of <em>Sentences</em> Commentaries. But the basic apporach is designed to be abstract enough to include the publication of other materials that want to follow the same workflow and adhere to the same guidelines. For more information see our <a href="/about/">about page</a>.</p>
+  
+<hr/>
+<br/>
+  <h1 class="page-heading">Posts On LombardPress Development</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
