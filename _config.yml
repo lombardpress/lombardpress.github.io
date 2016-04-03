@@ -15,7 +15,8 @@ url: "https://lombardpress-site.herokuapp.com" # the base hostname & protocol fo
 twitter_username: jeffreycwitt
 github_username:  jeffreycwitt
 
-post_dirs: false
+
+permalink: pretty
 
 # Build settings
 markdown: kramdown
