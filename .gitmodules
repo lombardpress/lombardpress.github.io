@@ -1,1 +1,4 @@
 
+[submodule "schema"]
+	path = schema
+	url = https://bitbucket.org/lombardpress/lombardpress-schema.git
