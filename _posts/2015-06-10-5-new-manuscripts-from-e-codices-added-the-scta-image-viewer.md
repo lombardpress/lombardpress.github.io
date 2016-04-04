@@ -23,7 +23,7 @@ Right now we are using the e-codices manifests, but eventually I will create cus
 
 For example, now we can compare a section of the abbreviatio of William Rothwell in the Kantonsbibliothek (Aarau, Aargauer Kantonsbibliothek, MsWettF 15) with the parent commentary of Peter of Tarantasia in the BnF (Peter of Tarantasia - Paris, Bibliotheque Nationale de France, ms. lat. 14556).
 
-![Mirador Comparison](/assets/mirador-comparison.png)
+![Mirador Comparison]({{ site.baseurl }}/assets/mirador-comparison.png)
 
 
 View these image and others at [http://images.scta.info](http://images.scta.info)
