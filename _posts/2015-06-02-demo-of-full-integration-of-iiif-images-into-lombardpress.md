@@ -2,7 +2,7 @@
 layout: post
 title:  Demo of full Integration of IIIF Images into LombardPress
 date:   2015-06-02
-permalink: /demo-of-full-integration-of-iiif-images-into-lombardpress
+permalink: /demo-of-full-integration-of-iiif-images-into-lombardpress/
 ---
 
 After a lot of work, I've finally been able to fully integrate IIIF images from distributed image services into the LombardPress web publication system. Now, at the touch of button you can quickly toggle images of diverse witnesses for each paragraph, served from different libraries throughout the world. Watch the demo and share.

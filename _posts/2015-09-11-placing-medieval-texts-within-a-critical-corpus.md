@@ -2,7 +2,7 @@
 layout: post
 title:  Placing Medieval Texts within a Critical Corpus - A Case Study on UPenn MS Codex 686
 date:   2015-09-11
-permalink: /placing-medieval-texts-within-a-critical-corpus
+permalink: /placing-medieval-texts-within-a-critical-corpus/
 ---
 
 # Placing Medieval Texts within a Critical Corpus: A Case Study on UPenn MS Codex 686

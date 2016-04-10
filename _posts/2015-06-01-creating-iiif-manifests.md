@@ -2,7 +2,7 @@
 layout: post
 title:  Creating IIIF Manifests
 date:   2015-06-01
-permalink: /creating-iiif-manifests
+permalink: /creating-iiif-manifests/
 ---
 
 In this post I wanted to share the readme file for the custom script I've made to auto generate IIIF manifests that will be ingested into Sentences Commentary Text Archive and used by the SCTA Image Viewer and by the LombardPress publishing site that will integrate manuscript witnesses into the critical editions Sentences commentaries.

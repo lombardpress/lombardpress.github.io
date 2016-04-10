@@ -2,7 +2,7 @@
 layout: post
 title:  Early data visualizations from the Sentences Commentary Text Archive
 date:   2015-04-24
-permalink: /early-data-visualizations-from-the-sentences-commentary-text-archive
+permalink: /early-data-visualizations-from-the-sentences-commentary-text-archive/
 ---
 
 I've recently created some simple bar graphs to illustrate the ultimate potential of the Sentences Commentary Text Archive. (View graphs here: [http://stats.scta.info](http://stats.scta.info)). Besides coordinating the reuse of individual transcriptions, the Sentences Commentary Text Archive can allow us to analyze the entire tradition with accurate metrics for the first time.

@@ -2,7 +2,7 @@
 layout: post
 title:  27th IIIF manifest added to the Sentences Commentary Text Archive
 date:   2015-04-29
-permalink: /27th-iiif-manifest-added-to-the-sentences-commentary-text-archive
+permalink: /27th-iiif-manifest-added-to-the-sentences-commentary-text-archive/
 ---
 
 

@@ -2,7 +2,7 @@
 layout: post
 title: Conceiving the Digital Critical Apparatus
 date: 2015-07-25
-permalink: /conceiving-the-digital-critical-apparatus
+permalink: /conceiving-the-digital-critical-apparatus/
 ---
 
 There was a lot of great discussion at the June 2015 Digital Latin Library seminar about what the digital critical apparatus could be. 

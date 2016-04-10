@@ -2,7 +2,7 @@
 layout: post
 title: Two new manifests from Openn added to the SCTA viewer
 date: 2015-07-13
-permalink: /two-new-manifests-from-openn-added-to-the-scta-viewer
+permalink: /two-new-manifests-from-openn-added-to-the-scta-viewer/
 ---
 
 I just added two new IIIF manifests for witnesses of *Sentences* commentaries to the SCTA Image Viewer made available through UPenn's [OPenn](http://openn.library.upenn.edu/Collections.html) project and, of course, [IIIF](http://iiif.io).
