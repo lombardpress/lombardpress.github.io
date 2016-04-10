@@ -6,7 +6,7 @@ permalink: /print/
 
 # About LombardPress Print
 
-LombardPress print is a set of scripts, stylesheets and guidelines designed for the automated typesetting of editions encoded according the [LombardPress Customized TEI schema](../schema)
+LombardPress print is a set of scripts, stylesheets and guidelines designed for the automated typesetting of editions encoded according the [LombardPress Customized TEI schema](../schema/docs)
 
 The public repository for LombardPress print can be found at: [http://bitbucket.org/lombarpress/lombardpress-print](http://bitbucket.org/lombardpress/lombardpress-print)
 
