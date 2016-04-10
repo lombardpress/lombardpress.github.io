@@ -2,7 +2,7 @@
 layout: post
 title:  The Digital Latin Library and a New Kind of Peer Review
 date:   2016-03-30
-permalink: /the-dll-and-a-new-kind-of-peer-review
+permalink: /the-dll-and-a-new-kind-of-peer-review/
 ---
 
 Below is a transcript of my presentation at the:
