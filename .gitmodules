@@ -1,4 +1,4 @@
 
 [submodule "schema"]
 	path = schema
-	url = git@github.com:lombardpress/lombardpress-schema.git
+	url = https://github.com/lombardpress/lombardpress-schema.git
