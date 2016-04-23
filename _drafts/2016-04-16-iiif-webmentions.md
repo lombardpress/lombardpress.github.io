@@ -180,4 +180,16 @@ With transcription annotations:
 
 ![mirador-view-after-annotations]({{ site.baseurl }}/assets/images/2016-05-12-iiif-webmentions/mirador-view-after-annotations.png)
 
-These final screen shots clearly show the benefits that libraries and holding institutions can receive when exposing their images via IIIF. After exposing them to the world of scholars, scholarly communities, via webmentions, can return to these libraries rich information about these resources: information that can dramatically enrich a users experience with those resources.
+With the possibility of adding multiple layers of annotations, including translations and comments:
+
+![mirador-annotations]({{ site.baseurl }}/assets/images/2016-05-12-iiif-webmentions/mirador_annotations.png)
+
+These screen shots clearly show the benefits that libraries and holding institutions can receive when exposing their images via IIIF. After exposing them to the world of scholars, scholarly communities, via webmentions, can return to these libraries rich information about these resources: information that can dramatically enrich a users experience with those resources.
+
+# Possibilities
+
+![map-slide]({{ site.baseurl }}/assets/images/2016-05-12-iiif-webmentions/map-slide-image.png)
+
+Finally, it is worth noting the scope of possibilities that comes with this kind of information. In the case of medieval Sentences Commentaries, we currently know of approximately 1,000 to 1,400 extant. If each commentary survives in at least one witness (and many survive in several), this means that the there are potentially thousands of manuscripts scattered throughout world libraries. Further, the many of witness for a single commentary are typically scattered through world libraries. This means same that metadata organized by the Sentences Commentary Text Archive can be re-used multiple times to provide each holding library with a transcription for their particular witness of a text, a table of contents that structures the witness. Rather than each library redundantly collecting and then siloing this data for themselves, we can leverage the editorial work **already being done** by scholars and editors of these texts, and then distribute that data, via web-mentions, to all world libraries that have a related item in their collection.
+
+
