@@ -1,0 +1,269 @@
+---
+layout: slide
+title: Jekyll Make presentation page with reveal.js
+description: A presentation slide for how to use reveal.js in Jekyll
+theme: black
+transition: slide
+---
+
+
+<section data-markdown>
+
+## Webmentions and IIIF
+
+---
+
+Jeffrey C. Witt (Loyola University Maryland) 
+
+and 
+
+Rafael Schwemmer (text & bytes)
+
+---
+
+New York, May 11th, 2016
+
+To follow along please visit: 
+
+[http://lombardpress.org/2016/04/16/iiif-webmentions/](http://lombardpress.org/2016/04/16/iiif-webmentions/)
+
+</section>
+
+<section data-markdown>
+
+# Goals and Aspirations
+
+</section>
+
+<section data-markdown>
+
+* When libraries expose their images to research communities, scholars are able to discover lots of new information.
+
+* Libraries and museums that make their images available should be able to benefit from the data that research communities generate.
+
+</section>
+
+<section data-markdown>
+
+* Our Questions:
+  * How can research communities quickly alert holding institutions to SUPPLEMENTAL information about material in their collections?
+  * How can we share this information in such a way that holding institutions can seamlessly re-use this SUPPLEMENTAL information to enrich their own collections and user experiences?
+
+</section>
+
+<section data-markdown>
+
+* Kinds of SUPPLEMENTAL information include:
+  * structural metadata, such as table of contents
+  * a search service
+  * annotation layers, such as transcriptions, translations, and commentary
+
+</section>
+
+<section data-markdown>
+
+# Before
+
+</section>
+
+<section>
+
+  <img src="/assets/images/2016-04-16-iiif-webmentions/miradorview-before.png"><img>
+
+</section>
+
+<section data-markdown>
+
+# IIIF Webmention Supplement Spec
+
+</section>
+
+<section>
+<h2>A Supplement for a Set of Ranges (e.g. Table of Contents)</h2>
+  <pre>
+    <code data-trim data-noescape>
+{  
+  "@id": "http://scta.info/iiif/wdr-wettf15/supplement/ranges/toc",
+  "@type": "sc:Supplement",
+  "profile": "http://iiif.io/api/0/supplement/ranges",
+  "within": [ "http://www.e-codices.unifr.ch/metadata/iiif/kba-WettF0015/manifest.json"],
+  "viewingHint": "http://iiif.io/api/services/webmention/discard",
+  "ranges": [
+    {
+      "@id": "http://scta.info/iiif/wdr-wettf15/range/r1",
+      "@type": "sc:Range",
+      "label": "Commentary",
+      "viewingHint": "top",
+      "ranges": [
+        "http://scta.info/iiif/wdr-wettf15/range/r1-1",
+        "http://scta.info/iiif/wdr-wettf15/range/r1-2",
+        "http://scta.info/iiif/wdr-wettf15/range/r1-3",
+      ]
+    }
+  ]
+}
+    </code>
+  </pre>
+</section>
+
+<section>
+<h2>Supplement for a Search Within Service</h2>
+  <pre>
+  <code data-trim data-noescape>
+{
+  "@id": "http://scta.info/iiif/wdr-wettf15/supplement/service/searchwithin",
+  "@type": "sc:Supplement",
+  "profile": "http://iiif.io/api/0/supplement/service",
+  "within": ["http://www.e-codices.unifr.ch/metadata/iiif/kba-WettF0015/manifest.json"],
+  "viewingHint": "http://iiif.io/api/services/webmention/discard",
+  "service": {
+    "@context": "http://iiif.io/api/search/0/context.json",
+    "@id": "http://exist.scta.info/exist/apps/scta/iiif/wdr-wettf15/search",
+    "profile": "http://iiif.io/api/search/0/search",
+    "label": "Search within this manifest"
+    }
+}
+    </code>
+  </pre>
+</section>
+
+<section>
+<h2>Supplement for a Layer of Transcriptions</h2>
+  <pre>
+  <code data-trim data-noescape>
+{
+  "@id": "http://scta.info/iiif/wdr-wettf15/supplement/layer/transcription",
+  "@type": "sc:Supplement",
+  "profile": "http://iiif.io/api/0/supplement/layer",
+  "within": [ "http://www.e-codices.unifr.ch/metadata/iiif/kba-WettF0015/manifest.json"],
+  "viewingHint": "http://iiif.io/api/services/webmention/discard",
+  "layer": "http://scta.info/iiif/wdr-wettf15/layer/transcription"
+}
+    </code>
+  </pre>
+</section>
+
+<section>
+  <h2>Manifest Service</h2>
+    <pre>
+      <code data-trim data-noescape>
+{
+  "@context":"https://www.w3.org/TR/webmention/",
+  "@id":"http://www.e-codices.unifr.ch/webmention/receive",
+  "profile":"http://w3.org/TR/webmention",
+  "label":"e-codices Webmention Service"
+}
+      </code>
+    </pre>
+</section>
+
+<section data-markdown>
+
+# Sending a Web Mention
+
+</section>
+
+<section>
+
+  <img src="/assets/images/2016-04-16-iiif-webmentions/commandline-webmention.png"><img>
+
+</section>
+
+<section data-markdown>
+
+# Receiving and Using a Webmention
+
+</section>
+
+<section>
+
+  <img src="/assets/images/2016-04-16-iiif-webmentions/Webmentions-ecod-1-webmentions-notification.png"><img>
+
+</section>
+
+<section>
+
+  <img src="/assets/images/2016-04-16-iiif-webmentions/Webmentions-ecod-2-webmentions-queue.png"><img>
+
+</section>
+
+<section>
+
+  <img src="/assets/images/2016-04-16-iiif-webmentions/Webmentions-ecod-3a-webmention-preview.searchWithin.png"><img>
+
+</section>
+
+
+<section>
+
+  <img src="/assets/images/2016-04-16-iiif-webmentions/Webmentions-ecod-4-iiif-supplements.png"><img>
+
+</section>
+
+<section data-markdown>
+
+# Re-Creating Manifests with Webmention(ed) Supplements
+
+</section>
+
+<section>
+
+  <img src="/assets/images/2016-04-16-iiif-webmentions/Webmentions-ecod-5-searchWithin-manifest.png"><img>
+
+</section>
+
+<section>
+
+  <img src="/assets/images/2016-04-16-iiif-webmentions/Webmentions-ecod-6-rangelist-manifest.png"><img>
+
+</section>
+
+<section data-markdown>
+
+# After
+
+</section>
+
+<section>
+  <img src="/assets/images/2016-04-16-iiif-webmentions/mirador-view-after-toc.png"><img>
+</section>
+
+<section>
+  <img src="/assets/images/2016-04-16-iiif-webmentions/mirador-view-after-search.png"><img>
+</section>
+
+<section>
+  <img src="/assets/images/2016-04-16-iiif-webmentions/mirador-view-after-annotations.png"><img>
+</section>
+
+<section>
+  <img src="/assets/images/2016-04-16-iiif-webmentions/mirador_annotations.png"><img>
+</section>
+
+<section data-markdown>
+
+## Possibilities
+
+* Today, scholars around the world are building editions, translations, and commentaries for the world's cultural materials. 
+
+* Without common standards this data will be silo-ed in a scholarly print edition or closed one-off websites. 
+
+* With the right work flow and with common standards this information be shared and re-used throughout th world.
+
+</section>
+
+<section>
+  <img src="/assets/images/2016-04-16-iiif-webmentions/map-slide-image.png"><img>
+</section>
+
+<section data-markdown>
+
+# Questions?
+
+Blog Post
+[http://lombardpress.org/2016/04/16/iiif-webmentions/](http://lombardpress.org/2016/04/16/iiif-webmentions/)
+
+Please contribute comments, questions, and feedback on the IIIF Discussion Board
+
+[https://groups.google.com/forum/#!forum/iiif-discuss](https://groups.google.com/forum/#!forum/iiif-discuss)
+</section>  

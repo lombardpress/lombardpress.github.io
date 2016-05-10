@@ -2,3 +2,6 @@
 [submodule "schema"]
 	path = schema
 	url = https://github.com/lombardpress/lombardpress-schema.git
+[submodule "javascripts/reveal.js"]
+	path = javascripts/reveal.js
+	url = https://github.com/hakimel/reveal.js.git
