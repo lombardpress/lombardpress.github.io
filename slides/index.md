@@ -7,7 +7,7 @@ transition: slide
 ---
 
 <section data-markdown>
-## Availiable Deckes
+## Availiable Decks
 
 [iiif-webmentions, May 11th, 2016, New York](2016-05-11-iiif-webmentions) 
 
