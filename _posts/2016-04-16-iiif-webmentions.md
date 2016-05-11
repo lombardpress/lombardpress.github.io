@@ -12,7 +12,7 @@ In this post, we want to describe a new possibility for sharing information betw
 
 To date, IIIF has focused primarily on how libraries and institutions can make images of their resources available to users. But less attention has been paid to how institutions exposing their images can reap the benefits of what scholars know about their materials.
 
-We imagine the following scenario. On the one hand, a holding library has lots of images of resources (e.g. images of books, manuscripts, maps, etc.). On the other hand, a group of scholars, an academic society, or some other institution maintains a dataset which includes detailed information about a given set of resources within the holding library’s collection, information that goes beyond the scope of the holding library; for example, a detailed table of contents, diplomatic or critical transcriptions, translations, and scholarly commentary.
+We imagine the following scenario. On the one hand, a holding library has lots of images of resources (e.g. images of books, manuscripts, maps, etc.). On the other hand, a group of scholars, an academic society, or some other institution maintains a dataset which includes detailed information about a given set of resources within the holding library’s collection, information that goes beyond the scope of the holding library: for example, a detailed table of contents, diplomatic or critical transcriptions, translations, and scholarly commentary.
  
 Each party has important information to offer. Information that, if coordinated, could be used to enrich a user’s experience of an object when viewed in any IIIF compatible viewer such as Mirador or the Universal Viewer.
 
@@ -20,7 +20,7 @@ Each party has important information to offer. Information that, if coordinated,
 
 Fortunately, the W3C Social Web working group is developing a specification to support this kind of collaboration. In light of that emerging specification, we propose a customization of that specification, tailored to the IIIF API, that will allow communities to share content in a decentralized way. 
 
-What follows is a description of the specification we have designed to facilitate this collaboration and an example of its implementation between the Sentences Commentary Text Archive and e-codices.
+What follows is a description of the specification we have designed to facilitate this collaboration and an example of its implementation between the *Sentences Commentary Text Archive* and e-codices.
 
 # The Supplement Specification
 
@@ -106,23 +106,23 @@ Below is a short description of the standard protocols that should be followed f
 
 ## Sending the Webmention
 
-The Webmention should be sent via POST and contain the two x-www-form-url encoded parameters `source` and `target` where source would be the IIIF supplement (a rangelist, search within service, etc.) and the target would be the manifest to which the supplement belongs. For more details see https://www.w3.org/TR/webmention/.
+The webmention should be sent via POST and contain the two x-www-form-url encoded parameters `source` and `target` where source would be the IIIF supplement (a rangelist, search within service, etc.) and the target would be the manifest to which the supplement belongs. For more details see https://www.w3.org/TR/webmention/.
 
 ## Receiving the Webmention
 
-The Webmention receiver should validate the source and the target and upon successful validation add the Webmention to a queue from which it can then be processed asynchronously to prevent DoS attacks. Typically, the receiver would validate the following and return an HTTP code 400 (Bad Request) if either of the following validations fail:
+The webmention receiver should validate the source and the target and upon successful validation add the webmention to a queue from which it can then be processed asynchronously to prevent DoS attacks. Typically, the receiver would validate the following and return an HTTP code 400 (Bad Request) if either of the following validations fail:
 
 * Are the required parameters `source` and `target` set?
 * Is source a valid URI?
 * Is target a valid URI?
 * Does the target exist on the receiver’s side?
-* Is the Webmention already in the queue?
+* Is the webmention already in the queue?
 
-If validation is successful, the receiver will return an HTTP code 202 (Accepted) indicating that the Webmention has been successfully received and will be processed. If any error occurs when adding the Webmention to the queue (e.g. when the database is unreachable) the receiver will return an HTTP code 500 (Internal Server Error).
+If validation is successful, the receiver will return an HTTP code 202 (Accepted) indicating that the webmention has been successfully received and will be processed. If any error occurs when adding the webmention to the queue (e.g. when the database is unreachable) the receiver will return an HTTP code 500 (Internal Server Error).
 
 # An Example
 
-The above protocol has been successfully implemented by the Sentences Commentary Text Archive (SCTA) and e-codices. At present, whenever the SCTA's database ingests new information about a manuscript that e-codices is making available via the IIIF API, the SCTA sends out a new webmention notification about supplemental information. 
+The above protocol has been successfully implemented by the *Sentences Commentary Text Archive* (SCTA) and e-codices. At present, whenever the SCTA's database ingests new information about a manuscript that e-codices is making available via the IIIF API, the SCTA sends out a new webmention notification about supplemental information. 
 
 ![commandline-webmention.png]({{ site.baseurl }}/assets/images/2016-04-16-iiif-webmentions/commandline-webmention.png)
 
@@ -132,7 +132,7 @@ In this first screen shot, the e-codices admin interface alerts their administra
 
 ![Webmentions-ecod-1-webmentions-notification]({{ site.baseurl }}/assets/images/2016-04-16-iiif-webmentions/Webmentions-ecod-1-webmentions-notification.png)
 
-The received webmention is logged in a queue which allows adminstrators to quickly choose which supplemental information they want to allow into the system and any webmentions they want to reject outright.
+The received webmention is logged in a queue which allows administrators to quickly choose which supplemental information they want to allow into the system and any webmentions they want to reject outright.
 
 ![Webmentions-ecod-2-webmentions-queue]({{ site.baseurl }}/assets/images/2016-04-16-iiif-webmentions/Webmentions-ecod-2-webmentions-queue.png)
 
@@ -150,13 +150,13 @@ Once accepted, the administrator still has the option to select which supplement
 
 ![Webmentions-ecod-4-iiif-supplements]({{ site.baseurl }}/assets/images/2016-04-16-iiif-webmentions/Webmentions-ecod-4-iiif-supplements.png)
 
-When a supplement is accepted for use, e-codices manifests will now include supplemental information provided by the Sentences Commentary Text Arhcive. 
+When a supplement is accepted for use, e-codices manifests will now include supplemental information provided by the *Sentences Commentary Text Archive*. 
 
 For example, it will include a service declaration for the SCTA search service for this manifest:
 
 ![Webmentions-ecod-5-searchWithin-manifest]({{ site.baseurl }}/assets/images/2016-04-16-iiif-webmentions/Webmentions-ecod-5-searchWithin-manifest.png)
 
-And it will include a set of ranges provided by the Sentences Commentary Text Archive:
+And it will include a set of ranges provided by the *Sentences Commentary Text Archive*:
 
 ![Webmentions-ecod-6-rangelist-manifest]({{ site.baseurl }}/assets/images/2016-04-16-iiif-webmentions/Webmentions-ecod-6-rangelist-manifest.png)
 
@@ -190,6 +190,6 @@ These screen shots clearly show the benefits that libraries and holding institut
 
 ![map-slide]({{ site.baseurl }}/assets/images/2016-04-16-iiif-webmentions/map-slide-image.png)
 
-Finally, it is worth noting the scope of possibilities that comes with this kind of information. In the case of medieval Sentences Commentaries, we currently know of approximately 1,000 to 1,400 extant. If each commentary survives in at least one witness (and many survive in several), this means that the there are potentially thousands of manuscripts scattered throughout world libraries. Further, witnesses for a single commentary are typically scattered throughout world libraries. This means that the same metadata organized by the *Sentences Commentary Text Archive* can be re-used multiple times to provide each holding library with a transcription for their particular witness of a text and a table of contents that structures the witness. Rather than each library redundantly collecting and then siloing this data for themselves, we can leverage the editorial work **already being done** by scholars and editors of these texts, and then distribute that data, via web-mentions, to all world libraries that have a related item in their collection.
+Finally, it is worth noting the scope of possibilities that comes with this kind of information. In the case of medieval *Sentences* Commentaries, we currently know of approximately 1,000 to 1,400 extant texts. If each commentary survives in at least one witness (and many survive in several), this means that the there are potentially thousands of manuscripts scattered throughout world libraries. Further, witnesses for a single commentary are typically scattered throughout world libraries. This means that the same metadata organized by the *Sentences Commentary Text Archive* can be re-used multiple times to provide each holding library with a transcription for their particular witness of a text and a table of contents that structures the witness. Rather than each library redundantly collecting and then siloing this data for themselves, we can leverage the editorial work **already being done** by scholars and editors of these texts, and then distribute that data, via web-mentions, to all world libraries that have a related item in their collection.
 
 
