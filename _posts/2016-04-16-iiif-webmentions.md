@@ -20,7 +20,7 @@ Each party has important information to offer. Information that, if coordinated,
 
 Fortunately, the W3C Social Web working group is developing a specification to support this kind of collaboration. In light of that emerging specification, we propose a customization of that specification, tailored to the IIIF API, that will allow communities to share content in a decentralized way. 
 
-What follows is a description of the specification we have designed to facilitate this collaboration and an example of its implementation betweent the Sentences Commentary Text Archive and e-codices.
+What follows is a description of the specification we have designed to facilitate this collaboration and an example of its implementation between the Sentences Commentary Text Archive and e-codices.
 
 # The Supplement Specification
 
@@ -92,9 +92,9 @@ At the same time institutions need to include in their own IIIF manifests a decl
             "label":"e-codices Webmention Service"
         }
 
-With these standards in place, communication of information around common resrouces can be automated. 
+With these standards in place, communication of information around common resources can be automated. 
 
-We have developed a IIIF library that scholars can use to automatically alert holding institutions of available information. This library is avaiable here: [https://github.com/jeffreycwitt/iiif-webmetion.rb](https://github.com/jeffreycwitt/iiif-webmetion.rb)
+We have developed a IIIF library that scholars can use to automatically alert holding institutions of available information. This library is available here: [https://github.com/jeffreycwitt/iiif-webmetion.rb](https://github.com/jeffreycwitt/iiif-webmetion.rb)
 
 Using this library anyone can, for example, send a webmention via the commandline simply by calling: 
 
@@ -102,11 +102,11 @@ Using this library anyone can, for example, send a webmention via the commandlin
 
 The script will do all the rest of the work. It will crawl the supplement looking for the IIIF resources (usually "manifests"), found in the "within" property of the supplement. The script will then crawl the referenced manifest looking to see if there is a webmention listening service. If one is found, it will send a notification to this listening surface, following the W3C standards for webmentions.
 
-Below is a short description of the standard protocols that should be followed for sending and receiving a webmetion request.
+Below is a short description of the standard protocols that should be followed for sending and receiving a webmention request.
 
 ## Sending the Webmention
 
-The Webmention should be sent via POST and contain the two x-www-form-urlencoded parameters `source` and `target` where source would be the IIIF supplement (a rangelist, search within service, etc.) and the target would be the manifest to which the supplement belongs. For more details see https://www.w3.org/TR/webmention/.
+The Webmention should be sent via POST and contain the two x-www-form-url encoded parameters `source` and `target` where source would be the IIIF supplement (a rangelist, search within service, etc.) and the target would be the manifest to which the supplement belongs. For more details see https://www.w3.org/TR/webmention/.
 
 ## Receiving the Webmention
 
@@ -122,13 +122,13 @@ If validation is successful, the receiver will return an HTTP code 202 (Accepted
 
 # An Example
 
-The above protocol has been succussfully implemented by the Sentences Commentary Text Archive (SCTA) and e-codices. At present, whenever the SCTA's database ingests new information about a manuscript that e-codices is making available via the IIIF API, the SCTA sends out a new webmention notification about supplemental information. 
+The above protocol has been successfully implemented by the Sentences Commentary Text Archive (SCTA) and e-codices. At present, whenever the SCTA's database ingests new information about a manuscript that e-codices is making available via the IIIF API, the SCTA sends out a new webmention notification about supplemental information. 
 
 ![commandline-webmention.png]({{ site.baseurl }}/assets/images/2016-04-16-iiif-webmentions/commandline-webmention.png)
 
-Once this webmention is sent, receiving institutions can rely on the standards of the supplement specification to parse the published data and incorporate it into their own systems in the manner that best fits their workflow. Below we offer an example of how e-codices recieves, parses, and uses the published supplemental information. 
+Once this webmention is sent, receiving institutions can rely on the standards of the supplement specification to parse the published data and incorporate it into their own systems in the manner that best fits their workflow. Below we offer an example of how e-codices receives, parses, and uses the published supplemental information. 
 
-In this first screen shot, the e-codices admin interface alerts their adminstrators that a new webmention has been received.
+In this first screen shot, the e-codices admin interface alerts their administrators that a new webmention has been received.
 
 ![Webmentions-ecod-1-webmentions-notification]({{ site.baseurl }}/assets/images/2016-04-16-iiif-webmentions/Webmentions-ecod-1-webmentions-notification.png)
 
@@ -136,7 +136,7 @@ The received webmention is logged in a queue which allows adminstrators to quick
 
 ![Webmentions-ecod-2-webmentions-queue]({{ site.baseurl }}/assets/images/2016-04-16-iiif-webmentions/Webmentions-ecod-2-webmentions-queue.png)
 
-Before accepting a webmention into the system, an adminstrator can preview the supplemental information. Here is an example of the preview of the SCTA "search within" service that e-codices learned about via a IIIF webmention:
+Before accepting a webmention into the system, an administrator can preview the supplemental information. Here is an example of the preview of the SCTA "search within" service that e-codices learned about via a IIIF webmention:
 
 ![Webmentions-ecod-3a-webmention-preview.searchWithin]({{ site.baseurl }}/assets/images/2016-04-16-iiif-webmentions/Webmentions-ecod-3a-webmention-preview.searchWithin.png)
 
@@ -144,9 +144,9 @@ Here is a SCTA range list or table of contents that e-codices learned about via 
 
 ![Webmentions-ecod-3b-webmention-preview-rangelist]({{ site.baseurl }}/assets/images/2016-04-16-iiif-webmentions/Webmentions-ecod-3b-webmention-preview-rangelist.png)
 
-Once reviewed, the adminstrator can accept a supplement. This will remove it from the queue and log it as a supplement officialy accepted by e-codices. 
+Once reviewed, the administrator can accept a supplement. This will remove it from the queue and log it as a supplement officially accepted by e-codices. 
 
-Once accepted, the adminstrator still has the option to select which supplements to use when building offial e-codices manifests.
+Once accepted, the administrator still has the option to select which supplements to use when building official e-codices manifests.
 
 ![Webmentions-ecod-4-iiif-supplements]({{ site.baseurl }}/assets/images/2016-04-16-iiif-webmentions/Webmentions-ecod-4-iiif-supplements.png)
 
@@ -160,7 +160,7 @@ And it will include a set of ranges provided by the Sentences Commentary Text Ar
 
 ![Webmentions-ecod-6-rangelist-manifest]({{ site.baseurl }}/assets/images/2016-04-16-iiif-webmentions/Webmentions-ecod-6-rangelist-manifest.png)
 
-Finally, we can compare how the user would experience this same manifest in IIIF viewer before and after the accepted webmentions.
+Finally, we can compare how the user would experience this same manifest in a IIIF viewer before and after the accepted webmentions.
 
 Before the accepted webmentions, e-codices offers the users the simple ability to view the manuscript images. 
 
