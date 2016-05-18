@@ -23,7 +23,7 @@ Below are some screen shots of the reading environment
 
 # 2.0.0 (in alpha testing)
 
-The public repository can be found at [http://bitbucket.org/jeffreycwitt/lombardpress2](http://github.com/lombardpress/lombardpress2) The repository issues and wiki for ongoing development goals. If you are interested in a feature please submit an issue.
+The public repository can be found at [http://github.com/lombardpress/lombardpress2](http://github.com/lombardpress/lombardpress2) The repository issues and wiki for ongoing development goals. If you are interested in a feature please submit an issue.
 
 # 1.0.0 (depreciated, legacy project)
 
