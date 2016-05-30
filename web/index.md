@@ -10,10 +10,9 @@ The LombardPress web publication framework is designed as a reading interface wh
 
 The web publication framework can be used to display an critical text. The framework itself relies on external services to retrieve texts (the SCTA api) and images (the IIIF api). 
 
-It's currently in private alpha testing, and we hope to move it to public beta testing in the Fall of 2016. If you would like early access to the site please contact Jeffrey C. Witt jeffreycwitt [at] gmail [dot] com
+It's currently in private alpha testing, and we hope to move it to public beta testing in the Fall of 2016. The alpa, in development site, can be viewed at [http://scta.lombardpress.org](http://scta.lombardpress.org)
 
 Below are some screen shots of the reading environment
-
 
 ![Screen-Shot-2015-06-17-at-1.56.39-PM.png]({{ site.baseurl }}/assets/images/Screen-Shot-2015-06-17-at-1.56.39-PM.png)
 
