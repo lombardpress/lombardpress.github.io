@@ -530,9 +530,12 @@ Likewise, the client should be able to treat every **Expression**, at no matter 
 
 ## Appendix C: Links
 
-* Live Client: [http://scta.lombardpress.org/](http://scta.lombardpress.org/)
-* Live client displaying text at **Expression** *sturctureLevel=structureItem*: [http://scta.lombardpress.org/text/lectio1](http://scta.lombardpress.org/text/lectio1)
-* Live DB visualizations [http://scta.info](http://scta.info)
-* Live DB visualization corresponding to text displayed in client above “lectio1”: [http://scta.info/resource/lectio1](http://scta.info/resource/lectio1)
+* Live client listing workGroups: [http://scta-staging.lombardpress.org/text/questions/?resourceid=http://scta.info/resource/scta](http://scta-staging.lombardpress.org/text/questions/?resourceid=http://scta.info/resource/scta)
+* Live DB visualization for the same resource [http://scta.info/resource/scta](http://scta.info/resource/scta)
+
+* Live client listing available top Level expressions [http://scta-staging.lombardpress.org/text/questions/?resourceid=http://scta.info/resource/plaoulcommentary](http://scta-staging.lombardpress.org/text/questions/?resourceid=http://scta.info/resource/plaoulcommentary)
+* Live DB visualization for the same resource [http://scta.info/resource/plaoulcommentary](http://scta.info/resource/plaoulcommentary)
+
+
 
 
