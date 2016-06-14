@@ -115,35 +115,35 @@ A *structureDivision* is similar. It represents a section in the hierarchy that 
 
 ## C.  Manifestations
 
-FRBR **Manifestations** should now exist at every level of the **Expression** hierarchy. They can be associated through predictable properties. Each **Expression** can take a *hasManifestation* and each **Manifestation** can take a *isManifestationOf* property. 
+FRBR **Manifestations** should now exist at every level of the **Expression** hierarchy. They can be associated through predictable properties. Each **Expression** can take a *hasManifestation* property and each **Manifestation** can take an *isManifestationOf* property. 
 
 **Manifestations** now bring us closer to the familiar CTS **Version**, but these versions vary in type. A **Manifestation** could be a manuscript, an early modern printing, a modern critical edition, or even a born digital critical edition. 
 
-It’s important to remember that even though a **Manifestation** is beginning to point to a physical or material representation of an **Expression**, it is nevertheless still an idea and not a physical object. We are referring here to the idea of the physical representation of an **Expression**. Thus when we talk about the 1512 printing of a given **Expression**, we are not talking about the item of the 1512 printing in the British Library or in the Harvard University Library. 
+It’s important to remember that even though a **Manifestation** is beginning to point to a physical or material representation of an **Expression**, it is nevertheless still an idea and not a physical object. We are referring here to the idea of the physical representation of an **Expression**. Thus when we talk about the 1512 printing of a given **Expression**, we are not talking about the **Item** of the 1512 printing in the British Library or in the Harvard University Library. 
 
-This is easier to see in the case of printed books, but harder to see in the case of a manuscript, which by definition will have only one material instantiation (or FRBR **Item**). Nevertheless, the conceptual distinction is important. The **Manifestation** that has the *manifestationType* manuscript will have one and only one material instantiation, whereas the **Manifestation** that has *manifestationType* of a printed book will have several if not thousands of material instantiations. 
+This is easier to see in the case of printed books, but harder to see in the case of a manuscript, which by definition will have only one material instantiation (or FRBR **Item**). Nevertheless, the conceptual distinction is important. The **Manifestation** that has the *manifestationType* manuscript will have one and only one material instantiation, whereas the **Manifestation** that has the *manifestationType* of a printed book will have several, if not thousands, of material instantiations. 
 
 Finally, we must also include a space here for born digital **Manifestations** of an **Expression**. The new practice of building born-digital critical editions of **Expressions** is a good example. This means that we have a **Manifestation** that corresponds to no physical material object. And it is of course tempting here associate this **Manifestation** with the actual digital file. But we must resist this temptation and continue to remember that the **Manifestation** is still an idea of how to materially represent (in this case, encode) a given **Expression**. It is the idea of a particular edition that may either have a material object or digital transcriptions standing as an instantiations of that idea.
 
 In concrete, a **Manifestation** should inherit the *structureType* of the **Expression** it *isManifestationOf*. Morever, a **Manifestation** should take on properties specific to a **Manifestation**. A **Manifestation** should have a *manifestationType* that indicates whether it is a manuscript, early printing, modern critical edition, or born digital critical edition. Other properties and constraints specific to each type of **Manifestation** could then be added. 
 
-Finally, a **Manifestation** should also point to FRBR **Items**. For reasons to be explained below we divide these associations into two types, *hasMaterialObject* and *hasTranscription*
+Finally, a **Manifestation** should also point to FRBR **Items**. For reasons to be explained below we divide these associations into two types, *hasMaterialObject* and *hasTranscription*.
 
-## D.  Items: Materials and Transcriptions
+## D.  Items: MaterialObjects and Transcriptions
 
-There seems to be something conceptually correct about identifying a digital transcription (by which I mean a semantically encoded text that can be serialized and distributed in multiple ways, and thus we do not yet mean the raw TEI file, or another other format) with a FRBR Item. Just like an individual printed books, it aims to be an instantiation of a **Manifestation**. However, instead of instantiating that idea with ink on a page, it does it with electronic signals on a disk drive.
+There seems to be something conceptually correct about identifying a digital transcription (by which I mean a semantically encoded text that can be serialized and distributed in multiple ways, and thus we do not yet mean the raw TEI file, or another other format) with a FRBR **Item**. Just like an individual printed books, it aims to be an instantiation of a **Manifestation**. However, instead of instantiating that idea with ink on a page, it does it with electronic signals on a disk drive.
 
 Nevertheless, the digital transcription is also so different from the material instantiation that we felt it best to split the FRBR **Item** class into two subclasses: the **MaterialObject** and the **Transcription**.
 
-The MaterialObject should be a record that has the appropriate properties to locate and describe the material book in this or that particular library. 
+The **MaterialObject** should be a record that has the appropriate properties to locate and describe the material book in this or that particular library. 
 
 My focus here will be on the **Transcription** subclass. 
 
-As mentioned above, the Transcription resource is not an actual digital file. Rather it is a resource that contains properties that can direct a client to the raw text representing this transcription in various file formats, the most obvious being XML. The *hasXML* property should point directly to the raw TEI file, which when requested through a traditional HTTP request returns exactly that: a TEI file. 
+As mentioned above, the **Transcription** resource is not an actual digital file. Rather it is a resource that contains properties that can direct a client to the raw text representing this transcription in various file formats, the most obvious being XML. The *hasXML* property should point directly to the raw TEI file, which when requested through a traditional HTTP request returns exactly that: a TEI file. 
 
-Keep in mind that the the **Transcription** resource continues to inherit its hierarchical position from the **Expression** to which it is connected. It will never be the case then that separate source TEI XML files are produced for every **Expression** level. Rather, a **Document** or file will exist corresponding to some level of the **Expression** hierarchy. I find that it generally makes the most sense to divide my **Documents** at the *structureItem level*. This mean that the raw XML for an **Transcription** corresponding to *structureCollection* level will actually be composed from several documents. I expect that the *hasXML* property would point to a XML TEI document that is composed dynamically from the **Documents** required for its composition. Thus the *hasDocument* should should point to the XML **Documents** from which this **Transcriptions** raw XML TEI document was dynamically composed. 
+Keep in mind that the the **Transcription** resource continues to inherit its hierarchical position from the **Expression** to which it is connected. It will rarely be the case then that separate source TEI XML files are produced for every **Expression** level. Rather, a **Document** or file will exist corresponding to some level of the **Expression** hierarchy. I find that it generally makes the most sense to divide my **Documents** at the *structureItem level*. This mean that the raw XML for a **Transcription** corresponding to *structureCollection* level will actually be composed from several documents. I expect that the *hasXML* property would point to a XML TEI document that is composed dynamically from the **Documents** required for its composition. Thus the *hasDocument* property should point to the XML **Documents** from which this **Transcription's** raw XML TEI document was dynamically composed. 
 
-The same situation occurs for a *structureDivision* and *structureBlock*. The *hasXML* property should point to a raw XML file that is dynamically constructed from selecting a part of the **Document** in which the raw source XML contained. In this case, there should only be one *hasDocument* property and it should be point to the XML Document from which the raw XML for this **Transcription** was pulled and dynamically reconstructed.
+The same situation occurs for a *structureDivision* and *structureBlock*. The *hasXML* property should point to a raw XML file that is dynamically constructed from selecting a part of the **Document** in which the raw source XML is contained. In this case, there should only be one *hasDocument* property and it should point to the XML **Document** from which the raw XML for this **Transcription** was pulled and dynamically reconstructed.
 
 The **Transcription** resource could also point to a number of other encoding serializations such as HTML or JSON or PlainText with parallel properties like *hasHTML*, *hasJSON*, or *hasPlainText*. 
 
@@ -512,7 +512,7 @@ But this same information can be used for a different view, such as a view of av
 
 ![available manifestations]({{ site.baseurl }}/assets/images/2016-06-30-DTS-modeling-proposal/available-manifestations-at-item-level.png)
 
-Likewise, the client should be able to treat every **Expression**, at no matter what level in the hierarchy, the same way while adjusting for properties unique to that *structureType*. So if the resource id points to a structureBlock (or paragraph) instead of a structureItem, we get a display that automatically adjusts.
+Likewise, the client should be able to treat every **Expression**, at no matter what level in the hierarchy, the same way while adjusting for properties unique to that *structureType*. So if the resource id points to a *structureBlock* (or paragraph) instead of a *structureItem*, we get a display that automatically adjusts.
 
 ![block level display]({{ site.baseurl }}/assets/images/2016-06-30-DTS-modeling-proposal/block-expression-display.png)
 
