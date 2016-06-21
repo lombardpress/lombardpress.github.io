@@ -1,0 +1,139 @@
+---
+layout: slide
+title: Introduction to core technologies - The importance of creating great data
+description: Introduction to Core Technologies
+theme: white
+transition: slide
+---
+
+
+<section data-markdown>
+
+# Introduction to core technologies: The importance of creating great data
+
+---
+
+Jeffrey C. Witt (Loyola University Maryland) 
+
+---
+
+</section>
+
+<section>
+	<section>
+	<h2>Visualizing the flow of data</h2>
+	</section>
+	<section>
+		<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/302592/images/1502183/Slide1.jpg">
+	</section>
+	<section>
+		<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/302592/images/1502185/Slide2.jpg">
+	</section>
+</section>
+
+
+<section>
+	<section>
+		<h2>Transcription Data: The Importance of Creating Great, Reusable, Data</h2>
+	</section>
+	<section>
+		<p>All transcription is data creation</p>
+
+		<p>But not all data is equal</p>
+
+		<p>Some data is messy, ambiguous, and unclear</p>
+
+		<p>Some data is well formed, well structured, and unambiguous</p>
+	</section>
+	<section>
+		<p>All data creation involves the identification of data types.</p>
+
+		<p>Declaring data types is what we mean when we say we are "encoding" a text.</p>
+
+		<p>But there are different ways of encoding a text, and each method has pros and cons</p>
+	</section>
+	<section>
+		<p>Two most common types of encoding for textual editors</p>
+		
+		<p>Visual Encoding vs. Semantic Encoding</p>
+	</section>
+	<section>
+		<h4>Visual Encoding (VE)<h4>
+		<ul>
+			<li>VE is what most traditional editors are use to</li>
+			<li>VE declares data types through visual differentiation</li>
+			<li>A title is differentiated from a regular text through italic rendering</li>
+			<li>A paragraph usually begins with an indentation represented through extra white space at the beginning of a line</li>
+			<li>A header is usually centered on the page, slighly larger, and surrounded by extra white space.</li>
+		</ul>
+	</section>
+	<section>
+		Image of Visual Encoding
+	</section>
+	<section>
+		<h2>The cons of visual encoding</h2>
+		<p>While visual encoding may initially seem more intuitive and more pleasing to an editor, it has TWO fundamental problems.</p>
+	</section>
+	<section>
+		<h4>First Problem: It is consistentally ambiguous about the identification of datatypes</h4>
+		<p>For example consider the various uses of italic rendering in a critical editions</p>
+		<p>IMAGE</p>
+	</section>
+	<section>
+		<h4>Second Problem: It fuses form and matter, making data type recognition inseparable from its original material representation</h4>
+
+		<p>If a heading is identified by its position in the center of a page surrounded by whitespace, if this rendering were lost, its distinction from the surrounding text would be lost.</p>
+
+		<p>This makes the dream of creating multiple representations (such as print and web displays) from a Single Source Document impossible.</p>
+
+		<p>Our aim must be to de-couple form and matter so that we can take that content and instantiate it in as many different types of matter (or media) as we wish.
+	</section>
+	<section>
+		<h4>Semantic Encoding (SE)</h4>
+		<p>The better alternative is semantic encoding.</p>
+
+		<p>Instead of distinguish data types by how they appear, we explicit label data types using an agreed upon field standard vocabulary</p>
+
+		<p>If the data is a heading then let's call it a heading.</p>
+
+		<p>If the data is a title let's call it a title</p>
+	</section>
+	<section>
+		<h4>Simple Example of Semantic Encoding<h4>
+		<p>replace with image from oxygen</p>
+		<pre>
+		<code data-trim>
+		<p>paragraph text about 
+		<name>Augustine</name> 
+		and his 
+		<title>City of God</title> where he provides a quotation 
+		<quote>about something interesting</quote></p>
+		</code>
+		</pre>
+	</section>
+</section>
+<section>
+	<section><h2>Corpus Data: A data model to organize and relate all this transcription data</h2>
+	</section>
+	<section>
+		<p>Consider the enormous variation data required to comprehensively describe a critical text</p>
+
+		<p>For example</p>
+
+		<ul>
+			<li>The whole text</li>
+			<li>Main subdivisions</li>
+			<li>Witnesses to the text and its parts</li>
+			<li>Transcriptions of individual witnesses</li>
+			<li>Transcriptions of critical text build from transcriptions of individual witnesses</li>
+		</ul>
+
+		<p>Such a list only scratches the surface</p>
+	</section>
+	<section>
+		<img src="https://raw.githubusercontent.com/scta/scta-ontology/master/SCTASCHEMA3.png">
+	</section>
+</section>
+
+<section>
+<h2>Image Data: A data model to manage digital images of manuscripts</h3>
