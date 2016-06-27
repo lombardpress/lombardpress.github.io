@@ -87,11 +87,9 @@ Slidedeck
 
 Topics 
 
-* Introduction: Visual vs. Semantic Encoding
-    - What's going on behind Microsoft Word and Classical Text Editor
-    - Why editors need to take ownership of the raw encoding of their data
-* Software Tooling
-    - Using OxygenXML
+* Basic Rules of XML
+* The TEI Standard
+* Installing and Using Oxygen
 
 Slidedeck
 
@@ -144,22 +142,22 @@ Articles:
 
 Topics 
 
-* Critical and Diplomatic Semantic Encoding
-    - The Apparatus Criticus
-    - The Apparatus Fontium
-* Assessing the state of semantic critical editing
-    - The Digital Latin Library, EpiDoc, and the LombardPress Schemas.
-* Challenges and Aspirations
+* Encoding the Apparatus Criticus
+* Enoding the Apparatus Fontium
+* Encoding Diplomatic or Documentary Editions
 
 Slidedeck 
 
-* [05-introduction-to-tei-part1](/slides/porto-slides/05-introduction-to-tei-part2)
+* [05-introduction-to-tei-part2](/slides/porto-slides/05-introduction-to-tei-part2)
 
 Articles and Links
 
+* [The TEI critical apparatus module](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TC.html)
 * [http://digitallatin.org/](http://digitallatin.org/)
 * [EpiDoc Guidelines](http://www.stoa.org/epidoc/gl/latest/)
 * [Lbp Schema](/schema/docs/)
+* [TEI by example: critical editing](http://teibyexample.org/modules/TBED07v00.htm)
+
 
 ### **12:00-13:00**: *Hands On Session* Encoding Practice and Discussion
 

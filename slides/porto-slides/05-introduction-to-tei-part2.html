@@ -6,6 +6,13 @@ theme: white
 transition: slide
 ---
 
+<style>
+.xml-block {background-color: lightgray; text-align: left;}
+.element {color: red;}
+.attribute {color: blue;}
+.indent1 {padding-left: 20px;}
+.indent2 {padding-left: 40px;}
+</style>
 
 <section data-markdown>
 
@@ -19,18 +26,148 @@ Jeffrey C. Witt (Loyola University Maryland)
 
 </section>
 
-<section data-markdown>
-Test1
+<section>
+	<section>
+		<h2>Encoding the Apparatus Criticus</h2>
+	</section>
+	<section>
+		<p>The first thing we need to know is that the creation of field standard schemata for critical editing is still in development.</p>
+	</section>	
+	<section>
+		<p>The central challenge lies is replacing the visually and ambiguously encoded apparatus criticus with a semantically encoded data base.</p>
 
+		<p>This primarily means we need to abstract from the way we eventually expect our apparatus to look. We must think in terms of data types.</p>
 
+		[Image of a critical apparatus]
+	</section>
+	
+	<section>
+		<p>What are the different types required to construct an apparatus?</p>
+		<ul>
+			<li>Lemma</li>
+			<li>Reading</li>
+			<li>Sigla</li>
+			<li>Some kind of abbreviated description of the type of variation</li>
+		</ul>
+	</section>
+	<section>
+		<h2>TEI Guidelines for a Critical Apparatus</h2>
+		<p>See: <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TC.html">http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TC.html</a></p>
+		<p>The basic form of a TEI apparatus entry is as follows:</p>
+		<div class="xml-block">
+			<span class="element">&lt;app&gt;</span><br/>
+				<span class="element indent1" style="padding-left: 20px">&lt;lem&gt;</span>fides<span class="element">&lt;/lem&gt;</span><br/>
+				<span class="element indent1" style="padding-left: 20px">&lt;rdg <span class="attribute">wit="#V"</span>&gt;</span>fidem<span class="element">&lt;/rdg&gt;</span><br/>
+			<span class="element">&lt;app&gt;</span><br/>
+		</div>
+	</section>
+	<section>
+		<h2>The @Type attribute</h2>
+		<p>Now there are obviously more kinds of variants than a simple form variations.</p>
+		<p>There omissions, corrections, additions, etc.</p>
+		<p>To do deal with this varation we are developing a taxonomy of "types" that you can to your apparatus entry as follows.</p>
+
+		<div class="xml-block">
+			<span class="element">&lt;app&gt;</span><br/>
+				<span class="element" style="padding-left: 20px">&lt;lem&gt;</span>fides<span class="element">&lt;/lem&gt;</span></br>
+				<span class="element" style="padding-left: 20px">&lt;rdg <span class="attribute">wit="#V"</span> <span class="attribute">type="omit"</span>/&gt;</span><br/>
+			<span class="element">&lt;app&gt;</span><br/>
+		</div>
+		</section>
+		<section>
+		<p>Or</p>
+		<div class="xml-block">
+			<span class="element">&lt;app&gt;</span><br/>
+				<span class="element" style="padding-left: 20px">&lt;lem&gt;</span>fides<span class="element">&lt;/lem&gt;</span><br/>
+				<span class="element" style="padding-left: 20px">&lt;rdg <span class="attribute">wit="#V"</span> <span class="attribute">type="corrReplace"</span>&gt;</span><br/>
+					<span class="element" style="padding-left: 40px">&lt;subst&gt;</span><br/>
+						<span class="element" style="padding-left: 60px">&lt;del&gt;</span>fidem<span class="element">&lt;del&gt;</span><br/>
+						<span class="element" style="padding-left: 60px">&lt;add&gt;</span>fides<span class="element">&lt;add&gt;</span><br/>
+					<span class="element" style="padding-left: 40px">&lt;/subst&gt;</span><br/>
+				<span class="element" style="padding-left: 20px">&lt;/rdg&gt;</span><br/>
+			<span class="element">&lt;app&gt;</span><br/>
+		</div>
+	</section>
+	<section>
+	<p>[List of currently supported apparatus types]</p>
+	</section>
+	<section>
+		<h2>Semantic encoding and new possibilities</h2>
+		<p>Because we are encoding data types and not presentation forms...</p>
+		<p>And because our digital representation allows us to transcend the concerns of limited space...</p>
+		<p>We can add additional data to our apparatus criticus that is simply not possible in the printed editions.</p> 
+	</section>
+	<section>
+		<h3>For example, we can add a note specific to each apparatus entry.</h3>
+
+		<div class="xml-block">
+			<span class="element">&lt;app&gt;</span><br/>
+				<span class="element indent1" style="padding-left: 20px">&lt;lem&gt;</span>fides<span class="element">&lt;/lem&gt;</span><br/>
+				<span class="element indent1" style="padding-left: 20px">&lt;rdg <span class="attribute">wit="#V"</span>&gt;</span>fidem<span class="element">&lt;/rdg&gt;</span><br/>
+				<span class="element indent1" style="padding-left: 20px">&lt;note&gt;</span>This is a note about this specific apparatus entry. Here you could explain at length why you made this decision along with any other pertinent details related to this variant entry.<span class="element">&lt;/note&gt;</span><br/>
+			<span class="element">&lt;app&gt;</span><br/>
+			<br/>
+		</div>
+	</section>
+	<section>
+		<h3>We all this is in place, we can render the critical apparatus as seen in this demo:</h3>
+		<iframe width="740" height="450" src="https://www.youtube.com/embed/5zC1ZoEdw8Q" frameborder="0" allowfullscreen></iframe>
+	</section>
+	<section>
+		<h2>A note on the state of developement</h2>
+		<p>It needs to be noted that while we can offer some guidelines about how to 
+		semantically encode an apparatus, these guidelines are very much a work in progress</p>
+	</section>
+	<section>	
+		<p>My goal and the goal of the groups I work with is to help provide guidelines that can standardize this progress as much as possible</p>
+		<p>Our work is advanced by partnering with groups who are committed to semantic encoding.</p>
+		<p>As you encounter new use cases and encoding problems, we can develop an increasingly robust set of guidelines and best practices</p>
+		<p>But the point is that this is a partnership, in which we develop together.</p>
+		<p>This means we will encounter encoding issues to which I cannot give you a direct answer.</p>
+		<p>But if you can log your encoding issue into our system, we can develop a feature request and work to support this or that data type.</p>
+	</section>
+
+	<section>
+		<h2>Dealing with uncertainty</h2>
+		<p>The @type=manual</p>
+		<div class="xml-block">
+			<span class="element">&lt;app&gt;</span><br/>
+				<span class="element" style="padding-left: 20px">&lt;lem&gt;</span>fides<span class="element">&lt;/lem&gt;</span><br/>
+				<span class="element" style="padding-left: 20px">&lt;rdg <span class="attribute">wit="#V"</span> <span class="attribute">type="manual"</span>&gt;</span>fides] fides <br/> 
+				<span class="element" style="padding-left: 40px">&lt;hi <span class="attribute">rend="italic"</span>&gt;</span>corr ex.<span class="element">&lt;/hi&gt;</span> interl. fidem<span class="element" style="padding-left: 20px">&lt;/rdg&gt;</span><br/>
+			<span class="element">&lt;app&gt;</span><br/>
+		</div>
+		<p>Note: This is BAD Semantic encoding. It should not be encouraged. But it is a method we can use as we collect information about various use cases. Each @type=manual because an instance that alerts us to the need to create an abstract data type.</p>
+	</section>
+	<section>
+		<h2>Feature Requests and Encoding Questions</h2>
+		<p>Feature requests and encoding questions can be asked here: <a href="https://github.com/lombardpress/lombardpress-schema/issues">https://github.com/lombardpress/lombardpress-schema/issues</a> All you need to is create a new issue and describe your ecoding problem. It's a ideal if you can add a screen shot of the encoding problem you are facing.</p>
+		<p>Every time you are tempted to create an @type=manual you should create an issue asking if there is proper type for the variant instance you are currently dealing with.</p>
+	</section>
+	<section>
+		<h3>The emerging form of organizational oversight for editorial schema</h3>
+		<img src="/assets/images/porto-slides/critical-schema-diagram.png">
+	</section>
+	<section>
+		<h2>Planned Meetings</h2>
+		<ul>
+			<li>LombardPress Team Meeting in Barcelona, July 12th-14th</li>
+			<li>Digital Latin Library Meeting, July 27th-28th</li>
+		</ul>
+		<p>The point is that a lot of work is currently on-going. And there is a lot of energy behind it.</p>
+		<p>If your team commit to this approach, we can leverage your interest and you can have a major voice at the table.</p>
+		<p>For example, it would be ideal to meet on a yearly basis to develop our encoding standards. Next summer, it would be great to have a representative from the Petrus Hispansu project at each of these standards meetings.</p>
+	</section>
+</section>
+<section>
+	<section>
+		<h2>Encoding the Apparatus Fontium</h2>
+	</section>
 </section>
 
-<section data-markdown>
-
-Test2
-
+<section>
+	<section>
+		<h2>Encoding the Diplomatic or Documentary Edition</h2>
+	</section>
 </section>
 
-<section data-markdown>
-Test3
-</section>
