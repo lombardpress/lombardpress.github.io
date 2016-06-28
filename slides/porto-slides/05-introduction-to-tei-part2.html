@@ -58,7 +58,7 @@ Jeffrey C. Witt (Loyola University Maryland)
 			<span class="element">&lt;app&gt;</span><br/>
 				<span class="element indent1" style="padding-left: 20px">&lt;lem&gt;</span>fides<span class="element">&lt;/lem&gt;</span><br/>
 				<span class="element indent1" style="padding-left: 20px">&lt;rdg <span class="attribute">wit="#V"</span>&gt;</span>fidem<span class="element">&lt;/rdg&gt;</span><br/>
-			<span class="element">&lt;app&gt;</span><br/>
+			<span class="element">&lt;/app&gt;</span><br/>
 		</div>
 	</section>
 	<section>
@@ -71,7 +71,7 @@ Jeffrey C. Witt (Loyola University Maryland)
 			<span class="element">&lt;app&gt;</span><br/>
 				<span class="element" style="padding-left: 20px">&lt;lem&gt;</span>fides<span class="element">&lt;/lem&gt;</span></br>
 				<span class="element" style="padding-left: 20px">&lt;rdg <span class="attribute">wit="#V"</span> <span class="attribute">type="omit"</span>/&gt;</span><br/>
-			<span class="element">&lt;app&gt;</span><br/>
+			<span class="element">&lt;/app&gt;</span><br/>
 		</div>
 		</section>
 		<section>
@@ -85,7 +85,7 @@ Jeffrey C. Witt (Loyola University Maryland)
 						<span class="element" style="padding-left: 60px">&lt;add&gt;</span>fides<span class="element">&lt;add&gt;</span><br/>
 					<span class="element" style="padding-left: 40px">&lt;/subst&gt;</span><br/>
 				<span class="element" style="padding-left: 20px">&lt;/rdg&gt;</span><br/>
-			<span class="element">&lt;app&gt;</span><br/>
+			<span class="element">&lt;/app&gt;</span><br/>
 		</div>
 	</section>
 	<section>
@@ -105,7 +105,7 @@ Jeffrey C. Witt (Loyola University Maryland)
 				<span class="element indent1" style="padding-left: 20px">&lt;lem&gt;</span>fides<span class="element">&lt;/lem&gt;</span><br/>
 				<span class="element indent1" style="padding-left: 20px">&lt;rdg <span class="attribute">wit="#V"</span>&gt;</span>fidem<span class="element">&lt;/rdg&gt;</span><br/>
 				<span class="element indent1" style="padding-left: 20px">&lt;note&gt;</span>This is a note about this specific apparatus entry. Here you could explain at length why you made this decision along with any other pertinent details related to this variant entry.<span class="element">&lt;/note&gt;</span><br/>
-			<span class="element">&lt;app&gt;</span><br/>
+			<span class="element">&lt;/app&gt;</span><br/>
 			<br/>
 		</div>
 	</section>
@@ -135,7 +135,7 @@ Jeffrey C. Witt (Loyola University Maryland)
 				<span class="element" style="padding-left: 20px">&lt;lem&gt;</span>fides<span class="element">&lt;/lem&gt;</span><br/>
 				<span class="element" style="padding-left: 20px">&lt;rdg <span class="attribute">wit="#V"</span> <span class="attribute">type="manual"</span>&gt;</span>fides] fides <br/> 
 				<span class="element" style="padding-left: 40px">&lt;hi <span class="attribute">rend="italic"</span>&gt;</span>corr ex.<span class="element">&lt;/hi&gt;</span> interl. fidem<span class="element" style="padding-left: 20px">&lt;/rdg&gt;</span><br/>
-			<span class="element">&lt;app&gt;</span><br/>
+			<span class="element">&lt;/app&gt;</span><br/>
 		</div>
 		<p>Note: This is BAD Semantic encoding. It should not be encouraged. But it is a method we can use as we collect information about various use cases. Each @type=manual because an instance that alerts us to the need to create an abstract data type.</p>
 	</section>
@@ -163,7 +163,34 @@ Jeffrey C. Witt (Loyola University Maryland)
 	<section>
 		<h2>Encoding the Apparatus Fontium</h2>
 	</section>
+	<section>
+		<h2>There are two major types of data in a critical editions that usually get linked to an apparatus fontium</h2>
+		<ul>
+			<li>Quotations</li>
+			<li>References</li>
+	</section>
+	<section>
+		<h2>Quotations</h2>
+		<p>We encode quotations as follows:</p>
+		<div class="xml-block">
+			<span class="element">&lt;cit&gt;</span><br/>
+				<span class="element" style="padding-left: 20px">&lt;quote&gt;</span>This is a quotation, perhaps from Augustine's City of God<span class="element">&lt;/quote&gt;</span><br/>
+				<span class="element" style="padding-left: 20px">&lt;bibl&gt;</span>Augustine, City of God, III, 2, 5 (PL XX:XX)<span class="element" style="padding-left: 20px">&lt;/bibl&gt;</span><br/>
+			<span class="element">&lt;/cit&gt;</span>
+		</div>
+	</section>
+	<h2>References</h2>
+		<p>We encode references as follows:</p>
+		<div class="xml-block">
+			<span class="element">&lt;cit&gt;</span><br/>
+				<span class="element" style="padding-left: 20px">&lt;ref&gt;</span>Magister in libro I, distinctione 23<span class="element">&lt;/ref&gt;</span><br/>
+				<span class="element" style="padding-left: 20px">&lt;bibl&gt;</span>Lombard, Sententia, I, d. 23, c. 2 (Brady I:XX)<span class="element" style="padding-left: 20px">&lt;/bibl&gt;</span><br/>
+			<span class="element">&lt;/cit&gt;</span>
+		</div>
+	</section>
+
 </section>
+
 
 <section>
 	<section>

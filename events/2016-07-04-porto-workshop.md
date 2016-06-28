@@ -14,7 +14,7 @@ Jeffrey C. Witt (Loyola University Maryland)
 jcwitt@loyola.edu
 
 
-# Schedule 
+## Tentative Schedule 
 
 <br/>
 
@@ -217,6 +217,7 @@ Topics
 
 Slidedeck
 
+* [What is IIIF?](http://www.slideshare.net/Cogapp/everything-you-ever-wanted-to-know-about-iiif-but-were-too-afraid-to-ask) 
 * [07-image-text-linking-via-iiif](/slides/porto-slides/07-image-text-linking-via-iiif)
 
 Articles and Links
@@ -226,19 +227,13 @@ Articles and Links
 
 ### **11:00-11:30**: Break
 
-### **11:30-13:00**: Embedding IIIF Data in our XML Editions
-
-Topics
-
-* The IIIF Manifest
-* Marking IIIF Canvases in the Project Data File
-* Marking IIIF Canvases in the TEI encoded editions
+### **11:30-13:00**: *Hands on Session* Continue editorial work and embedding of IIIF data into XML editions
 
 ### **13:00-14:00**: Lunch
 
 ### **14:00-15:00**: *Hands On Session* and (hopefully) demonstrations of online and print editions from the weeks work.
 
-### **15:00-17:00**: Questions and Planning for the Future Work and Future Meetings
+### **15:00-17:00**: Questions and Planning for the Future and Sustainability of our Work
 
 
 

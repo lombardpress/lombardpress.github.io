@@ -6,6 +6,12 @@ theme: white
 transition: slide
 ---
 
+<style>
+.xml-block {background-color: lightgray;}
+.element {color: red;}
+.attribute {color: blue;}
+</style>
+
 
 <section data-markdown>
 
@@ -68,7 +74,7 @@ Jeffrey C. Witt (Loyola University Maryland)
 		</ul>
 	</section>
 	<section>
-		Image of Visual Encoding
+		[TODO: Image of Visual Encoding]
 	</section>
 	<section>
 		<h2>The cons of visual encoding</h2>
@@ -99,17 +105,14 @@ Jeffrey C. Witt (Loyola University Maryland)
 		<p>If the data is a title let's call it a title</p>
 	</section>
 	<section>
-		<h4>Simple Example of Semantic Encoding<h4>
-		<p>replace with image from oxygen</p>
-		<pre>
-		<code data-trim>
-		<p>paragraph text about 
-		<name>Augustine</name> 
-		and his 
-		<title>City of God</title> where he provides a quotation 
-		<quote>about something interesting</quote></p>
-		</code>
-		</pre>
+		<h4>Simple Example of Semantic Encoding</h4>
+		
+		<div class="xml-block">
+			<span class="element">&lt;p&gt;</span>Paragraph about 
+			<span class="element">&lt;name&gt;</span>Augustine<span class="element">&lt;/name&gt;</span> and his work <span class="element">&lt;title&gt;</span>City of God<span class="element">&lt;/title&gt;</span>
+			<span class="element">&lt;/div&gt;</span>
+		</div>
+		
 	</section>
 </section>
 <section>
