@@ -1,12 +1,10 @@
 ---
 layout: post
-title:  DTS Modeling Proposal
+title:  A Distributed Text Service Modeling Proposal: case study of the scta ontology and api
 date:   2016-06-12
-tags: 
-- draft
 ---
 
-DOCUMENT STATUS: Draft
+DOCUMENT STATUS: Public Draft
 
 # Introduction
 
@@ -84,7 +82,7 @@ We cannot simply call these CTS **Versions** or FRBR **Manifestations** because 
 
 ## B.  Expressions and OHCO
 
-Once at the FRBR **Expression**, we have reached what we most commonly think of as the abstract text, without yet specifying a particular material instantiation, version, or edition of that text. A good indicator that one has reached the FRBR **Expression** level is that the “text” can be broken down into a hierarchy. No such hierarchy is possible when discussing a FRBR **Work** because the idea has not been expressed in any form. A hierarchy only forms, when an author tries to express that idea. Accordingly, the hierarchies will likely differ in two different **Expressions** of the same **Work**. 
+Once at the FRBR **Expression**, we have reached what we most commonly think of as the abstract text without yet specifying a particular material instantiation, version, or edition of that text. A good indicator that one has reached the FRBR **Expression** level is that the “text” can be broken down into a hierarchy. No such hierarchy is possible when discussing a FRBR **Work** because the idea has not been expressed in any form. A hierarchy only forms, when an author tries to express that idea. Accordingly, the hierarchies will likely differ in two different **Expressions** of the same **Work**. 
 
 Once at the **Expression** level, the existing text hierarchy makes it possible to construct a matrix, where FRBR concepts continue to run along the X axis and the hierarchy division runs down the 
 Y axis. Thus, each unit within the FRBR **Expression** hierarchy can have FRBR **Manifestations** and FRBR **Items**.
@@ -125,13 +123,13 @@ This is easier to see in the case of printed books, but harder to see in the cas
 
 Finally, we must also include a space here for born digital **Manifestations** of an **Expression**. The new practice of building born-digital critical editions of **Expressions** is a good example. This means that we have a **Manifestation** that corresponds to no physical material object. And it is of course tempting here associate this **Manifestation** with the actual digital file. But we must resist this temptation and continue to remember that the **Manifestation** is still an idea of how to materially represent (in this case, encode) a given **Expression**. It is the idea of a particular edition that may either have a material object or digital transcriptions standing as an instantiations of that idea.
 
-In concrete, a **Manifestation** should inherit the *structureType* of the **Expression** it *isManifestationOf*. Morever, a **Manifestation** should take on properties specific to a **Manifestation**. A **Manifestation** should have a *manifestationType* that indicates whether it is a manuscript, early printing, modern critical edition, or born digital critical edition. Other properties and constraints specific to each type of **Manifestation** could then be added. 
+In concrete, a **Manifestation** should inherit the *structureType* of the **Expression** it *isManifestationOf*. Moreover, a **Manifestation** should take on properties specific to a **Manifestation**. A **Manifestation** should have a *manifestationType* that indicates whether it is a manuscript, early printing, modern critical edition, or born digital critical edition. Other properties and constraints specific to each type of **Manifestation** could then be added. 
 
 Finally, a **Manifestation** should also point to FRBR **Items**. For reasons to be explained below we divide these associations into two types, *hasMaterialObject* and *hasTranscription*.
 
 ## D.  Items: MaterialObjects and Transcriptions
 
-There seems to be something conceptually correct about identifying a digital transcription (by which I mean a semantically encoded text that can be serialized and distributed in multiple ways, and thus we do not yet mean the raw TEI file, or another other format) with a FRBR **Item**. Just like an individual printed books, it aims to be an instantiation of a **Manifestation**. However, instead of instantiating that idea with ink on a page, it does it with electronic signals on a disk drive.
+There seems to be something conceptually correct about identifying a digital transcription (by which I mean a semantically encoded text that can be serialized and distributed in multiple ways, and thus we do not yet mean the raw TEI file, or another other format) with a FRBR **Item**. Just like an individual printed books, it aims to be an instantiation of a **Manifestation**. However, instead of instantiating that idea with ink on a page, it does so with electronic signals on a disk drive.
 
 Nevertheless, the digital transcription is also so different from the material instantiation that we felt it best to split the FRBR **Item** class into two subclasses: the **MaterialObject** and the **Transcription**.
 
@@ -423,7 +421,7 @@ The next serialization shows the jsonld response for a top level **Expression**:
       ]
     }
 
-Here’s how a client might consume that info to provide information about nested parts:
+Here’s how a client might consume that information to provide information about nested parts:
 
 ![top level work group]({{ site.baseurl }}/assets/images/2016-06-30-DTS-modeling-proposal/expression-with-items.png)
 
@@ -512,7 +510,7 @@ But this same information can be used for a different view, such as a view of av
 
 ![available manifestations]({{ site.baseurl }}/assets/images/2016-06-30-DTS-modeling-proposal/available-manifestations-at-item-level.png)
 
-Likewise, the client should be able to treat every **Expression**, at no matter what level in the hierarchy, the same way while adjusting for properties unique to that *structureType*. So if the resource id points to a *structureBlock* (or paragraph) instead of a *structureItem*, we get a display that automatically adjusts.
+Likewise, the client should be able to treat every **Expression**, at any level in the hierarchy, the same way while adjusting for properties unique to that *structureType*. So if the resource id points to a *structureBlock* (or paragraph) instead of a *structureItem*, we get a display that automatically adjusts.
 
 ![block level display]({{ site.baseurl }}/assets/images/2016-06-30-DTS-modeling-proposal/block-expression-display.png)
 
@@ -530,10 +528,10 @@ Likewise, the client should be able to treat every **Expression**, at no matter 
 
 ## Appendix C: Links
 
-* Live client listing workGroups: [http://scta-staging.lombardpress.org/text/questions/?resourceid=http://scta.info/resource/scta](http://scta-staging.lombardpress.org/text/questions/?resourceid=http://scta.info/resource/scta)
+* Live client listing workGroups: [http://scta.lombardpress.org/text/questions/?resourceid=http://scta.info/resource/scta](http://scta.lombardpress.org/text/questions/?resourceid=http://scta.info/resource/scta)
 * Live DB visualization for the same resource [http://scta.info/resource/scta](http://scta.info/resource/scta)
 
-* Live client listing available top Level expressions [http://scta-staging.lombardpress.org/text/questions/?resourceid=http://scta.info/resource/plaoulcommentary](http://scta-staging.lombardpress.org/text/questions/?resourceid=http://scta.info/resource/plaoulcommentary)
+* Live client listing available top Level expressions [http://scta.lombardpress.org/text/questions/?resourceid=http://scta.info/resource/plaoulcommentary](http://scta.lombardpress.org/text/questions/?resourceid=http://scta.info/resource/plaoulcommentary)
 * Live DB visualization for the same resource [http://scta.info/resource/plaoulcommentary](http://scta.info/resource/plaoulcommentary)
 
 
