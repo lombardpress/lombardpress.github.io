@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  A Distributed Text Service Modeling Proposal: case study of the scta ontology and api
+title:  A Distributed Text Service Modeling Proposal - case study of the scta ontology and api
 date:   2016-06-12
 ---
 
