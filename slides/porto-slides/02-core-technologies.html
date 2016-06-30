@@ -30,14 +30,12 @@ Jeffrey C. Witt (Loyola University Maryland)
 	<h2>Visualizing the flow of data</h2>
 	</section>
 	<section>
-		<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/302592/images/1502183/Slide1.jpg">
+		<img src="/assets/images/lbp-flow1.jpg">
 	</section>
 	<section>
-		<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/302592/images/1502185/Slide2.jpg">
+		<img src="/assets/images/lbp-flow2.jpg">
 	</section>
 </section>
-
-
 <section>
 	<section>
 		<h2>Transcription Data: The Importance of Creating Great, Reusable, Data</h2>
@@ -74,7 +72,8 @@ Jeffrey C. Witt (Loyola University Maryland)
 		</ul>
 	</section>
 	<section>
-		[TODO: Image of Visual Encoding]
+		<h2>Example of Visual Encoding</h2>
+		<img src="/assets/images/porto-slides/typeset-print-edition.jpg">
 	</section>
 	<section>
 		<h2>The cons of visual encoding</h2>
@@ -83,7 +82,7 @@ Jeffrey C. Witt (Loyola University Maryland)
 	<section>
 		<h4>First Problem: It is consistentally ambiguous about the identification of datatypes</h4>
 		<p>For example consider the various uses of italic rendering in a critical editions</p>
-		<p>IMAGE</p>
+		<img src="/assets/images/print-text-example.png">
 	</section>
 	<section>
 		<h4>Second Problem: It fuses form and matter, making data type recognition inseparable from its original material representation</h4>
@@ -110,7 +109,7 @@ Jeffrey C. Witt (Loyola University Maryland)
 		<div class="xml-block">
 			<span class="element">&lt;p&gt;</span>Paragraph about 
 			<span class="element">&lt;name&gt;</span>Augustine<span class="element">&lt;/name&gt;</span> and his work <span class="element">&lt;title&gt;</span>City of God<span class="element">&lt;/title&gt;</span>
-			<span class="element">&lt;/div&gt;</span>
+			<span class="element">&lt;/p&gt;</span>
 		</div>
 		
 	</section>
@@ -139,4 +138,39 @@ Jeffrey C. Witt (Loyola University Maryland)
 </section>
 
 <section>
-<h2>Image Data: A data model to manage digital images of manuscripts</h3>
+	<section>
+		<h2>Image Data: A data model to manage digital images of manuscripts</h2>
+	</section>
+	<section>
+		<p>In order to create views where text and images can be immediately called upon and compared, a significant amount of abstraction and data-modelings is necessary.</p>
+		<p>We need to keep track of single digital files and their relationship to a "folio" or "page".</p>
+		<p>Further keep track of that folios place within the "material hierarchy" (the codex) and the "content hierarchy" (the text).</p>
+		<p>Finally, we need to be able to track connections between our transcriptions of the text, folios, and by extention the digitial images to which those transcriptions are related</p>
+	</section>
+	<section>
+		<h3>Consider the "text" of William Rothwell</h3>
+		<img src="/assets/images/rothwell-exemplar.jpg"/>
+	</section>
+	<section>
+		<h3>The "text" has several "witnesses" or "manifestations"</h3>
+		<img src="/assets/images/rothwell-witnesses.jpg"/>
+	</section>
+	<section>
+		<h4>Each of these "manifestations" has folios, which are digitial represented by at least one digital image, but sometimes several</h4> 
+		<img src="/assets/images/rothwell-witnesses-folios.jpg"/>
+	</section>
+	<section>
+		<h3>Enter IIIF: a community standard to help us organize and use images scattered throughout the world's libraries.</h3>
+		<img src="/assets/images/porto-slides/iiif-screen-shot.png"/>
+	</section>
+	<section>
+		<h3>Basic presentation model</h3>
+		<img height="600px" src="http://iiif.io/api/presentation/2.1/img/objects.png">
+	</section>
+	<section>
+		<h3>Extended presentation model</h3>
+		<img src="http://iiif.io/api/presentation/2.1/img/objects-all.png">
+	</section>
+</section>
+	
+	
