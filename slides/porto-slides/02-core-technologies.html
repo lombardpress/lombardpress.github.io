@@ -41,33 +41,33 @@ Jeffrey C. Witt (Loyola University Maryland)
 		<h2>Transcription Data: The Importance of Creating Great, Reusable, Data</h2>
 	</section>
 	<section>
-		<p>All transcription is data creation</p>
+		<p>All transcription is data creation.</p>
 
-		<p>But not all data is equal</p>
+		<p>But not all data is equal.</p>
 
-		<p>Some data is messy, ambiguous, and unclear</p>
+		<p>Some data is messy, ambiguous, and unclear.</p>
 
-		<p>Some data is well formed, well structured, and unambiguous</p>
+		<p>Some data is well formed, well structured, and unambiguous.</p>
 	</section>
 	<section>
 		<p>All data creation involves the identification of data types.</p>
 
 		<p>Declaring data types is what we mean when we say we are "encoding" a text.</p>
 
-		<p>But there are different ways of encoding a text, and each method has pros and cons</p>
+		<p>But there are different ways of encoding a text, and each method has pros and cons.</p>
 	</section>
 	<section>
-		<p>Two most common types of encoding for textual editors</p>
+		<h3>Types of Encoding</h3>
 		
-		<p>Visual Encoding vs. Semantic Encoding</p>
+		<p>Visual Encoding and Semantic Encoding.</p>
 	</section>
 	<section>
-		<h4>Visual Encoding (VE)<h4>
+		<h4>Visual Encoding (VE)</h4>
 		<ul>
-			<li>VE is what most traditional editors are use to</li>
-			<li>VE declares data types through visual differentiation</li>
-			<li>A title is differentiated from a regular text through italic rendering</li>
-			<li>A paragraph usually begins with an indentation represented through extra white space at the beginning of a line</li>
+			<li>VE is what most traditional editors are familiar with.</li>
+			<li>VE declares data types through visual differentiation.</li>
+			<li>A title is differentiated from a regular text through italic rendering.</li>
+			<li>A paragraph usually begins with an indentation represented through extra white space at the beginning of a line.</li>
 			<li>A header is usually centered on the page, slightly larger, and surrounded by extra white space.</li>
 		</ul>
 	</section>
@@ -81,15 +81,18 @@ Jeffrey C. Witt (Loyola University Maryland)
 	</section>
 	<section>
 		<h4>First Problem: It is consistently ambiguous about the identification of datatypes</h4>
-		<p>For example consider the various uses of italic rendering in a critical editions</p>
+		<p>For example consider the various uses of italic rendering in a critical edition.</p>
 		<img src="/assets/images/print-text-example.png">
+		<aside class="notes">
+			See also examples from De Ryjk, p. 40 and 42
+		</aside>
 	</section>
 	<section>
-		<h4>Second Problem: It fuses form and matter, making data type recognition inseparable from its original material representation</h4>
+		<h4>Second Problem: It fuses form and matter, making data type recognition inseparable from its original material representation.</h4>
 
-		<p>If a heading is identified by its position in the center of a page surrounded by whitespace, if this rendering were lost, its distinction from the surrounding text would be lost.</p>
+		<p>Consider a heading is identified by its position in the center of a page surrounded by whitespace. If this rendering were lost, its distinction from the surrounding text would be lost.</p>
 
-		<p>This makes the dream of creating multiple representations (such as print and web displays) from a Single Source Document impossible.</p>
+		<p>This makes the dream of creating multiple representations (such as print and web displays) from a **Single Source Document** impossible.</p>
 
 		<p>Our aim must be to de-couple form and matter so that we can take that content and instantiate it in as many different types of matter (or media) as we wish.
 	</section>
@@ -101,7 +104,7 @@ Jeffrey C. Witt (Loyola University Maryland)
 
 		<p>If the data is a heading then let's call it a heading.</p>
 
-		<p>If the data is a title let's call it a title</p>
+		<p>If the data is a title let's call it a title.</p>
 	</section>
 	<section>
 		<h4>Simple Example of Semantic Encoding</h4>
@@ -113,6 +116,7 @@ Jeffrey C. Witt (Loyola University Maryland)
 		</div>
 		
 	</section>
+
 </section>
 <section>
 	<section><h2>Corpus Data: A data model to organize and relate all this transcription data</h2>
@@ -120,20 +124,30 @@ Jeffrey C. Witt (Loyola University Maryland)
 	<section>
 		<p>Consider the enormous variation data required to comprehensively describe a critical text</p>
 
-		<p>For example</p>
+		<p>For example:</p>
 
 		<ul>
 			<li>The whole text</li>
 			<li>Main subdivisions</li>
 			<li>Witnesses to the text and its parts</li>
 			<li>Transcriptions of individual witnesses</li>
-			<li>Transcriptions of critical text build from transcriptions of individual witnesses</li>
+			<li>Transcriptions of critical text built from transcriptions of individual witnesses</li>
 		</ul>
 
 		<p>Such a list only scratches the surface</p>
 	</section>
 	<section>
 		<img src="https://raw.githubusercontent.com/scta/scta-ontology/master/SCTASCHEMA3.png">
+	</section>
+	<section>
+		<p>This database of metadata is built automatically by "crawling" the Semantically Encoded Editions that editors produce.</p>
+	</section>
+	<section>
+	<p>This database is public and open, which means anyone can build a web application on top of it.</p>
+
+	<p>This means that the text, the organizing database, and web publishing plaform are modular and separable.</p>
+
+	<p>In short: your data is not locked in one website. It can be used by multiple applications for a plurality of purposes.</p>
 	</section>
 </section>
 
@@ -142,10 +156,12 @@ Jeffrey C. Witt (Loyola University Maryland)
 		<h2>Image Data: A data model to manage digital images of manuscripts</h2>
 	</section>
 	<section>
-		<p>In order to create views where text and images can be immediately called upon and compared, a significant amount of abstraction and data-modelings is necessary.</p>
+		<p>In order to create views where text and images can be immediately called upon and compared, a significant amount of abstraction and data-modeling is necessary.</p>
+	</section>
+	<section>
 		<p>We need to keep track of single digital files and their relationship to a "folio" or "page".</p>
-		<p>Further keep track of that folios place within the "material hierarchy" (the codex) and the "content hierarchy" (the text).</p>
-		<p>Finally, we need to be able to track connections between our transcriptions of the text, folios, and by extension the digital images to which those transcriptions are related</p>
+		<p>Further, we need to keep track of that folio's place within the "material hierarchy" (the codex) and the "content hierarchy" (the text).</p>
+		<p>Finally, we need to be able to track connections between our transcriptions of the text, folios, and by extension the digital images to which those transcriptions are related.</p>
 	</section>
 	<section>
 		<h3>Consider the "text" of William Rothwell</h3>
@@ -160,7 +176,7 @@ Jeffrey C. Witt (Loyola University Maryland)
 		<img src="/assets/images/rothwell-witnesses-folios.jpg"/>
 	</section>
 	<section>
-		<h3>Enter IIIF: a community standard to help us organize and use images scattered throughout the world's libraries.</h3>
+		<h3>Enter IIIF: a community standard to help us organize and use images scattered throughout the world's libraries</h3>
 		<img src="/assets/images/porto-slides/iiif-screen-shot.png"/>
 	</section>
 	<section>
@@ -171,6 +187,9 @@ Jeffrey C. Witt (Loyola University Maryland)
 		<h3>Extended presentation model</h3>
 		<img src="http://iiif.io/api/presentation/2.1/img/objects-all.png">
 	</section>
+</section>
+<section>
+	<h3>Discussion</h3>
 </section>
 	
 	
