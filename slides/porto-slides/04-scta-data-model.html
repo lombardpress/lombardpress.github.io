@@ -43,23 +43,24 @@ Jeffrey C. Witt (Loyola University Maryland)
 
 	<p>The basic task we are undertaking here is the traditional task of building a table of contents.</p>
 
-	<p>But this table contents is also going to determine the ids and relationships between resources in our datamodel</p>
+	<p>But this table of contents is also going to determine the ids and relationships between resources in our data model.</p>
 
-	<p>It also going to provide with guidance as to how we structure files and directories</p>
+	<p>It is also going to provide us with guidance as to how we structure our files and directories.</p>
 
-	<p>While immediate purpose of doing things this way may not seem immediately obvious, just keep the following rule of in mind.</p>
+	<p>While the immediate purpose of doing things this way may not seem immediately obvious, just keep the following rule of in mind.</p>
 
-	<p>Strong organization enables automation.</p>
+	<p>"Strong organization enables automation."</p>
 
 	</section>
 
 	<section>
 
-	<p>Sample projectdata files:</p>
+	<h4>Sample projectdata files:</h4>
 	<p style="font-size: 80%">Tip: you can load any of these files into Oxygen and play around with them by simply coping the url, selecting open url from the file menu, and pasting the url into the provided field.</p>
-	<ul>
+	<ul style="font-size: 80%">
 		<li>Petrus Hispanus Summa Logicales <a href="https://raw.githubusercontent.com/scta/scta-projectfiles-petrushispanus/master/phsl-projectdata.xml">https://raw.githubusercontent.com/scta/scta-projectfiles-petrushispanus/master/phsl-projectdata.xml </a></li>
 		<li>Petrus Hispanus Syncategoreumata <a href="https://raw.githubusercontent.com/scta/scta-projectfiles-petrushispanus/master/phsyn-projectdata.xml"> https://raw.githubusercontent.com/scta/scta-projectfiles-petrushispanus/master/phsyn-projectdata.xml</a></li>
+		<li>Petrus Hispanus De Anima <a href="https://raw.githubusercontent.com/scta/scta-projectfiles-petrushispanus/master/263-projectdata.xml"> https://raw.githubusercontent.com/scta/scta-projectfiles-petrushispanus/master/263-projectdata.xml</a></li>
 		<li>Adam Wodheam Oxford Ordinatio <a href="https://raw.githubusercontent.com/scta/scta-projectfiles/master/aw-projectdata.xml"> https://raw.githubusercontent.com/scta/scta-projectfiles/master/aw-projectdata.xml</a></li>
 	</ul>
 	<aside class="notes"> (15 minutes) Open files in Oxygen and go through different parts of file and take questions</aside>
@@ -69,11 +70,11 @@ Jeffrey C. Witt (Loyola University Maryland)
 	</section>
 	<section>
 		<h2>A word of caution</h2>
-		<p>It is important to simply reiterate that the standardization of the projectdata file is still a work in progress.</p>
+		<p>It is important to reiterate that the standardization of the projectdata file is still a work in progress.</p>
 
 		<p>As our community grows, its logic and standardization will improve</p>
 
-		<p>For the moment, this means we simply need to build the file in the same way I have done so that the automatic scripts will still work, even if this is not always the best way.</p>
+		<p>For the moment, this means we simply need to build the file in the same way as I have done, so that the automatic scripts will still work, even if this is not always the best way.</p>
 
 		<p>What's exciting about the prospect of working together, is that as we had more data, we discover more flaws or bugs in the system and logic, and then improve it together.</p> 
 
@@ -81,35 +82,35 @@ Jeffrey C. Witt (Loyola University Maryland)
 	<section>
 	<h2>The Header</h2>
 
-	<p>The header is not something you need to be too worried about. It's simple function is to collect metadata about this text, the helps us link its parent work group, to its author, the varous witness to this text.</p>
+	<p>The header is not something you need to be too worried about. Its function is simply to collect metadata about this text that helps us link the text to its parent work group, to its author, and to the various witnesses to the text.</p>
 	</section>
 	<section>
 	<h2> Div@id=body </h2>
 
-	<p>This is simply the body tag that will contain your table of contents. (In the future, this mostly likely be changed to simpley &lt;body&gt;.)</p>
+	<p>This is simply the body tag that will contain your table of contents. (In the future, this mostly likely be changed to simply &lt;body&gt;.)</p>
 	</section>
 	<section>
 	<h2>Items</h2>
 
-	<p>Within this body tag, there are two many division you can make: Items and Divisions. 
+	<p>Within this body tag, there are two main divisions you can make: Items and Divisions. 
 
-	<p>Items are the privileged divisions in your text. In the case of the Peter of Spain example, these seem to be Tractatus 1, Tractatus 2, etc etc.</p>
+	<p>Items are the privileged divisions in your text. In the case of the Peter of Spain Tractatus, these seem to be Tractatus 1, Tractatus 2, etc, etc.</p>
 
-	<p>Items will correspond to the file divisions of your text. We expect there to be a separate file for each section of the text that is identified as an item. If your text is very small, its possible that you will only have one Item. But in very large texts, it is extremely helpful to be able to break the text up into multiple files.</p>
+	<p>Items will correspond to the file divisions of your text. We expect there to be a separate directory and file for each section of the text that is identified as an Item. If your text is very small, it is possible that you will only have one Item. But in very large texts, it is extremely helpful to be able to break the text up into multiple files.</p>
 	</section>
 	<section>
 	<h2>Divisions</h2>
 
-	<p>Even though Items are privileged sections, it is also quite possible that these sections should be grouped in larger divisions.</p>
+	<p>Even though Items are privileged sections, it is also quite possible that these sections should be grouped into larger Divisions.</p>
 
-	<p>This is very common in Sentences Commentaries, where questions are grouped within distinction divisions, and distinction divisions are grouped with book divisions.</p>
+	<p>This is very common in Sentences Commentaries, where questions are grouped within distinction Divisions, and distinction Divisions are grouped with book Divisions.</p>
 
 	</section>
 	<section>
 	<h2>hasWitnesses->witness->folio</h2>
-	<p>The hasWitnesses section is designed to tell us whether or not a particular Item appears in a particular manuscript. The folio references go further to tell us what folios this section of the text falls on.</p>
+	<p>The hasWitnesses section is designed to tell us whether or not a particular Item appears in a particular manuscript. The folio references go further to tell us on what folios this section of the text falls.</p>
 
-	<p>It is this data that allows us to build table of contents for each manuscript as well as for the text as a whole</p>
+	<p>It is this data that allows us to build a table of contents for each manuscript as well as for the text as a whole.</p>
 
 	<aside class="notes">
 	Show mirador example here of table of contents.
@@ -119,6 +120,7 @@ Jeffrey C. Witt (Loyola University Maryland)
 </section>
 <section>
 <h2>The SCTA Database: the immediate result of processing a projectdata file</h2>
+
 <p>We can visualize what this data looks like at <a href="http://scta.info">http://scta.info</a>.</p> 
 
 <aside class="notes"> (10 minutes) Spend some time playing around with this.</aside>
