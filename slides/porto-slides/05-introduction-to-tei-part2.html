@@ -31,10 +31,10 @@ Jeffrey C. Witt (Loyola University Maryland)
 		<h2>Encoding the Apparatus Criticus</h2>
 	</section>
 	<section>
-		<p>The first thing we need to know is that the creation of field standard schemata for critical editing is still in development.</p>
+		<p>The first thing we need to know is that the creation of a field standard schemata for critical editing is still in development.</p>
 	</section>	
 	<section>
-		<p>The central challenge lies is replacing the visually and ambiguously encoded apparatus criticus with a semantically encoded data base.</p>
+		<p>The central challenge lies in replacing the visually and ambiguously encoded apparatus criticus with a semantically encoded data base.</p>
 
 		<p>This primarily means we need to abstract from the way we eventually expect our apparatus to look. We must think in terms of data types.</p>
 	</section>
@@ -61,14 +61,14 @@ Jeffrey C. Witt (Loyola University Maryland)
 	</section>
 	<section>
 		<h2>The @type attribute</h2>
-		<p>Now there are obviously more kinds of variants than a simple form variations.</p>
-		<p>There omissions, corrections, additions, etc.</p>
-		<p>To do deal with this variation we are developing a taxonomy of "types" that you can to your apparatus entry as follows.</p>
+		<p>Now there are obviously more kinds of variants than a simple form variation.</p>
+		<p>There are omissions, corrections, additions, etc.</p>
+		<p>To deal with this variation, we are developing a taxonomy of "types" that you can add to your apparatus entry as follows.</p>
 
 		<div class="xml-block">
 			<span class="element">&lt;app&gt;</span><br/>
 				<span class="element" style="padding-left: 20px">&lt;lem&gt;</span>fides<span class="element">&lt;/lem&gt;</span></br>
-				<span class="element" style="padding-left: 20px">&lt;rdg <span class="attribute">wit="#V"</span> <span class="attribute">type="omit"</span>/&gt;</span><br/>
+				<span class="element" style="padding-left: 20px">&lt;rdg <span class="attribute">wit="#V"</span> <span class="attribute">type="om."</span>/&gt;</span><br/>
 			<span class="element">&lt;/app&gt;</span><br/>
 		</div>
 		</section>
@@ -77,11 +77,11 @@ Jeffrey C. Witt (Loyola University Maryland)
 		<div class="xml-block">
 			<span class="element">&lt;app&gt;</span><br/>
 				<span class="element" style="padding-left: 20px">&lt;lem&gt;</span>fides<span class="element">&lt;/lem&gt;</span><br/>
-				<span class="element" style="padding-left: 20px">&lt;rdg <span class="attribute">wit="#V"</span> <span class="attribute">type="correction-substitution"</span>&gt;</span><br/>
-					<span class="element" style="padding-left: 40px">&lt;subst&gt;</span><br/>
+				<span class="element" style="padding-left: 20px">&lt;rdg <span class="attribute">wit="#V"</span> <span class="attribute">type="corrReplace"</span>&gt;</span><br/>
+					<span class="element" style="padding-left: 40px">&lt;corr&gt;</span><br/>
 						<span class="element" style="padding-left: 60px">&lt;del&gt;</span>fidem<span class="element">&lt;del&gt;</span><br/>
 						<span class="element" style="padding-left: 60px">&lt;add&gt;</span>fides<span class="element">&lt;add&gt;</span><br/>
-					<span class="element" style="padding-left: 40px">&lt;/subst&gt;</span><br/>
+					<span class="element" style="padding-left: 40px">&lt;/corr&gt;</span><br/>
 				<span class="element" style="padding-left: 20px">&lt;/rdg&gt;</span><br/>
 			<span class="element">&lt;/app&gt;</span><br/>
 		</div>
@@ -93,7 +93,7 @@ Jeffrey C. Witt (Loyola University Maryland)
 		<h2>Semantic encoding and new possibilities</h2>
 		<p>Because we are encoding data types and not presentation forms...</p>
 		<p>And because our digital representation allows us to transcend the concerns of limited space...</p>
-		<p>We can add additional data to our apparatus criticus that is simply not possible in the printed editions.</p> 
+		<p>We can add additional data to our apparatus criticus that is simply not possible in printed editions.</p> 
 	</section>
 	<section>
 		<h3>For example, we can add a note specific to each apparatus entry.</h3>
@@ -108,18 +108,18 @@ Jeffrey C. Witt (Loyola University Maryland)
 		</div>
 	</section>
 	<section>
-		<h3>We all this is in place, we can render the critical apparatus as seen in this demo:</h3>
+		<h3>With all this is in place, we can render the critical apparatus as seen in this demo:</h3>
 		<iframe width="740" height="450" src="https://www.youtube.com/embed/5zC1ZoEdw8Q" frameborder="0" allowfullscreen></iframe>
 	</section>
 	<section>
 		<h2>A note on the state of development</h2>
 		<p>It needs to be noted that while we can offer some guidelines about how to 
-		semantically encode an apparatus, these guidelines are very much a work in progress</p>
+		semantically encode an apparatus, these guidelines are very much a work in progress.</p>
 	</section>
 	<section>	
-		<p>My goal and the goal of the groups I work with is to help provide guidelines that can standardize this progress as much as possible</p>
+		<p>My goal and the goal of the groups I work with is to help provide guidelines that can standardize this progress as much as possible.</p>
 		<p>Our work is advanced by partnering with groups who are committed to semantic encoding.</p>
-		<p>As you encounter new use cases and encoding problems, we can develop an increasingly robust set of guidelines and best practices</p>
+		<p>As you encounter new use cases and encoding problems, we can develop an increasingly robust set of guidelines and best practices.</p>
 		<p>But the point is that this is a partnership, in which we develop together.</p>
 		<p>This means we will encounter encoding issues to which I cannot give you a direct answer.</p>
 		<p>But if you can log your encoding issue into our system, we can develop a feature request and work to support this or that data type.</p>
@@ -135,12 +135,12 @@ Jeffrey C. Witt (Loyola University Maryland)
 				<span class="element" style="padding-left: 40px">&lt;hi <span class="attribute">rend="italic"</span>&gt;</span>corr ex.<span class="element">&lt;/hi&gt;</span> interl. fidem<span class="element" style="padding-left: 20px">&lt;/rdg&gt;</span><br/>
 			<span class="element">&lt;/app&gt;</span><br/>
 		</div>
-		<p>Note: This is BAD Semantic encoding. It should not be encouraged. But it is a method we can use as we collect information about various use cases. Each @type=manual because an instance that alerts us to the need to create an abstract data type.</p>
+		<p>Note: This is BAD Semantic encoding. It should not be encouraged. But it is a method we can use as we collect information about various use cases. Each @type=manual becomes an instance that alerts us to the need to create an abstract data type.</p>
 	</section>
 	<section>
 		<h2>Feature Requests and Encoding Questions</h2>
-		<p>Feature requests and encoding questions can be asked here: <a href="https://github.com/lombardpress/lombardpress-schema/issues">https://github.com/lombardpress/lombardpress-schema/issues</a> All you need to is create a new issue and describe your ecoding problem. It's a ideal if you can add a screen shot of the encoding problem you are facing.</p>
-		<p>Every time you are tempted to create an @type=manual you should create an issue asking if there is proper type for the variant instance you are currently dealing with.</p>
+		<p>Feature requests and encoding questions can be asked here: <a href="https://github.com/lombardpress/lombardpress-schema/issues">https://github.com/lombardpress/lombardpress-schema/issues</a>. All you need to do is create a new issue and describe your encoding problem. It is ideal if you can add a screen shot of the encoding problem you are facing.</p>
+		<p>Every time you are tempted to create an @type=manual, you should create an issue asking if there is proper type for the variant instance you are currently dealing with.</p>
 	</section>
 	<section>
 		<h3>The emerging form of organizational oversight for editorial schema</h3>
@@ -155,7 +155,7 @@ Jeffrey C. Witt (Loyola University Maryland)
 			<li>Sentences Commentary Meeting, Basel, Switzerland, August 15th-19th</li>
 		</ul>
 		<p>The point is that a lot of work is currently on-going. And there is a lot of energy behind it.</p>
-		<p>If your team commit to this approach, we can leverage your interest and you can have a major voice at the table.</p>
+		<p>If your team commits to this approach, we can leverage your interest and you can have a major voice at the table.</p>
 		<p>For example, it would be ideal to meet on a yearly basis to develop our encoding standards. Next summer, it would be great to have a representative from the Petrus Hispanus project at each of these standards meetings.</p>
 	</section>
 </section>
@@ -164,7 +164,7 @@ Jeffrey C. Witt (Loyola University Maryland)
 		<h2>Encoding the Apparatus Fontium</h2>
 	</section>
 	<section>
-		<h2>There are two major types of data in a critical editions that usually get linked to an apparatus fontium</h2>
+		<h2>There are two major types of data in a critical edition that usually get linked to an apparatus fontium.</h2>
 		<ul>
 			<li>Quotations</li>
 			<li>References</li>
