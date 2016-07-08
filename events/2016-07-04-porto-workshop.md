@@ -125,7 +125,7 @@ Articles:
 
 ### **15:00-15:30**: Break
 
-#### **15:30-16:30**: *Hands On Session* Creating A Project Data File and Organizing Your Files
+### **15:30-16:30**: *Hands On Session* Creating A Project Data File and Organizing Your Files
 
 ### **16:30-17:00**: Questions
 
