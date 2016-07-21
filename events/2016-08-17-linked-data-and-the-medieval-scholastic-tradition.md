@@ -18,12 +18,13 @@ This workshop aims to bring together stake holders from a variety of projects in
 ## Represented research groups, projects, and stakeholders
 
 * [SIEMP repertory of commentaries on Peter Lombard’s Sentences](https://rcs.philsem.unibas.ch/)
-* Basel Digital Humanities Lab
 * [The Sentences Commentary Text Archive](http://scta.info)
 * [LombardPress](http://lombardpress.org)
-* [Petrus Hispanus Project](http://ifilosofia.up.pt/meirinhos/petrushispanus/projeto_fct_2016_2019)
+* [Representation and Reality](http://representationandreality.gu.se)
+* [Basel Digital Humanities Lab](http://dhlab.unibas.ch/)
 * [The THESIS project](http://www.thesis-project.ro/)
-* [IRHT](http://www.irht.cnrs.fr/)
+* [Fragmentarium](http://fragmentarium.ms)
+* [Petrus Hispanus Project](http://ifilosofia.up.pt/meirinhos/petrushispanus/projeto_fct_2016_2019)
 
 ## Provisional Agenda
 
