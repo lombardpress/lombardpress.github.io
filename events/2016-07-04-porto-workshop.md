@@ -1,9 +1,8 @@
 ---
 layout: page
-title: LombardPress Events
+title: Petrus Hispansu Project Workshop
 ---
 
-Document Status: First Draft
 
 # 2016 Petrus Hispanus Project Workshop
 

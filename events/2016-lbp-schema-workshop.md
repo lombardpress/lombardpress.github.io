@@ -14,31 +14,31 @@ July 12th-14th, 2016, Barcelona, Spain
 
 9–10am Welcome, Introduction to SCTA and LombardPress and Agenda
 
-10:15am–12:00pm The teiHeader
+10:15am–12:00pm The Critical Apparatus
 
 12-1pm Lunch
 
-1-4pm Diplomatic Transcriptions
+1-4pm The Critical Apparatus
 
 4-5pm Re-Cap and Discussion 
 
 ## Wednesday, July 13th
 
-9am-12pm Diplomatic Transcriptions (Continued)
+9am-12pm The Apparatus Fontium
 
 12-1pm Lunch
 
-1–4pm Critical Transcriptions
+1–4pm Sources and Citations (presentation by Michael Stenskjær Christensen)
 
 4-5pm Re-Cap and Discussion 
 
 ## Thursday, July 14th 
 
-9am-12pm Critical Transcriptions (Continued)
+9am-12pm Diplomatic Transcriptions
 
 12-1pm Lunch
 
-1–4pm Documentation
+1–4pm The Tei Header
 
 4-5pm Development Roadmap 
 
