@@ -2,7 +2,7 @@
 layout: page
 title: Linked Data and the Medieval Scholastic Tradition
 redirect_from:
-  - /scholastic-linked-data
+  - scholastic-linked-data
 ---
 
 Document Status: First Draft
