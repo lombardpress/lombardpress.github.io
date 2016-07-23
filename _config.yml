@@ -27,3 +27,4 @@ exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'vendor', 'Procfile', 'Rakefil
 # gems
 gems:
   - jekyll-babel
+  - jekyll-redirect-from

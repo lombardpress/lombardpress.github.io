@@ -7,5 +7,6 @@ gem 'rake'
 gem 'puma'
 
 gem 'jekyll-babel'
+gem 'jekyll-redirect-from'
 
 gem 'rack-rewrite'

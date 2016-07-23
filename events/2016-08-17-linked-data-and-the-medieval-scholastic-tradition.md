@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Linked Data and the Medieval Scholastic Tradition
+redirect_from:
+  - /scholastic-linked-data
 ---
 
 Document Status: First Draft
@@ -8,7 +10,9 @@ Document Status: First Draft
 # Linked Data and the Medieval Scholastic Tradition
 
 Dates: August 17-19, 2016
+
 Location: Basel, Switzerland
+
 Sponsored by: The University of Basel
 
 ## Abstract 
