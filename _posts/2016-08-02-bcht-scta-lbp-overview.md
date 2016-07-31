@@ -84,6 +84,8 @@ The result of crawling these documents can be viewed in our database visualizati
 
 This database becomes a service that makes multiple web applications possible. One such application is the LombardPress web publication framework. LombardPress is simply one application that knows how to query the underlying public database for the information it needs in order to create a unique reading environment. See for example: [http://scta.lombardpress.org](http://scta.lombardpress.org).
 
+![](/assets/images/porto-slides/plaoul-with-images-example.png)
+
 ![](/assets/images/porto-slides/lbp-quotedBy-display.png)
 
 ![](/assets/images/porto-slides/lbp-with-app.png)
