@@ -1,8 +1,12 @@
 ---
 layout: post
 title:  SCTA, LombardPress, and the Sentences Commentary Corpus
-date:   2016-07-01
+date:   2016-07-31
+redirect_from:
+  - bcht2016
 ---
+
+The following is a version of the presentation given at: *The Boston Colloquy on Historical Theology*, August 2nd, 2016, at Boston College, Boston, MA
 
 # Introduction: The Power and Potential of Data Re-Use
 
@@ -13,8 +17,9 @@ Some of our goals include the following:
 * We want to create environments (plural) where users can freely access the entire corpus of *Sentences* commentaries at the touch of a button.
     - This includes both online reading environments, traditional printed critical editions, as well more abstract data visualization environments.
 * We want to make the corpus searchable and to be able to filter those results by a variety of parameters.
-    - For example, we want to be able to search for a word or phrase, and then filter those results by century, by author, or the region the author was working, or the Order to which the author belonged. Or further, we want to be able to search across works and filter by parts of a *Sentences* commentary, such as searching only prologues, or only distinction 1s, or distinction 17s.
-* We also want to link the critical text to diplomatic transcriptions of text witness and to images of those witnesses.
+    - For example, we want to be able to search for a word or phrase, and then filter those results by century, by author, or the region in which the author was working, or the Order to which the author belonged. 
+    - Further, we want to be able to search across works and filter by parts of a *Sentences* commentary, such as searching only prologues, or only distinction 1s, or distinction 17s.
+* We also want to link the critical text to diplomatic transcriptions of text witnesses and to the images of those witnesses.
     - These kinds of connections open up further search possibilities, such as the ability to search not only for every instance of a name, such as Robert Holcot, but to filter by various spelling of Robert Holcot, or to generate a list of spellings of a name according to region: in other words, to see all the instances of Robert Holcot in manuscripts written by a German hand.
 * And very much like the GRPL, we want to create the infrastructure in which the deep interconnected nature of the *Sentences* commentary tradition (and the scholastic tradition in general) can become transparent and traceable both by the human reader and computer applications.
     - For example, we want to be able begin at a particular quotation, such as Hebrews 11:1, and then see every instance of this quotation in the entire corpus. 
@@ -31,11 +36,11 @@ Our approach has been to radically separate the data we are producing (that is o
 
 This why there are two different names for conceptually distinct and separable parts of our work. 
 
-On the one hand, there is what we have, up until now called the *Sentences Commentary Text Archive*. This name will mostly like change to the more generic *Scholastic Commentaries and Texts Archive*, so that we can expand our models to other scholastic works. 
+On the one hand, there is what we have, up until now called the *Sentences Commentary Text Archive*. This name is now being changed to the more generic *Scholastic Commentaries and Texts Archive* so that we can expand our models to other scholastic works. 
 
 This archive is composed of two pieces, the storage of the raw data (that is our editions abstracted from any "presentational form") and a database of millions of pieces of metadata that allow us to offer the kinds of connections and searches described above. At a very simple level, it functions like a machine readable library catalog that other computer applications can read and use to request various parts of the corpus in order to do further things with that information. 
 
-LombardPress-Web is the name we have given to one such completely different application that knows how to read this database. LombardPress-Web queries this data for the information it needs and the displays the results and the text in web environment for interested readers to read and search.
+LombardPress-Web is the name we have given to one such completely different application that knows how to read this database. LombardPress-Web queries this data for the information it needs and the displays the results and the text in a web environment for interested readers to read and search.
 
 I'll turn to some examples of this momentarily, but I want to stop here and emphasize how this addresses the above problem. When you visit the LombardPress-Web platform, it may look and feel as though you are visiting a website on a server that contains lots of texts and images.
 
@@ -45,17 +50,15 @@ This means the text you see on one website is not locked or siloed in that websi
 
 So, in the case of our collaboration with the GRPL, it would be a shame for each project to be re-editing and re-encoding the same text. Nevertheless I think we have both made really interesting websites and it would be shame to force all our editions to be viewed in one and only one reading environment. 
 
-Instead, it would be ideal if we could commit to separating our editions from being locked into one print version, one website, or one presentational form. By abstracting our editions from their presentational form, we can, through our collective editorial work, contribute to a single connected corpus, from which we can then request any information we want and render or display it in any format that suits our purposes or needs. 
+Instead, it would be ideal if we could commit to separating our editions from being locked into one print version, one website, or one presentational form. By abstracting our editions from their presentational form, we can, through our collective editorial work, contribute to a single connected corpus, from which we can request any information we want and then render or display that information in any format that suits our purposes or needs. 
 
 ## Examples and Demonstrations
 
 With that in mind let me close by offering some examples of how this kind of data re-use works in our case.
 
-### Database Build
-
-![dbbuild](/assets/images/Screen-Shot-2015-09-07-at-1.03.42-PM.png)
-
 ### LombardPress Print
+
+First, it should be emphasized again that our approach is in now way opposed to the goal of creating beautiful traditional print books. Here are some examples of the output we can produce.
 
 ![](/assets/images/porto-slides/typeset-print-edition.jpg)
 
@@ -63,7 +66,23 @@ With that in mind let me close by offering some examples of how this kind of dat
 
 ![](/assets/images/example-lbp-print-output.png)
 
+However, what we do want to insist on is that, in the process of creating a great book, we need to prioritize the creation of great data before focusing on how that data will be displayed in a printed format. When we commit to creating great semantically encoded, machine readable data, we can automatically create beautiful books and simultaneously enable other kinds of possibilities.
+
+### Database Build
+
+The screen shot below is an example of what we can do, once our editions are "semantically" encoded and machine readable. This program is crawling all of the files that are used to create print editions. As it crawls this data it is constructing a database that can be used as a service by other applications.
+
+![dbbuild](/assets/images/Screen-Shot-2015-09-07-at-1.03.42-PM.png)
+
+### Database Visualization
+
+The result of crawling these documents can be viewed in our database visualization at [http://scta.info](http://scta.info).
+
+![db-result](/assets/images/scta-db-visualization.png)
+
 ### LombardPress Web
+
+This database becomes a service that makes multiple web applications possible. One such application is the LombardPress web publication framework. LombardPress is simply one application that knows how to query the underlying public database for the information it needs in order to create a unique reading environment. See for example: [http://scta.lombardpress.org](http://scta.lombardpress.org).
 
 ![](/assets/images/porto-slides/lbp-quotedBy-display.png)
 
@@ -75,12 +94,15 @@ With that in mind let me close by offering some examples of how this kind of dat
 
 ### Mirador
 
+But the important point is that this information is not locked into the the LombardPress application. Other applications can also request information from same public database and create alternative reading environments. One such example is Mirador. See for example: [http://miradorlab.scta.info](http://miradorlab.scta.info) and [http://projectmirador.org](http://projectmirador.org)
+
 ![](/assets/images/2016-04-16-iiif-webmentions/mirador-view-after-search.png)
 
 ![](/assets/images/porto-slides/mirador-manifest-list.png)
 
-
 ### SCTA Statistics
+
+Another application can choose to display abstract statistics rather than texts.
 
 ![](/assets/images/Screen-Shot-2016-03-24-at-10.52.34-AM.png)
 
@@ -90,6 +112,8 @@ With that in mind let me close by offering some examples of how this kind of dat
 
 
 ### Basic System Overview
+
+Below is a basic visualization of the separation of core services from applications that ultimately display information to the end user. 
 
 ![lbp-flow2](/assets/images/lbp-flow2.jpg)
 
