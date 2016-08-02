@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  SCTA, LombardPress, and the Sentences Commentary Corpus
-date:   2016-07-31
+date:   2016-08-02
 redirect_from:
   - bcht2016
 ---
