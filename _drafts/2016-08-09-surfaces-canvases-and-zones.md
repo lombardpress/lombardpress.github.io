@@ -98,11 +98,11 @@ A Surface can be expected to have the following set of properties
   - canvasWidth
   - canvasTop (the offset against the Surface coordinates)
   - canvasLeft (the offset against the Surface coordinates)
-    - Normally, these canvasHeight, canvasWidth should be identical with the ISurface width and ISurface height and canvasTop and canvasLeft should be 0. These properties are required because of the contingency when a canvas has identified with a set of facing pages rather than with an individual surface. The second set of coordinates is required to adjust all zone coordinates in such a cases. We consider it bad practice when an institutions mints such canvases, but we have no control over whether or not they do so.
+    - Normally, these canvasHeight, canvasWidth properties should be identical with the ISurface width and ISurface height. Likewise, canvasTop and canvasLeft should normally be 0. These properties are required because of the contingency when a canvas has been identified with a set of facing pages rather than with an individual surface. The second set of coordinates is required to adjust all zone coordinates in such a cases. Zone coordinate should always be relative the **Surface** which should only ever represent a folio side or page. Again, we consider it bad practice when an institution mints such canvases, but we have no control over whether or not they do so.
 
   - hasAnnotationList (multiple)
   - hasTranscription (multiple)
-  - hasCanonicalTranscription
+  - hasCanonicalTranscription (single)
 
 ## Image
 
@@ -134,9 +134,9 @@ Basic information required by IIIF should be listed here
 
 - isOnSurface (single)
 - isZoneFor (multiple)
-  - should be point to the transcription or transcriptions this is zone for
+  - should be point to the transcription or transcriptions this is zone for. Rival transcriptions of the same entity should be pointing to identical zone resources rather than re-creating a new zone.
 - lrx
-  - coordinates should all be given as abstract units relative the **Manifestation Surface** coordinates
+  - coordinates should always be given as abstract units relative the **Manifestation Surface** coordinates
 - lry
 - ulx
 - uly
