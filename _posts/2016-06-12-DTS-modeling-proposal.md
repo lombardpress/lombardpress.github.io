@@ -2,6 +2,7 @@
 layout: post
 title:  A Distributed Text Service Modeling Proposal - case study of the scta ontology and api
 date:   2016-06-12
+comments: true
 ---
 
 DOCUMENT STATUS: Public Draft
@@ -12,9 +13,9 @@ What follows is an attempt to describe the movement from an abstract data model 
 
 I will first provide a general overview of the abstract data model (visually represented here: [https://raw.githubusercontent.com/scta/scta-ontology/master/SCTASCHEMA3.png](https://raw.githubusercontent.com/scta/scta-ontology/master/SCTASCHEMA3.png)) and how this model can be translated into a set of classes and subclasses that take on a logical and predictable set of properties suited to their class type (described here[https://github.com/scta/scta-ontology/blob/master/SCTAOntologySpec.md](https://github.com/scta/scta-ontology/blob/master/SCTAOntologySpec.md))
 
-Second, I will turn to a mock serialization of this same information that will illustrate how a web application could efficiently consume and display this information while minimizing HTTP requests. 
+Second, I will turn to a mock serialization of this same information that will illustrate how a web application could efficiently consume and display this information while minimizing HTTP requests.
 
-In the end, I’ll demonstrate this entire movement from data model to serialization to web application consumption for a number of common resource types. 
+In the end, I’ll demonstrate this entire movement from data model to serialization to web application consumption for a number of common resource types.
 
 # 1.  Data Model and Semantic Properties
 
@@ -26,20 +27,20 @@ The model begins from the concept of a top level **WorkGroup**. A top level **Wo
 
 Right away, it should be noted that this is a departure from the way CTS (Canonical Text Services) has understood the term **Work** (see: [http://www.homermultitext.org/hmt-docs/specifications/ctsurn/specification.html](http://www.homermultitext.org/hmt-docs/specifications/ctsurn/specification.html). While CTS has claimed an equivalence between a FRBR **Work** and a CTS **Work**, I have opted for a different approach.
 
-CTS states: 
+CTS states:
 
 >Within a text group, a CTS URN’s work is a conceptual entity, like the FRBR work: it is an abstract idea of the content expressed in all versions of a work, in the original language or in translation. [http://www.homermultitext.org/hmt-docs/specifications/ctsurn/specification.html](http://www.homermultitext.org/hmt-docs/specifications/ctsurn/specification.html_)
 
 CTS moves directly from CTS **Work** to CTS **Version** which it identifies with a FRBR **Expression**, and from CTS **Versions** to CTS **Exemplars** which it identifies with FRBR **Items**. Missing from this, as CTS notes, is the concept of FRBR **Manifestation**.
 
-Thus, we have the following alignment: 
+Thus, we have the following alignment:
 
 FRBR Work | CTS Work
-FRBR Expression | CTS Version 
-FRBR Manifestation | 
+FRBR Expression | CTS Version
+FRBR Manifestation |
 FRBR Item | CTS Exemplar
 
-This close, but not exact, alignment of the two models seems to be the source of great confusion, and I think we need to create a remapping and then revert to the FRBR language. 
+This close, but not exact, alignment of the two models seems to be the source of great confusion, and I think we need to create a remapping and then revert to the FRBR language.
 
 In brief, I think the deep abstractness of the FRBR **Work** is under appreciated. Likewise, our familiarity with the colloquial use of the word “work” to refer to an artistic creation that appears in a certain form (i.e. a book), inclines us to identify FRBR **Work** with what CTS means by **Work**. But in actual fact what CTS usually means by **Work** more closely parallels what FRBR means by **Expression**.
 
@@ -50,7 +51,7 @@ Below are the brief descriptions that FRBR gives for a FRBR **Work** and FRBR **
 
 Critical in the definition of a FRBR **Work** is the phrase: considered “apart from all ways of expressing it.” Here we are very far from any notion of a text (a FRBR **Expression**) much less the idea of a typeset book (a FRBR **Manifestation**) and even further from the notion of a particular instance of a FRBR **Manifestation** in a library or bookshop somewhere in the world (a FRBR **Item**).
 
-The idea of *Moby Dick* can be expressed in multiple ways. It can be expressed as a novel or as a screen-play. Each of these are separate FRBR **Expressions** that, as of yet, have made no reference to a particular edition or version. They are still just ideas. Each of these **Expressions** can then manifest themselves in different ways. 
+The idea of *Moby Dick* can be expressed in multiple ways. It can be expressed as a novel or as a screen-play. Each of these are separate FRBR **Expressions** that, as of yet, have made no reference to a particular edition or version. They are still just ideas. Each of these **Expressions** can then manifest themselves in different ways.
 
 Thus from the outset I think we need a realignment of the two models that contradicts that alignment proposed by CTS.
 
@@ -58,19 +59,19 @@ Instead of:
 
 FRBR Work | CTS Work
 FRBR Expression | CTS Version
-FRBR Manifestation | 
+FRBR Manifestation |
 FRBR Item | CTS Exemplar
 
 we should adopt the following alignment:
 
-FRBR Work | 
+FRBR Work |
 FRBR Expression | CTS Work
 FRBR Manifestation | CTS Version
 FRBR Item | CTS Exemplar
 
 I pause here to provide one last real world justification for this correction:
 
-Adam Wodeham's Oxford Ordinatio Commentary on the Sentences of Peter Lombard is a FRBR **Work** as I understand it. 
+Adam Wodeham's Oxford Ordinatio Commentary on the Sentences of Peter Lombard is a FRBR **Work** as I understand it.
 
 But this **Work** was expressed by Wodeham in the 1330's as his own written expression. For moment let us call this Adam Wodeham’s "Original Expression."
 
@@ -82,9 +83,9 @@ We cannot simply call these CTS **Versions** or FRBR **Manifestations** because 
 
 ## B.  Expressions and OHCO
 
-Once at the FRBR **Expression**, we have reached what we most commonly think of as the abstract text without yet specifying a particular material instantiation, version, or edition of that text. A good indicator that one has reached the FRBR **Expression** level is that the “text” can be broken down into a hierarchy. No such hierarchy is possible when discussing a FRBR **Work** because the idea has not been expressed in any form. A hierarchy only forms, when an author tries to express that idea. Accordingly, the hierarchies will likely differ in two different **Expressions** of the same **Work**. 
+Once at the FRBR **Expression**, we have reached what we most commonly think of as the abstract text without yet specifying a particular material instantiation, version, or edition of that text. A good indicator that one has reached the FRBR **Expression** level is that the “text” can be broken down into a hierarchy. No such hierarchy is possible when discussing a FRBR **Work** because the idea has not been expressed in any form. A hierarchy only forms, when an author tries to express that idea. Accordingly, the hierarchies will likely differ in two different **Expressions** of the same **Work**.
 
-Once at the **Expression** level, the existing text hierarchy makes it possible to construct a matrix, where FRBR concepts continue to run along the X axis and the hierarchy division runs down the 
+Once at the **Expression** level, the existing text hierarchy makes it possible to construct a matrix, where FRBR concepts continue to run along the X axis and the hierarchy division runs down the
 Y axis. Thus, each unit within the FRBR **Expression** hierarchy can have FRBR **Manifestations** and FRBR **Items**.
 
 While the hierarchy of a text is often unique to the **Expression** or to **Expressions** within a similar **WorkGroup**, it is possible to abstract from the details of the hierarchy and identify common patterns within any given hierarchy. Two obvious examples of this are the top level of the **Expression** hierarchy and the bottom level of the hierarchy. Every hierarchy, no matter how big or small, simple or complicated, will have a top level **Expression** and a bottom level **Expression**. Moreover, we can expect that these kinds of **Expressions** will have features or properties unique to their type. For example, a top level **Expression** will, by definition, never have a *isPartOfTopLevelExpression* property because there are no **Expressions** containing it. Likewise, a bottom level **Expression** will never have a *hasPart* property because it is the lowest level of the hierarchy and therefore there are no more parts to be contained.
@@ -93,7 +94,7 @@ While the hierarchy of a text is often unique to the **Expression** or to **Expr
 
 The desire to identify general classes of resources within an **Expression** hierarchy while remaining agnostic about the actual hierarchy of any given **Expression** is the impetus behind the associated properties I refer to as *structureTypes* and *levels*.
 
-The *structureType* property is used to divide a hierarchy, no matter its actual structure, into three privileged parts. A top level Expression (as we will see below, normally a top level *structureCollection*), a *structureItem* level, and *structureBlock* level. 
+The *structureType* property is used to divide a hierarchy, no matter its actual structure, into three privileged parts. A top level Expression (as we will see below, normally a top level *structureCollection*), a *structureItem* level, and *structureBlock* level.
 
 Let’s consider first the *structureItem* division. This division, perhaps despite appearances, actually follows an established and traditional practice of dividing an **Expression** into a privileged set of units. In most books, this is the chapter division level. Consider the formatting of most monographs. Though there may be sections within books that contain chapters, and though chapters may contain many subdivisions, the chapter division is privileged. The chapter division gets a new page and a grand heading in a way that subdivisions do not. Likewise, if paragraph numbers, line numbers, or note numbers, get counted the numbering usually restarts at these privileged points in the **Expression** hierarchy. This seems to be clear evidence that this division within the hierarchy is being privileged. This privileging is not without good reason. It allows us, no matter how complicated the hierarchy of a text, to quickly jump from the top level **Expression** to exhaustively access all of the discrete sections within a text without having to loop through an unknown number of nested divisions.
 
@@ -105,7 +106,7 @@ Besides *structureItem* and *structureBlock*, we also use the notion of a *struc
 
 A *structureCollection* is any section that stands above the *structureItem* level. These types help create predictable properties. Any **Expression** designated as a *structureCollection* would be expected to list all the *structureItems* it contains.
 
-In this case, a top level **Expression** would also be a *structureCollection*. It would be differentiated from any other sub sections that are also *structureCollections* because it alone has a level property whose value equals “1”. 
+In this case, a top level **Expression** would also be a *structureCollection*. It would be differentiated from any other sub sections that are also *structureCollections* because it alone has a level property whose value equals “1”.
 
 Any *structureCollection* whose level property does not equal 1 would be expect to also have a property *isPartOfTopLevelExpression*.
 
@@ -113,17 +114,17 @@ A *structureDivision* is similar. It represents a section in the hierarchy that 
 
 ## C.  Manifestations
 
-FRBR **Manifestations** should now exist at every level of the **Expression** hierarchy. They can be associated through predictable properties. Each **Expression** can take a *hasManifestation* property and each **Manifestation** can take an *isManifestationOf* property. 
+FRBR **Manifestations** should now exist at every level of the **Expression** hierarchy. They can be associated through predictable properties. Each **Expression** can take a *hasManifestation* property and each **Manifestation** can take an *isManifestationOf* property.
 
-**Manifestations** now bring us closer to the familiar CTS **Version**, but these versions vary in type. A **Manifestation** could be a manuscript, an early modern printing, a modern critical edition, or even a born digital critical edition. 
+**Manifestations** now bring us closer to the familiar CTS **Version**, but these versions vary in type. A **Manifestation** could be a manuscript, an early modern printing, a modern critical edition, or even a born digital critical edition.
 
-It’s important to remember that even though a **Manifestation** is beginning to point to a physical or material representation of an **Expression**, it is nevertheless still an idea and not a physical object. We are referring here to the idea of the physical representation of an **Expression**. Thus when we talk about the 1512 printing of a given **Expression**, we are not talking about the **Item** of the 1512 printing in the British Library or in the Harvard University Library. 
+It’s important to remember that even though a **Manifestation** is beginning to point to a physical or material representation of an **Expression**, it is nevertheless still an idea and not a physical object. We are referring here to the idea of the physical representation of an **Expression**. Thus when we talk about the 1512 printing of a given **Expression**, we are not talking about the **Item** of the 1512 printing in the British Library or in the Harvard University Library.
 
-This is easier to see in the case of printed books, but harder to see in the case of a manuscript, which by definition will have only one material instantiation (or FRBR **Item**). Nevertheless, the conceptual distinction is important. The **Manifestation** that has the *manifestationType* manuscript will have one and only one material instantiation, whereas the **Manifestation** that has the *manifestationType* of a printed book will have several, if not thousands, of material instantiations. 
+This is easier to see in the case of printed books, but harder to see in the case of a manuscript, which by definition will have only one material instantiation (or FRBR **Item**). Nevertheless, the conceptual distinction is important. The **Manifestation** that has the *manifestationType* manuscript will have one and only one material instantiation, whereas the **Manifestation** that has the *manifestationType* of a printed book will have several, if not thousands, of material instantiations.
 
 Finally, we must also include a space here for born digital **Manifestations** of an **Expression**. The new practice of building born-digital critical editions of **Expressions** is a good example. This means that we have a **Manifestation** that corresponds to no physical material object. And it is of course tempting here associate this **Manifestation** with the actual digital file. But we must resist this temptation and continue to remember that the **Manifestation** is still an idea of how to materially represent (in this case, encode) a given **Expression**. It is the idea of a particular edition that may either have a material object or digital transcriptions standing as an instantiations of that idea.
 
-In concrete, a **Manifestation** should inherit the *structureType* of the **Expression** it *isManifestationOf*. Moreover, a **Manifestation** should take on properties specific to a **Manifestation**. A **Manifestation** should have a *manifestationType* that indicates whether it is a manuscript, early printing, modern critical edition, or born digital critical edition. Other properties and constraints specific to each type of **Manifestation** could then be added. 
+In concrete, a **Manifestation** should inherit the *structureType* of the **Expression** it *isManifestationOf*. Moreover, a **Manifestation** should take on properties specific to a **Manifestation**. A **Manifestation** should have a *manifestationType* that indicates whether it is a manuscript, early printing, modern critical edition, or born digital critical edition. Other properties and constraints specific to each type of **Manifestation** could then be added.
 
 Finally, a **Manifestation** should also point to FRBR **Items**. For reasons to be explained below we divide these associations into two types, *hasMaterialObject* and *hasTranscription*.
 
@@ -133,17 +134,17 @@ There seems to be something conceptually correct about identifying a digital tra
 
 Nevertheless, the digital transcription is also so different from the material instantiation that we felt it best to split the FRBR **Item** class into two subclasses: the **MaterialObject** and the **Transcription**.
 
-The **MaterialObject** should be a record that has the appropriate properties to locate and describe the material book in this or that particular library. 
+The **MaterialObject** should be a record that has the appropriate properties to locate and describe the material book in this or that particular library.
 
-My focus here will be on the **Transcription** subclass. 
+My focus here will be on the **Transcription** subclass.
 
-As mentioned above, the **Transcription** resource is not an actual digital file. Rather it is a resource that contains properties that can direct a client to the raw text representing this transcription in various file formats, the most obvious being XML. The *hasXML* property should point directly to the raw TEI file, which when requested through a traditional HTTP request returns exactly that: a TEI file. 
+As mentioned above, the **Transcription** resource is not an actual digital file. Rather it is a resource that contains properties that can direct a client to the raw text representing this transcription in various file formats, the most obvious being XML. The *hasXML* property should point directly to the raw TEI file, which when requested through a traditional HTTP request returns exactly that: a TEI file.
 
-Keep in mind that the the **Transcription** resource continues to inherit its hierarchical position from the **Expression** to which it is connected. It will rarely be the case then that separate source TEI XML files are produced for every **Expression** level. Rather, a **Document** or file will exist corresponding to some level of the **Expression** hierarchy. I find that it generally makes the most sense to divide my **Documents** at the *structureItem level*. This mean that the raw XML for a **Transcription** corresponding to *structureCollection* level will actually be composed from several documents. I expect that the *hasXML* property would point to a XML TEI document that is composed dynamically from the **Documents** required for its composition. Thus the *hasDocument* property should point to the XML **Documents** from which this **Transcription's** raw XML TEI document was dynamically composed. 
+Keep in mind that the the **Transcription** resource continues to inherit its hierarchical position from the **Expression** to which it is connected. It will rarely be the case then that separate source TEI XML files are produced for every **Expression** level. Rather, a **Document** or file will exist corresponding to some level of the **Expression** hierarchy. I find that it generally makes the most sense to divide my **Documents** at the *structureItem level*. This mean that the raw XML for a **Transcription** corresponding to *structureCollection* level will actually be composed from several documents. I expect that the *hasXML* property would point to a XML TEI document that is composed dynamically from the **Documents** required for its composition. Thus the *hasDocument* property should point to the XML **Documents** from which this **Transcription's** raw XML TEI document was dynamically composed.
 
 The same situation occurs for a *structureDivision* and *structureBlock*. The *hasXML* property should point to a raw XML file that is dynamically constructed from selecting a part of the **Document** in which the raw source XML is contained. In this case, there should only be one *hasDocument* property and it should point to the XML **Document** from which the raw XML for this **Transcription** was pulled and dynamically reconstructed.
 
-The **Transcription** resource could also point to a number of other encoding serializations such as HTML or JSON or PlainText with parallel properties like *hasHTML*, *hasJSON*, or *hasPlainText*. 
+The **Transcription** resource could also point to a number of other encoding serializations such as HTML or JSON or PlainText with parallel properties like *hasHTML*, *hasJSON*, or *hasPlainText*.
 
 # 2.  Serialization for a API consuming client
 
@@ -209,7 +210,7 @@ Let’s start with a top level **WorkGroup**. A simple request for a top level *
       ]
     }
 
-This can be displayed as follows: 
+This can be displayed as follows:
 
 ![top level work group]({{ site.baseurl }}/assets/images/2016-06-30-DTS-modeling-proposal/top-level-workGroup.png)
 
@@ -291,7 +292,7 @@ The next serialization shows the jsonld response for a top level **Expression**:
       "structureType": "collection",
       "level": "1",
       "isPartOf": "http://scta.info/resource/sententia",
-      "canonicalManifestation": 
+      "canonicalManifestation":
         {
             "@id": "http://scta.info/resource/plaoulcommentary/critical",
             "title": "Critical Edition for Plaoul Commentary",
@@ -395,7 +396,7 @@ The next serialization shows the jsonld response for a top level **Expression**:
             "gitRepo": "http://bitbucket.org/jeffreycwitt/lectio4"
         },
         {
-            "@id": "http://scta.info/resource/lectio5", 
+            "@id": "http://scta.info/resource/lectio5",
             "title": "Lectio 5",
             "status": "Draft",
             "gitRepo": "http://bitbucket.org/jeffreycwitt/lectio5"
@@ -438,7 +439,7 @@ Finally, we can illustrate what the jsonld might look like for a non top-level *
       "isPartOf": "http://scta.info/resource/deFide",
       "topLevelExpression": "http://scta.info/resource/plaoulcommentary",
       "next": "http://scta.info/resource/lectio2",
-      "canonicalManifestation": 
+      "canonicalManifestation":
         {
             "@id": "http://scta.info/resource/lectio1/critical",
             "title": "Critical edition for lectio 1 in Plaoul Commentary",
@@ -502,7 +503,7 @@ Finally, we can illustrate what the jsonld might look like for a non top-level *
       ]
     }
 
-And this information can be used as follows: 
+And this information can be used as follows:
 
 ![item text view]({{ site.baseurl }}/assets/images/2016-06-30-DTS-modeling-proposal/item-text-view.png)
 
@@ -533,7 +534,3 @@ Likewise, the client should be able to treat every **Expression**, at any level 
 
 * Live client listing available top Level expressions [http://scta.lombardpress.org/text/questions/?resourceid=http://scta.info/resource/plaoulcommentary](http://scta.lombardpress.org/text/questions/?resourceid=http://scta.info/resource/plaoulcommentary)
 * Live DB visualization for the same resource [http://scta.info/resource/plaoulcommentary](http://scta.info/resource/plaoulcommentary)
-
-
-
-
