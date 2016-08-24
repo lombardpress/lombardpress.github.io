@@ -29,13 +29,13 @@ layout: default
 
 var disqus_config = function () {
     this.page.url = "{{ page.url }}";
-    this.page.identifier = "{{ site.host }}{{ page.id }}";
+    this.page.identifier = "http://lombardpress.org{{ page.id }}";
 };
 
 
 
 (function() { // DON'T EDIT BELOW THIS LINE
-    console.log("{{ site.host }}{{ page.id }}")
+    console.log("http://lombardpress.org{{ page.id }}")
     var d = document, s = d.createElement('script');
     s.src = '//lombardpress-org.disqus.com/embed.js';
     s.setAttribute('data-timestamp', +new Date());
