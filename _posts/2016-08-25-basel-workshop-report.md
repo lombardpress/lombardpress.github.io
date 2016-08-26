@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Creating an aggregated dataset from distributed sources - a report from the 2016 Basel meeting.
-date:   2016-08-24
+date:   2016-08-25
 comments: true
 ---
 
