@@ -26,7 +26,7 @@ body: {
   @type: "bio:birth"
   dc:date: "1225"
 }
-target: "http://viaf.org/viaf/264344179/"" //this is the viaf entry for Aquinas
+target: "http://viaf.org/viaf/264344179/" //this is the viaf entry for Aquinas
 ```
 
 De Anima DB
