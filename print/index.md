@@ -8,7 +8,7 @@ permalink: /print/
 
 LombardPress print is a set of scripts, stylesheets and guidelines designed for the automated typesetting of editions encoded according the [LombardPress Customized TEI schema](../schema/docs)
 
-The public repository for LombardPress print can be found at: [http://bitbucket.org/lombarpress/lombardpress-print](http://bitbucket.org/lombardpress/lombardpress-print)
+The public repository for LombardPress print can be found at: [http://github.org/lombardpress/lombardpress-print](http://github.com/lombardpress/lombardpress-print)
 
 Example covers and typeset pages can be seen here
 
@@ -16,7 +16,6 @@ Example covers and typeset pages can be seen here
 
 ![example-lbp-print-output.png]({{ site.baseurl }}/assets/images/example-lbp-print-output.png)
 
-A demo of this conversion can be found here: 
+A demo of this conversion can be found here:
 
 <iframe width="100%" height="450px" src="https://www.youtube.com/embed/mbHsuR82TuQ" frameborder="0" allowfullscreen></iframe>
-
