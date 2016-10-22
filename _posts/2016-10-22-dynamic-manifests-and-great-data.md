@@ -17,7 +17,7 @@ In this post I describe a couple of examples of how strong data models and open 
 
 Over the last month, most of my work has involved implementing the Manifestation Surface data model I described in an [earlier post](/2016/08/09/surfaces-canvases-and-zones/). A central motivation behind this model and my implementation work is that the focus of the SCTA and LombardPress is slightly different than most of the main players in the IIIF community right now. Many IIIF implementers are primarily focused on building IIIF collections of codices that mirror their physical collections.
 
-The SCTA however is an archive that has no physical collections. Rather we collect ideas. Or more specifically Expression of texts and their Manifestations. (See my [earlier post](2016/06/12/DTS-modeling-proposal/) for a description of the modified FRBR model we use at the SCTA.) These Expressions have their own hierarchy that do not correspond directly to the material hierarchy of a codex.
+The SCTA however is an archive that has no physical collections. Rather we collect ideas. Or more specifically Expression of texts and their Manifestations. (See my [earlier post](/2016/06/12/DTS-modeling-proposal/) for a description of the modified FRBR model we use at the SCTA.) These Expressions have their own hierarchy that do not correspond directly to the material hierarchy of a codex.
 
 For example, an Expression may have Manifestations in many codices scattered throughout the world. Further, these manifestations often constitute only a part of a codex. Further many Expression Manifestations span several material codices.
 
