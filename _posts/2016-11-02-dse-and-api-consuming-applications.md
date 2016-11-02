@@ -5,7 +5,7 @@ date:   2016-11-02
 comments: true
 ---
 
-#Digital Scholarly Editions and API Consuming Applications
+# Digital Scholarly Editions and API Consuming Applications
 
 Below is a video recording of my talk "Digital Scholarly Editions and API Consuming Applications" given at the University of Graz, September 24th, 2016.
 
