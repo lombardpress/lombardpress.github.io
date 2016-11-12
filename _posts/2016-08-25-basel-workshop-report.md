@@ -3,6 +3,7 @@ layout: post
 title:  Creating an aggregated dataset from distributed sources - a report from the 2016 Basel meeting.
 date:   2016-08-25
 comments: true
+tags: featured
 ---
 
 The following is a report and summary of the main proposal discussed at the "Linked Data and the Medieval Scholastic Tradition," workshop held at the University of Basel in August 17-19, 2016.

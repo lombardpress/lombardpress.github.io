@@ -1,0 +1,21 @@
+.column-wrapper, .right-column, .left-column {
+  box-sizing: border-box;
+
+}
+
+.column-wrapper{
+  margin-top: 2%;
+  @extend %clearfix;
+}
+
+.right-column, .left-column{
+  float: left;
+  width: 50%;
+
+}
+.right-column {
+  padding-left: 1.5%;
+}
+.right-column {
+  padding-right: 1.5%;
+}

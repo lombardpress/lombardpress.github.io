@@ -3,6 +3,8 @@ layout: post
 title:  Creating Dynamic Custom IIIF Manifests and the Importance of Great Data
 date:   2016-10-22
 comments: true
+tags: featured
+description: How we create dynamic IIIF collections and manifests for distributed content that correspond to author and texts within the SCTA catalogue.
 ---
 
 # Introduction

@@ -3,6 +3,7 @@ layout: post
 title:  Surfaces, Canvases, and Zones
 date:   2016-08-09
 comments: true
+tags: featured
 ---
 
 # Introduction

@@ -1,0 +1,243 @@
+---
+layout: slide
+title: Digital Scholarly Editions and API Consuming Applications
+description: Digital Scholarly Editions as API Consuming Applications
+theme: white
+transition: slide
+---
+
+
+<section>
+
+<h3>Linked Data, Digital Editions, and the Medieval Scholastic Corpus</h3>
+
+<hr/>
+
+<p>Jeffrey C. Witt (Loyola University Maryland) | @jeffreycwitt</p>
+
+<hr/>
+
+<p>University of Pennsylvania, Philadelphia, Pennsylvania, November 19th, 2016</p>
+
+<p>Slide Deck: <a href="http://lombardpress.org/slides/2016-11-19-schoenberg-symposium/">http://lombardpress.org/slides/2016-11-19-schoenberg-symposium/</a></p>
+
+</section>
+<section data-markdown>
+
+# Our Problem and Aspirations
+
+</section>
+<section>
+  <section data-markdown>
+
+  # The Present Paradigm
+
+  ## Text-as-Document
+
+  </section>
+  <section data-markdown>
+    # The Problem
+    ## Data Isolation: In Print and on the Web
+  </section>
+  <section>
+    <img src="/assets/images/2016-09-24-graz-dixit-conference/altavilla-page.png"/>
+  </section>
+  <section>
+    <img src="/assets/images/2016-09-24-graz-dixit-conference/auriol-page.png"/>
+  </section>
+  <section>
+    <img src="/assets/images/2016-09-24-graz-dixit-conference/candia-page.png"/>
+  </section>
+  <section>
+    <img src="/assets/images/2016-09-24-graz-dixit-conference/rufus-of-cornwall.png"/>
+  </section>
+  <section>
+    <img src="/assets/images/2016-09-24-graz-dixit-conference/mirecourt-page.png"/>
+  </section>
+  <section>
+    <img src="/assets/images/2016-09-24-graz-dixit-conference/fitzralph-page.png"/>
+  </section>
+  <section>
+    <img src="/assets/images/2016-09-24-graz-dixit-conference/magister-sententiarum-page.png"/>
+  </section>
+  <section>
+    How do we stop making redundant interfaces
+    and instead promote the creation of interfaces
+    that present a dataset in unique and revelaing ways?
+  </section>
+</section>
+<section>
+<section data-markdown>
+# A New Paradigm
+## Text-as-Network
+</section>
+<section data-markdown style="font-size: 30px">
+
+Despite the inarguable benefits the Web provides, until recently the same principles that
+enabled the Web of documents to flourish have not been applied to data. Traditionally, data
+published on the Web has been made available as raw dumps in formats such as CSV or
+XML, or marked up as HTML tables, sacrificing much of its structure and semantics. In the
+conventional hypertext Web, the nature of the relationship between two linked documents is
+implicit, as the data format, i.e. HTML, is not sufficiently expressive to enable individual
+entities described in a particular document to be connected by typed links to related
+entities.
+
+Heath, T., Hepp, M., and Bizer, C. (eds.). Special
+Issue on Linked Data, International Journal on Semantic Web and Information Systems
+(IJSWIS). [http://linkeddata.org/docs/ijswis-special-issue](http://linkeddata.org/docs/ijswis-special-issue)
+</section>
+<section>
+  "Data is relationships." -- Tim Berners Lee, Ted Talk, February 2009
+</section>
+<section>
+  <iframe width="700px" height="500px" src="https://www.youtube.com/embed/OM6XIICm_qo" frameborder="0" allowfullscreen></iframe>
+</section>
+</section>
+<section>
+  <section>Our Data</section>
+  <section>
+    <img src="/assets/images/hierarchy7.jpg"/>
+  </section>
+  <section>
+    <img src="/assets/images/2016-09-24-graz-dixit-conference/distinction-thread-infographic.png"/>
+  </section>
+  <section>
+    <img src="/assets/images/web.jpg"/>
+  </section>
+</section>
+<section>
+  <section>
+  Our Data Model and API
+  </section>
+  <section data-markdown style="font-size: 24px">
+- WorkGroup (Work)
+  - The idea of Moby Dick
+- Expression
+  - The idea of Melville's expression (as opposed to a screen play expression)
+- Manifestation
+  - The idea of the 1959 edition of Moby Dick
+- Item
+  - One physical copy of the 1959 edition in a particular library
+- Transcription
+  - the idea of a digital transcription of the 1959 edition of Moby Dick
+  - includes properties like hasXML, hasJson, hasPlaintext, hasHtml
+  </section>
+  <section data-markdown style="font-size: 24px">
+- Manifestation Surface
+  - the idea of page 1 in 1959 edition of Moby Dick
+- Item Surface
+  - the physical page 1 in a particular copy of the 1959 edition of Moby Dick
+- IIIF Canvas
+- IIIF image annotation
+  - images taken of the physical page 1 in a particular copy
+  </section>
+  <section>
+    <img src="https://raw.githubusercontent.com/scta/scta-ontology/master/SCTASCHEMA3.png"/>
+  </section>
+  <section>
+    <img src="/assets/images/scta-ontology-surface-visualization.png"/>
+  </section>
+</section>
+<section>
+  <section data-markdown>
+    # Data Creation
+  </section>
+  <section data-markdown>
+    # Transcription and Distributed Delivery
+    ## Adopting the Git Workflow
+  </section>
+  <section>
+  <h2>Creating the data set with RDF extraction</h2>
+  <img src="/assets/images/Screen-Shot-2015-09-07-at-1.03.42-PM.png"/>
+  </section>
+  <section>
+    Critical Corpus Database Visualization
+    <img src="/assets/images/scta-db-visualization.png"/>
+  </section>
+</section>
+<section>
+  <section>
+    Building common libraries for common tasks
+  </section>
+  <section>
+    <a href="https://github.com/lombardpress/lbp.rb">https://github.com/lombardpress/lbp.rb</a>
+    <img src="/assets/images/2016-09-24-graz-dixit-conference/lbprb-classes.png"/>
+  </section>
+</section>
+<section>
+  <section>
+  LombardPress Interface Display
+  </section>
+  <section>
+    <img src="/assets/images/2016-06-30-DTS-modeling-proposal/workGroup-with-expressions.png"/>
+  </section>
+  <section>
+    <img src="/assets/images/Screen-Shot-2015-06-17-at-2.03.54-PM.png"/>
+  </section>
+  <section>
+    <img src="/assets/images/porto-slides/lbp-with-collation.png"/>
+  </section>
+  <section>
+    <img src="/assets/images/porto-slides/lbp-referencedBy.png"/>
+  </section>
+  <section>
+    <img src="/assets/images/porto-slides/lbp-with-referenced-text-and-para-info.png"/>
+  </section>
+</section>
+<section>
+  <section>
+    Mirador IIIF Image Interface
+  </section>
+  <section>
+      <img src="/assets/images/2016-04-16-iiif-webmentions/mirador_annotations.png"/>
+  </section>
+  <section>
+    <img src="/assets/images/2016-04-16-iiif-webmentions/mirador-view-after-search.png"/>
+  </section>
+  <section>
+    <img src="/assets/images/2016-04-16-iiif-webmentions/mirador-view-after-toc.png"/>
+  </section>
+</section>
+<section>
+  <section>
+    Lbp Print Interface
+  </section>
+  <section>
+    <img src="/assets/images/porto-slides/typeset-print-edition.jpg"/>
+  </section>
+
+</section>
+<section data-markdown style="font-size: 18px;">
+  ###Suggested Readings
+
+  ####Introduction
+
+  http://lombardpress.org/2016/08/02/bcht-scta-lbp-overview/
+
+  ####Modeling and Workflows
+
+  [http://lombardpress.org/2016/06/12/DTS-modeling-proposal/](http://lombardpress.org/2016/06/12/DTS-modeling-proposal/)
+
+  [http://lombardpress.org/2016/08/09/surfaces-canvases-and-zones/](http://lombardpress.org/2016/08/09/surfaces-canvases-and-zones/)
+
+  [http://lombardpress.org/placing-medieval-texts-within-a-critical-corpus/](http://lombardpress.org/placing-medieval-texts-within-a-critical-corpus/)
+
+  ####On Information sharing and linked open data
+
+  [http://lombardpress.org/2016/04/16/iiif-webmentions/](http://lombardpress.org/2016/04/16/iiif-webmentions/)
+
+  [http://lombardpress.org/2016/08/25/basel-workshop-report/](http://lombardpress.org/2016/08/25/basel-workshop-report/)
+
+  ####On Peer Review
+
+  [http://lombardpress.org/2016/05/19/the-traveling-imprimatur/](http://lombardpress.org/2016/05/19/the-traveling-imprimatur/)
+
+  ####On LombardPress web
+
+  [http://lombardpress.org/bringing-ecodices-and-openn-together/](http://lombardpress.org/bringing-ecodices-and-openn-together/)
+
+  [http://lombardpress.org/conceiving-the-digital-critical-apparatus/](http://lombardpress.org/conceiving-the-digital-critical-apparatus/)
+
+  [http://lombardpress.org/demo-of-full-integration-of-iiif-images-into-lombardpress/](http://lombardpress.org/conceiving-the-digital-critical-apparatus/)
+
+</section>
