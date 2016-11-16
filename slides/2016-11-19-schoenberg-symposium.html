@@ -1,7 +1,7 @@
 ---
 layout: slide
-title: Digital Scholarly Editions and API Consuming Applications
-description: Digital Scholarly Editions as API Consuming Applications
+title: Linked Data, Digital Editions, and the Medieval Scholastic Corpus
+description: Linked Data, Digital Editions, and the Medieval Scholastic Corpus
 theme: white
 transition: slide
 ---
@@ -24,20 +24,48 @@ transition: slide
 </section>
 <section data-markdown>
 
-# Our Problem and Aspirations
+## Outline
+
+1. Part I - Theoretical Overview
+
+  A. Problems and Aspirations
+
+  B. The Current Paradigm - Text as Document
+
+  C. A New Paradigm - Text as Network
+
+  D. The SCTA Network Data Model
+
+2. Part II - Putting Theory in Practice
+
 
 </section>
 <section>
   <section data-markdown>
-
-  # The Present Paradigm
-
-  ## Text-as-Document
-
+    # I.A. Problems and Aspirations
   </section>
   <section data-markdown>
-    # The Problem
-    ## Data Isolation: In Print and on the Web
+    ## The medieval corpus, at present, is an invisible tapestry
+  </section>
+  <section data-markdown>
+    ## We want to provide a scientific view each thread within the context of the whole.
+    ### A scientific view through:
+
+    - Analysis
+    - Search
+    - Access
+    - Synthesis
+
+  </section>
+</section>
+<section>
+  <section data-markdown>
+    # I.B. The Current Paradigm
+    ## Text-as-Document
+  </section>
+  <section data-markdown>
+    ## The problem with the text-as-document approach
+    ### Data Isolation: in print and on the web
   </section>
   <section>
     <img src="/assets/images/2016-09-24-graz-dixit-conference/altavilla-page.png"/>
@@ -60,31 +88,32 @@ transition: slide
   <section>
     <img src="/assets/images/2016-09-24-graz-dixit-conference/magister-sententiarum-page.png"/>
   </section>
-  <section>
-    How do we stop making redundant interfaces
-    and instead promote the creation of interfaces
-    that present a dataset in unique and revelaing ways?
+  <section data-markdown>
+    **In sum**: research groups are currently
+    choosing the most inefficient way possible
+    to make data avaialable on the web,
+    while leaving us with results that go barely
+    beyond the capabilities of the printed page.
   </section>
 </section>
 <section>
 <section data-markdown>
-# A New Paradigm
-## Text-as-Network
+  # I.C. A New Paradigm
+  ## Text-as-Network
 </section>
 <section data-markdown style="font-size: 30px">
+  Despite the inarguable benefits the Web provides, until recently the same principles that
+  enabled the Web of documents to flourish have not been applied to data. Traditionally, data
+  published on the Web has been made available as raw dumps in formats such as CSV or
+  XML, or marked up as HTML tables, sacrificing much of its structure and semantics. In the
+  conventional hypertext Web, the nature of the relationship between two linked documents is
+  implicit, as the data format, i.e. HTML, is not sufficiently expressive to enable individual
+  entities described in a particular document to be connected by typed links to related
+  entities.
 
-Despite the inarguable benefits the Web provides, until recently the same principles that
-enabled the Web of documents to flourish have not been applied to data. Traditionally, data
-published on the Web has been made available as raw dumps in formats such as CSV or
-XML, or marked up as HTML tables, sacrificing much of its structure and semantics. In the
-conventional hypertext Web, the nature of the relationship between two linked documents is
-implicit, as the data format, i.e. HTML, is not sufficiently expressive to enable individual
-entities described in a particular document to be connected by typed links to related
-entities.
-
-Heath, T., Hepp, M., and Bizer, C. (eds.). Special
-Issue on Linked Data, International Journal on Semantic Web and Information Systems
-(IJSWIS). [http://linkeddata.org/docs/ijswis-special-issue](http://linkeddata.org/docs/ijswis-special-issue)
+  Heath, T., Hepp, M., and Bizer, C. (eds.). Special
+  Issue on Linked Data, International Journal on Semantic Web and Information Systems
+  (IJSWIS). [http://linkeddata.org/docs/ijswis-special-issue](http://linkeddata.org/docs/ijswis-special-issue)
 </section>
 <section>
   "Data is relationships." -- Tim Berners Lee, Ted Talk, February 2009
@@ -93,8 +122,13 @@ Issue on Linked Data, International Journal on Semantic Web and Information Syst
   <iframe width="700px" height="500px" src="https://www.youtube.com/embed/OM6XIICm_qo" frameborder="0" allowfullscreen></iframe>
 </section>
 </section>
+<section data-markdown>
+  # I.D. The SCTA "Network" Data Model
+</section>
 <section>
-  <section>Our Data</section>
+  <section data-markdown>
+    ## Our Data
+  </section>
   <section>
     <img src="/assets/images/hierarchy7.jpg"/>
   </section>
@@ -106,11 +140,12 @@ Issue on Linked Data, International Journal on Semantic Web and Information Syst
   </section>
 </section>
 <section>
-  <section>
-  Our Data Model and API
+  <section data-markdown>
+    ## Our Data Model
   </section>
   <section data-markdown style="font-size: 24px">
-- WorkGroup (Work)
+- WorkGroup
+- Work
   - The idea of Moby Dick
 - Expression
   - The idea of Melville's expression (as opposed to a screen play expression)
@@ -138,6 +173,9 @@ Issue on Linked Data, International Journal on Semantic Web and Information Syst
     <img src="/assets/images/scta-ontology-surface-visualization.png"/>
   </section>
 </section>
+<section data-markdown>
+  # Part II - Putting Theory in Practice
+</section>
 <section>
   <section data-markdown>
     # Data Creation
@@ -146,18 +184,26 @@ Issue on Linked Data, International Journal on Semantic Web and Information Syst
     # Transcription and Distributed Delivery
     ## Adopting the Git Workflow
   </section>
+</section>
+<section>
+  <section data-markdown>
+    # Data Aggregation and Delivery
+  </section>
   <section>
   <h2>Creating the data set with RDF extraction</h2>
   <img src="/assets/images/Screen-Shot-2015-09-07-at-1.03.42-PM.png"/>
   </section>
   <section>
-    Critical Corpus Database Visualization
+    <h2>Critical Corpus Database Visualization</h2>
     <img src="/assets/images/scta-db-visualization.png"/>
   </section>
 </section>
+<section data-markdown>
+  # Data Display
+</section>
 <section>
-  <section>
-    Building common libraries for common tasks
+  <section data-markdown>
+    ## Building common libraries for common tasks
   </section>
   <section>
     <a href="https://github.com/lombardpress/lbp.rb">https://github.com/lombardpress/lbp.rb</a>
@@ -165,8 +211,8 @@ Issue on Linked Data, International Journal on Semantic Web and Information Syst
   </section>
 </section>
 <section>
-  <section>
-  LombardPress Interface Display
+  <section data-markdown>
+  ## LombardPress Interface Display
   </section>
   <section>
     <img src="/assets/images/2016-06-30-DTS-modeling-proposal/workGroup-with-expressions.png"/>
@@ -185,8 +231,8 @@ Issue on Linked Data, International Journal on Semantic Web and Information Syst
   </section>
 </section>
 <section>
-  <section>
-    Mirador IIIF Image Interface
+  <section data-markdown>
+    ## Mirador IIIF Image Interface
   </section>
   <section>
       <img src="/assets/images/2016-04-16-iiif-webmentions/mirador_annotations.png"/>
@@ -199,13 +245,12 @@ Issue on Linked Data, International Journal on Semantic Web and Information Syst
   </section>
 </section>
 <section>
-  <section>
-    Lbp Print Interface
+  <section data-markdown>
+    ## Lbp Print Interface
   </section>
   <section>
     <img src="/assets/images/porto-slides/typeset-print-edition.jpg"/>
   </section>
-
 </section>
 <section data-markdown style="font-size: 18px;">
   ###Suggested Readings
