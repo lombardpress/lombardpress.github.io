@@ -14,4 +14,5 @@ description: Index of available decks
   - [Workflows](porto-slides/06-workflows)
   - [Image and Text Linking Via IIIF](porto-slides/07-image-text-linking-via-iiif)
 - [DSE and API Consuming Applications, Graz, Austria, September 24th, 2016](2016-09-24-graz-dixit-conference)
-- [Schoenberg Symposium, Philadelphia, Pennsylvania, November 19th, 2016](2016-11-19-schoenberg-symposium)
+- [Schoenberg Symposium, University of Pennsylvania, Philadelphia, Pennsylvania, November 19th, 2016](2016-11-19-schoenberg-symposium)
+- [Philosophy and History of Open Science, University of Helsinki, Helsinki, December 1st, 2016](2016-12-01-helsinki-open-science)
