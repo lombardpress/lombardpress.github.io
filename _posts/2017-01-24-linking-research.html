@@ -1,0 +1,36 @@
+---
+layout: post
+title:  Linking Research
+date:   2017-01-24
+comments: true
+tags: featured
+description: A description of ongoing work to link distrinbuted scholarly discussion of scholastic texts via the SCTA Database, LombardPress, LinkedData, and LinkedData Notifications.
+---
+
+<div id="aim-of-the-scta">
+  <h2>Aims of the SCTA</h2>
+  <p><a href="http://scta.info">The Scholastic Commentaries and Texts Archive (SCTA)</a> is an RDF database, designed to generate unique RDF IDs for granular components, linking all paragraph and sections together through a variety of relationships (isPartOf, references, abbreviates, copies, isRelatedTo, etc.) and linking these text parts to their manifestations in various books, manuscripts, and digital transcriptions (see <a href="http://lombardpress.org/2016/06/12/DTS-modeling-proposal/">http://lombardpress.org/2016/06/12/DTS-modeling-proposal/</a>.
+  <p>A key feature of this approach is that we can create relationships between the entire corpus: relationships between discrete sections of enormous texts written over 500 years of continuous discourse. Each time a new text is edited and sources are identified, these asserted relationships can be inverted and we can, for example, automatically collect all the places a paragraph written in the 12th century is discussed or referenced over the next 500 or so years of medieval thought.</p>
+</div>
+<div id="unrealized-potential">
+  <h2>Unrealized Potential of Linking Secondary and Primary Sources</h2>
+
+  <p>This approach un-taps <em>only some</em> of the potential of linked research. While it helps us to link together the primary sources of the corpus as they become available, we do not yet have a mechanism to link together the many secondary articles quoting, referencing, and analyzing various parts of the SCTA corpus.</p>
+
+  <p>In an ideal world, we would like an automated way to collect (or be notified about) any discrete section of a primary source text within corpus that has been cited or discussed in any secondary article.</p>
+
+  <p>With a list of referencing secondary articles, we can, in our display to the user, offer a list of distributed secondary articles (i.e. hosted anywhere) that discuss the primary source passage in question.</p>
+
+</div>
+<div id="using-linkeddata-notifications">
+  <h2>Using LinkedData Notifications to connect distributed scholaraly discussion</h2>
+
+  <p>What might this look like in practice?</p>
+
+  <p>Let's imagine I'm writing an article about topic discusssed in scholastic philosophy and I'm quoting primary source material from the scholastic corpus. Because of possibilities of writing semantic markup, my authoring platform can embed meaningful metadata into every citation. Using <a href="https://rdfa.info/">RDFa</a> my quotation of a passage can include a reference to the URL for that cited passage, where property="cito:discusses" and resource="http://scta.info/resource/b1d3qun-qnveid" are added the blockquote element as attributes. In this case the property describes the relationship between the quotation and the targeted resource. Such a reference might look like the following:</p>
+
+  <blockquote property="cito:discussion" resource="http://scta.info/resource/b1d3qun-qnveid">Quod non videtur, quia secundum Augustinus in Sermone communi de uno martyre "si servasset in se homo bonum quod in illo creavit Deus, id est imaginem suam, semper laudaret dictum non solum lingua sed et vita" etc.</blockquote>
+
+  <p>Following the emerging specifications for <a href="https://www.w3.org/TR/ldn/">Linked Data Notifications</a>, this embeded link because the lynch pin for aggregating a distributed discussion. Each resource in the SCTA database has an associated inbox, which can be found by simply de-referencing the targeted resource, searching for the property <code>http://www.w3.org/ns/ldp#inbox</code> and retrieving the value of that property. Now, when this article is published, a "notification" that this target resource is being discussed in this article can be sent to the resource inbox. This notifications is saved in the respective inbox and awaits use and consumption by another other client interacting with this resource.</p>
+
+</div>
