@@ -21,6 +21,7 @@ In an ideal world, we would like an automated way to collect (or be notified abo
 
 With a list of referencing secondary articles, we can, in our display to the user, offer a list of distributed secondary articles (i.e. hosted anywhere) that discuss the primary source passage in question.
 
+
 ## What if? Dokieli Articles, LDN, and SCTA Integration
 
 What might this look like in practice?
@@ -29,7 +30,10 @@ While I'm still getting up to speed on [Linked Data Notifications](https://www.w
 
 Let's imagine I'm writing an article about scholasticism in markdown, with the plan to publish the article via my personal Jekyll blog (as I'm doing here). Whenever I want to quote a passage from a text within the SCTA corpus, I can simply include a reference to the SCTA ID for that passage, like so:
 
-  >> Quod non videtur, quia secundum Augustinus in Sermone communi de uno martyre "si servasset in se homo bonum quod in illo creavit Deus, id est imaginem suam, semper laudaret dictum non solum lingua sed et vita" etc. -- [http://scta.info/resource/b1d3qun-qnveid](http://scta.info/resource/b1d3qun-qnveid).
+> Quod non videtur, quia secundum Augustinus in Sermone communi de uno martyre "si servasset in se homo bonum quod in illo creavit Deus, id est imaginem suam, semper laudaret dictum non solum lingua sed et vita" etc. --
+[http://scta.info/resource/b1d3qun-qnveid](http://scta.info/resource/b1d3qun-qnveid){: property="cito:discusses"}.
+
+
 
 If each resource within the SCTA catalogue has an "inbox" property, then, when the article is published, a series of notifications could be sent out to the relevant inboxes for each passage quoted in the article. Likewise, since each of these paragraphs is connected to IIIF canvas, a second series of notifications could be sent out to every IIIF canvas inbox, alerting the holding library to the fact that the text from this manuscript page has been discussed. Further, if anyone comments on the quoted passage, using the [Dokieli](https://dokie.li/) framework, that comment could be stored anywhere, and at the same time every system displaying the passage in question would be aware of the comment. This includes both the system displaying the primary source text and the system displaying the secondary source article.
 

@@ -15,6 +15,7 @@ This is all well and good. It is important, and it has a place. But I want to ma
 
 In this post I describe a couple of examples of how strong data models and open can data allow us to construct **dynamic** IIIF manifests and collections (curated from libraries throughout the world) with a speed and scale that individual GUI manifest constructors cannot compete with.
 
+
 # Example 1: Text collections
 
 Over the last month, most of my work has involved implementing the Manifestation Surface data model I described in an [earlier post](/2016/08/09/surfaces-canvases-and-zones/). A central motivation behind this model and my implementation work is that the focus of the SCTA and LombardPress is slightly different than most of the main players in the IIIF community right now. Many IIIF implementers are primarily focused on building IIIF collections of codices that mirror their physical collections.
