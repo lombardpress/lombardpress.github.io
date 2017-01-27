@@ -11,8 +11,6 @@ redirect_from:
   - 2016/06/12/dts-modeling-proposal/
 ---
 
-DOCUMENT STATUS: Public Draft
-
 # Introduction
 
 What follows is an attempt to describe the movement from an abstract data model and a semantically meaningful ontology to a serialization of that information that a generic web application can consume and display.
