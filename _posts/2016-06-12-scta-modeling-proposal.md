@@ -5,7 +5,10 @@ date:   2016-06-12
 comments: true
 tags: featured
 redirect_from:
-  - scta-modeling-proposal
+  - 2016/06/12/DTS-modeling-proposal
+  - 2016/06/12/DTS-modeling-proposal/
+  - 2016/06/12/dts-modeling-proposal
+  - 2016/06/12/dts-modeling-proposal/
 ---
 
 DOCUMENT STATUS: Public Draft
