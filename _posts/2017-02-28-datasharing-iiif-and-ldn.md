@@ -6,7 +6,7 @@ comments: true
 description: A write up of ongoing reflections about how to use Linked Data Notifications to help facilitate data sharing between related IIIF resources.
 ---
 
-Post by Jeffrey Witt (@jeffreycwitt)
+A post by Jeffrey Witt (@jeffreycwitt)
 
 # Introduction
 
@@ -47,7 +47,7 @@ In an [earlier post](http://lombardpress.org/2016/04/16/iiif-webmentions/), we d
 
 ## Example Notifications
 
-###Example 1
+### Example 1
 
 Layer Notification: [http://scta.info/iiif/rothwellcommentary/wettf15/notification/layer/transcription](http://scta.info/iiif/rothwellcommentary/wettf15/notification/layer/transcription)
 
@@ -65,7 +65,7 @@ This example is fairly similar except that the object does not point to a de-ref
 
 Once the client knows that it is a "service" and not a "layer" or "range" it can check the service "profile" to know what kind service it is and whether or not they want to incorporate it.
 
-## Example 3
+### Example 3
 
 Service Notification: [http://scta.info/iiif/rothwellcommentary/wettf15/notification/ranges/toc](http://scta.info/iiif/rothwellcommentary/wettf15/supplement/ranges/toc)
 
