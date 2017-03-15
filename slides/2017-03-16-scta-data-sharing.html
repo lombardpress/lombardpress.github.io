@@ -1,16 +1,109 @@
 ---
 layout: slide
-title: Examples of SCTA Supplemental Data Publication
+title: The Scholastic Commentaries and Texts Archive - Aspirations, Challenges, and Attempted Solutions
 theme: white
 transition: slide
 ---
 
 
 <section>
-<h3>Examples of SCTA Supplemental Data Publication</h3>
+<h3>The Scholastic Commentaries and Texts Archive: Aspirations, Challenges, and Attempted Solutions</h3>
 <hr/>
 <p>Jeffrey C. Witt (Loyola University Maryland) | @jeffreycwitt</p>
 <hr/>
 <p>March 16, 2017</p>
-<p>Slide Deck: <a href="http://lombardpress.org/slides/2017-03-16-scta-supplemental-data-examples/">http://lombardpress.org/slides/2017-03-16-scta-supplemental-data-examples</a></p>
+<p>Slide Deck: <a href="http://lombardpress.org/slides/2017-03-16-scta-data-sharing/">http://lombardpress.org/slides/2017-03-16-scta-data-sharing/</a></p>
 </section>
+
+<section data-markdown>
+
+### Today, scholars around the world are building editions, translations, and commentaries for the world's cultural materials.
+</section>
+<section data-markdown>
+### Without common standards this data will be silo-ed in a scholarly print edition or a closed, one-off website.
+</section>
+<section>
+  <section data-markdown>
+    ### At the same time, hundreds of world libraries are cataloguing, digitizing, and publishing manuscripts in isolation from scholars and from other libraries with related witnesses.
+  </section>
+  <section data-markdown>
+    ### An example of why this is problematic
+  </section>
+  <section data-markdown>
+    ### Numbering Mistake in WettF15
+  </section>
+  <section data-markdown>
+    ![/assets/images/rothwellcommentary-d3-mistake.png](/assets/images/rothwellcommentary-d3-mistake.png)
+  </section>
+  <section data-markdown>
+    ![/assets/images/rothwellcommentary-d49-mistake.png](/assets/images/rothwellcommentary-d49-mistake.png)
+  </section>
+  <section data-markdown>
+    In the theory, the fact that both of these manuscripts are published via IIIF API makes them comparable.
+
+    In practice, these kinds of organizational mistakes makes their comparison extremely arduous.
+  </section>
+  <section data-markdown>
+    Unlike, pictures, finding the same place in a text without accurate navigational meta-data is extremely difficult.
+
+    Fortunately, scholars and subject are already undertaking this arduous work of alignment.
+
+    Unfortunately, this metadata is getting sioled in journal articles or the front matter of editions.
+
+    Thus, each person who comes to texts a new must repeat the task of collation rather than being able to build on the work already being done.
+
+    **THE SCTA hopes to change this**
+  </section>
+</section>
+<section data-markdown>
+ With the right work flow and with common standards (and political will), the information scholars are **ALREADY** producing in Word Documents can be shared and re-used throughout the world.
+</section>
+<section data-markdown>
+  ###We hope for something like this
+  ![/assets/images/2016-04-16-iiif-webmentions/map-slide-image.png](/assets/images/2016-04-16-iiif-webmentions/map-slide-image.png)
+</section>
+<section data-markdown>
+### Main Tasks We've had to overcome to be able collect, create, and publish this information
+</section>
+<section data-markdown>
+#### Text Structural Metadata
+* Collected as XML
+* Versioned via Git
+* Converted to RDF (according to SCTA text ontology) via SCTA build script
+* Served over the web via Apache Jena Fueski
+* dynamically converted to IIIF ranges on-demand via rails Sinatra app.
+</section>
+<section data-markdown>
+#### Transcriptions
+* Transcribed as TEI XML according to customized and tightly restricted TEI schema [https://github.com/lombardpress/lombardpress-schema/tree/release/1.0.0](https://github.com/lombardpress/lombardpress-schema/tree/release/1.0.0)
+* Versioned via git
+* Metadata and source location converted to RDF
+* Served over the web via Apache Jena Fueski
+* Metadata data used to retrieve text
+* Transcription retrieved EITHER directly from Github and converted to IIIF annotationList
+* OR retrieved from our (in development) eXist-db text service that retruns text already converted to IIIF annotationList
+</section>
+<section data-markdown>
+#### Search Service
+* Transcriptions imported into eXist-db converted directly converted to IIIF search annotationList
+</section>
+<section data-markdown>
+#### Folio and Canvas metadata
+* Manuscript folios and canvas id association collected via XML
+* Versioned via Git
+* Converted to RDF (according to SCTA text ontology) via SCTA build script
+* Served over the web via Apache Jena Fueski
+* Canvas metadata used in all above conversions to IIIF
+</section>
+<section data-markdown>
+## Current Progress
+
+  * 6 million words indexed
+  * 2,394,083 metadata assertions
+  * 11,055 folio-canvas associations
+  * 13,674 text headings indexed and made searchable.
+  * 72 texts indexed associated with 106 manuscript
+    * This kind of association allows a user to select a text and see all related manuscripts from distributed libraries.
+    * For example:
+      * [http://mirador.scta.info/#/plaoulcommentary](http://mirador.scta.info/#/plaoulcommentary)
+      * [http://mirador.scta.info/#/rothwellcommentary](http://mirador.scta.info/#/rothwellcommentary)
