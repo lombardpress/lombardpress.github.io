@@ -1,0 +1,109 @@
+---
+layout: slide
+title: Manifest Reconstruction
+theme: white
+transition: slide
+---
+
+<style type="text/css">
+	.reveal a { font-size: 22px; margin: 3px; padding: 6px;}
+  .reveal p { font-size: 22px; margin: 3px; padding: 6px;}
+</style>
+
+<section>
+  <h3>Manifest Reconstruction</h3>
+  <hr/>
+  <p>Jeffrey C. Witt (Loyola University Maryland) | @jeffreycwitt</p>
+  <hr/>
+  <p>March 16, 2017</p>
+  <p>Slide Deck: <a href="http://lombardpress.org/slides/2017-03-16-manifest-reconstruction/">http://lombardpress.org/slides/2017-03-16-manifest-reconstruction</a></p>
+</section>
+
+<section data-markdown>
+  ### The E-codices Manifest
+
+  [http://www.e-codices.unifr.ch/metadata/iiif/kba-WettF0015/manifest.json](http://www.e-codices.unifr.ch/metadata/iiif/kba-WettF0015/manifest.json)
+
+  or
+
+  [http://lombardpress.org/assets/e-codices-rothwell-example.json](http://lombardpress.org/assets/e-codices-rothwell-example.json)
+
+  View this in a mirador viewer [http://mirador.scta.info](http://mirador.scta.info) and you will see images coming from Switzerland and a table of contents, search service, and transcriptions (at least on folio 107v) coming from Baltimore.
+
+</section>
+<section data-markdown>
+
+  ### Minting of Canvas Id
+
+```
+{
+  "@id": "http://www.e-codices.unifr.ch/metadata/iiif/kba-WettF0015/canvas/kba-WettF0015_e005a.json",
+  "@type": "sc:Canvas",
+  "label": "bindingEa",
+  "height": 6496,
+  "width": 4872,
+  "images": [{
+    "@id": "http://www.e-codices.unifr.ch/metadata/iiif/kba-WettF0015/annotation/kba-WettF0015_e005a.json",
+    "@type": "oa:Annotation",
+    "motivation": "sc:painting",
+    "on": "http://www.e-codices.unifr.ch/metadata/iiif/kba-WettF0015/canvas/kba-WettF0015_e005a.json",
+    "resource": {
+      "@id":"http://www.e-codices.unifr.ch/loris/kba/kba-WettF0015/kba-WettF0015_e005a.jp2/full/full/0/default.jpg",
+      "@type": "dctypes:Image",
+      "format": "image/jpeg",
+      "height": 6496,
+      "width": 4872,
+      "service": {
+        "@context": "http://iiif.io/api/image/2/context.json",
+        "@id": "http://www.e-codices.unifr.ch/loris/kba/kba-WettF0015/kba-WettF0015_e005a.jp2",
+        "profile": "http://iiif.io/api/image/2/level2.json"
+      }
+    }
+  }]
+}
+```
+</section>
+<section data-markdown>
+  ### Identifying canvases IDs is not as daunting as it might seem.
+
+  It usually involves identifying the canvas base
+  `http://www.e-codices.unifr.ch/metadata/iiif/kba-WettF0015/canvas/` and the recognizing the changing pattern for each canvas `kba-WettF0015_e005a.json`.
+
+  Note - Bodleian manuscripts are using hashes so there will be no predictable pattern for associating canvas ids with folio pages.
+
+  The point - The publication of supplemental material requires the collection of canvas ids and there association with the published supplemental data.
+
+</section>
+<section data-markdown>
+  ### Manifests (for the time being) need to publish an endpoint where they can receive updates about new information
+
+  ```json
+service": [{
+  "@context": "https://www.w3.org/TR/webmention/",
+  "@id": "http://www.e-codices.unifr.ch/webmention/receive",
+  "profile": "http://w3.org/TR/webmention",
+  "label": "e-codices Webmention Service"
+}
+```
+  In the future, there might be a central hub or central inbox that would negate this requirement.
+
+  For the purposes of a present demo, this step can be skipped if the listening endpoint is already known.
+</section>
+<section data-markdown>
+  ### Once the announcement has been made, an institution can incorporate this data, by dynamically constructing from known distributed sources.
+
+  In the following manifest:
+  [http://lombardpress.org/assets/e-codices-rothwell-example.json](http://lombardpress.org/assets/e-codices-rothwell-example.json)
+
+  See lines 61-66 of ecodices manifest from search block.
+
+  Compare to: [http://scta.info/iiif/rothwellcommentary/wettf15/supplement/service/searchwithin](http://scta.info/iiif/rothwellcommentary/wettf15/supplement/service/searchwithin)
+
+  See lines 5518-5545 for Transcription Inclusion
+
+  Compare to: [http://scta.info/iiif/rothwellcommentary/wettf15/supplement/layer/transcription](http://scta.info/iiif/rothwellcommentary/wettf15/supplement/layer/transcription)
+
+  See lines 9760 and following for Table of Contents of Range List
+
+  Compare to: [http://scta.info/iiif/rothwellcommentary/wettf15/supplement/ranges/toc](http://scta.info/iiif/rothwellcommentary/wettf15/supplement/ranges/toc)
+</section>

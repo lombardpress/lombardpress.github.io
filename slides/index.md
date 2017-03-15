@@ -16,3 +16,7 @@ description: Index of available decks
 - [DSE and API Consuming Applications, Graz, Austria, September 24th, 2016](2016-09-24-graz-dixit-conference)
 - [Schoenberg Symposium, University of Pennsylvania, Philadelphia, Pennsylvania, November 19th, 2016](2016-11-19-schoenberg-symposium)
 - [Philosophy and History of Open Science, University of Helsinki, Helsinki, December 1st, 2016](2016-12-01-helsinki-open-science)
+- Data Sharing Between Research Groups and Libraries, University of Pennsylvania, Philadelphia, March 16-17, 2017
+  - [Overview of SCTA Data Sharing Aspirations](2017-03-16-scta-data-sharing)
+  - [Examples of SCTA Supplemental Data Publication](2017-03-16-scta-supplemental-data-examples)
+  - [Manifest Reconstruction from Distributed Data Sources](2017-03-16-manifest-reconstruction)
