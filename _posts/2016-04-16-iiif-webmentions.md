@@ -3,6 +3,7 @@ layout: post
 title:  IIIF, Webmentions, and Collaboration between Institutions and Research Communities
 date: 2016-04-16
 description: A demonstration and documentation of data sharing between research groups and institutions using Webmentions. This project was supported by a generous Implementation Grant from the IIIF Consortium
+tags: featured
 ---
 
 A post by Jeffrey C. Witt (LombardPress and SCTA) and Rafael Schwemmer (text & bytes)
