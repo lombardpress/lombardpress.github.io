@@ -10,7 +10,7 @@ The primary focus of LombardPress is to faciliate the publication, dissemination
 
 # LombardPress Schema
 
-The LombardPress Schema is a narrow customization of the more general TEI specification. This customization allows us to document and encode the increasingly complex interaction of works, transcriptions, translations, and images that constitute the corpus of Sentences commentary texts. For more, see [Lbp Schema](/schema)
+The LombardPress Schema is a narrow customization of the more general TEI specification. This customization allows us to document and encode the increasingly complex interaction of works, transcriptions, translations, and images that constitute the corpus of Sentences commentary texts. For more, see [Lbp Schema](/schema/docs/index)
 
 # LombardPress Web Publication Framework
 
@@ -23,9 +23,3 @@ LombardPress Print is a set of stylesheets, scripts, and workflows designed to a
 # Contact
 
 The primary contact for the LombardPress sytem is Jeffrey C Witt (jcwitt [at] loyola [dot] edu).
-
-
-
-
-
-
