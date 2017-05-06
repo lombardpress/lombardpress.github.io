@@ -20,3 +20,4 @@ description: Index of available decks
   - [Overview of SCTA Data Sharing Aspirations](2017-03-16-scta-data-sharing)
   - [Examples of SCTA Supplemental Data Publication](2017-03-16-scta-supplemental-data-examples)
   - [Manifest Reconstruction from Distributed Data Sources](2017-03-16-manifest-reconstruction)
+- ["The Scholastic Commentaries and Texts Archive: reconceiving the medieval corpus in a Linked Data world", Washington and Lee University, May 8, 2017](2017-05-08-wlu-scta-linked-data)
