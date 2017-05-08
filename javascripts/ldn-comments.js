@@ -19,8 +19,9 @@ $(document).ready(function(){
           source = (data["http://scta.info/resource/b1d3qun-qnveid"])
           console.log(source);
           var title = source["http://purl.org/dc/elements/1.1/title"][0].value
+          var parnumber = source["http://scta.info/property/paragraphNumber"][0].value
           console.log(title);
-          $("#citation").append("Passage source: " + title + " <a href='" + target + "'>" + target + "</a>");
+          $("#citation").append("Passage source: Paragraph no. " + parnumber + " <a href='" + target + "'>" + target + "</a>");
           var inbox = source["http://www.w3.org/ns/ldp#inbox"][0].value
           console.log("inbox found", inbox);
           $.get(inbox, function(data){
