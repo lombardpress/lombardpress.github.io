@@ -1,0 +1,186 @@
+---
+layout: slide
+title: The Promise and Challenge of Dating Sharing Between Scholars and Libraries - An LDN Solution
+description: A presentation and demo of sharing IIIF resources via LDN
+theme: white
+transition: slide
+---
+
+
+<section>
+
+<h3>The Promise and Challenge of Dating Sharing Between Scholars and Libraries - An LDN Solution</h3>
+
+<hr/>
+
+<p>Chip Goines (Harvard University and Jeffrey C. Witt (Loyola University Maryland)</p>
+<p>In Collaboration with Kate Lynch and Doug Emery (University of Pennsylvania) and Marina Rustow and the Princeton Geniza Lab (Princeton University)</p>
+
+<hr/>
+
+<p>Vatican, Vatican City, June 9, 2017</p>
+
+<p>Slide Deck: <a href="http://lombardpress.org/slides/2017-06-09-vatican-ldn">http://lombardpress.org/slides/2017-06-09-vatican-ldn</a></p>
+
+</section>
+
+<section data-markdown>
+  ![/assets/images/2016-04-16-iiif-webmentions/map-slide-image.png](/assets/images/2016-04-16-iiif-webmentions/map-slide-image.png)
+</section>
+
+<section data-markdown>
+  ![ldn-visualization](/assets/images/ldn-visualizations.png)
+</section>
+
+<section data-markdown>
+  ![ldn-visualization](/assets/images/ldn-visualizations1.png)
+</section>
+<section data-markdown>
+  ![ldn-breakdown](/assets/images/ldn-example.png)
+</section>
+<section data-markdown>
+  ### Notification of TOC for Harvard ms. lat. 245
+
+```json
+{
+  "@id": "http://scta.info/iiif/aquinasscriptum/harv245/notification/ranges/toc",
+  "@type": "Announce",
+  "motivation": "iiif:supplement:range",
+  "target": ["http://iiif.lib.harvard.edu/manifests/drs:51994085"],
+  "source": "http://scta.info",
+  "updated": "2017-03-18 13:12:46 UTC",
+  "object": "http://scta.info/iiif/aquinasscriptum/harv245/ranges/toc/wrapper"
+}
+```
+</section>
+<section data-markdown>
+  ### Notification of TOC for Penn ms. 686
+
+```json
+{
+  "@id": "http://scta.info/iiif/rothwellcommentary/penn/notification/ranges/toc",
+  "@type": "Announce",
+  "motivation": "iiif:supplement:range",
+  "target": ["http://library.upenn.edu/iiif/mscodex686/manifest"],
+  "source": "http://scta.info",
+  "updated": "2017-03-18 13:12:46 UTC",
+  "object": "http://scta.info/iiif/rothwellcommentary/penn/ranges/toc/wrapper"
+}
+```
+</section>
+<section data-markdown>
+  ### Notification of TOC for Penn ms. 855
+
+```json
+{
+  "@id": "http://scta.info/iiif/melanderdeanima/penn855/notification/ranges/toc",
+  "@type": "Announce",
+  "motivation": "iiif:supplement:range",
+  "target": ["http://library.upenn.edu/iiif/mscodex855/manifest"],
+  "source": "http://scta.info",
+  "updated": "2017-03-18 13:12:46 UTC",
+  "object": "http://scta.info/iiif/melanderdeanima/penn855/ranges/toc/wrapper"
+}
+```
+</section>
+<section data-markdown>
+  ### Sample Notification Object
+  #### A IIIF set of ranges wrapped in a "range wrapper"
+  ![notifications-sent](/assets/images/scta-range-wrapper.png)
+</section>
+<section data-markdown>
+  ### Sending Notifications
+  ![notifications-sent](/assets/images/ldn-bash-notifications-sent.png)
+</section>
+<section>
+  ### CHIP's Slides
+</section>
+<section data-markdown>
+  ### Penn Public Inbox with Received Notification
+  ![penn-inbox](/assets/images/ldn_penn_inbox.png)
+</section>
+<section data-markdown>
+  ### Bringing Resources Together Inside Mirador via an External Inbox
+  ![mirador-ldn-hack](/assets/images/mirador-ldn-hack.gif)
+</section>
+<section>
+  <section data-markdown>
+    ## In conclusion ...
+
+    #### What would a IIIF spec need to provide over and above the LDN specification?
+  </section>
+  <section data-markdown>
+    ### 1. It must STANDARDIZE the service block announcing an Inbox inside a manifest
+
+```json
+"service":
+{
+  "@context": "http://www.w3.org/ns/ldp#inbox",
+  "@id": "http://sims-dev.library.upenn.edu:8084/iiif/notifications?target=http://library.upenn.edu/iiif/mscodex855/manifest",
+  "profile": "http://www.w3.org/ns/ldp#inbox",
+  "label": "Linked Data Notifications inbox"
+}
+```
+
+  </section>
+  <section data-markdown>
+    ### 2. It must STANDARDIZE an acceptable notification payload
+
+```json
+{
+  "@id": "http://scta.info/iiif/aquinasscriptum/harv245/notification/ranges/toc",
+  "@type": "Announce",
+  "motivation": "iiif:supplement:range",
+  "target": ["http://iiif.lib.harvard.edu/manifests/drs:51994085"],
+  "source": "http://scta.info",
+  "updated": "2017-03-18 13:12:46 UTC",
+  "object": "http://scta.info/iiif/aquinasscriptum/harv245/ranges/toc/wrapper"
+}
+```
+
+  </section>
+  <section data-markdown>
+    ### 3. It must STANDARDIZE a common Inbox index list page
+```json
+{
+"@context": "http://www.w3.org/ns/ldp",
+"@id": "http://sims-dev.library.upenn.edu:8084/iiif/notifications",
+"contains": [{
+  "url": "http://sims-dev.library.upenn.edu:8084/iiif/notifications/5923451a08ff807e442f7829",
+  "motivation": "iiif:supplement:range",
+  "updated": "2017-03-18 13:12:46 UTC",
+  "source": "http://scta.info",
+  "received": "22-05-2017 04:07:54 -04:00"}
+  ]
+}
+```
+  </section>
+  <section data-markdown>
+    ### 4. It must STANDARDIZE the Inbox individual notification display
+    #### (This could be a simple repeat of the notification payload (i.e. #2))
+
+```json
+{
+  "@id": "http://scta.info/iiif/aquinasscriptum/harv245/notification/ranges/toc",
+  "@type": "Announce",
+  "motivation": "iiif:supplement:range",
+  "target": ["http://iiif.lib.harvard.edu/manifests/drs:51994085"],
+  "source": "http://scta.info",
+  "updated": "2017-03-18 13:12:46 UTC",
+  "object": "http://scta.info/iiif/aquinasscriptum/harv245/ranges/toc/wrapper"
+}
+```
+  </section>
+  <section data-markdown>
+    ### 5. It must provide guidelines for the standalone publication of supplemental (non-manifest) IIIF resources.
+
+    * E.g.
+    * A range wrapper
+    * List of service blocks
+    * Layers that include canvas associations for respective annotation lists.
+
+  </section>
+</section>
+<section data-markdown>
+  # Questions?
+</section>
