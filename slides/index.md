@@ -3,7 +3,7 @@ layout: page
 title: Available Decks
 description: Index of available decks
 ---
-
+- [APIs for texts: exploratory examples](2017-06-08-text-apis)
 - [The Promise and Challenge of Dating Sharing Between Scholars and Libraries: An LDN Solution](2017-06-09-vatican-ldn)
 - ["The Scholastic Commentaries and Texts Archive: reconceiving the medieval corpus in a Linked Data world", Washington and Lee University, May 8, 2017](2017-05-08-wlu-scta-linked-data)
 - ["The Scholastic Commentaries and Texts Archive: reconceiving the medieval corpus in a Linked Data world", Washington and Lee University, May 8, 2017](2017-05-08-wlu-scta-linked-data)

@@ -1,0 +1,586 @@
+{
+      "@id": "http://scta.info/api/presentation/1.0/lectio1",
+      "canonicalId": "http://scta.info/lectio1",
+      "@type": "expression",
+      "title": "Lectio 1",
+      "author": "Peter Plaoul",
+      "description": "Lectio 1 from Plaoul's Commentary",
+      "structureType": "item",
+      "level": "3",
+      "isPartOf": "http://scta.info/api/presentation/1.0/deFide",
+      "topLevelExpression": "http://scta.info/api/presentation/1.0/plaoulcommentary",
+      "next": "http://scta.info/api/presentation/1.0/lectio2",
+      "canonicalManifestation":
+        {
+            "@id": "http://scta.info/api/presentation/1.0/lectio1/critical",
+            "canonicalId": "http://scta.info/lectio1/critical",
+            "title": "Critical edition for lectio 1 in Plaoul Commentary",
+            "type": "manifestation",
+            "manifestationType": "critical",
+            "status": "Draft",
+            "editor": "Jeffrey C. Witt",
+            "canonicalTranscription":
+            {
+                "@id": "http://scta.info/api/presentation/1.0/lectio1/critical/transcription",
+                "canonicalId": "http://scta.info/lectio1/critial/transcription",
+                "title": "Critical Edition Transcription for lectio 1 in Plaoul Commentary",
+                "status": "Draft",
+                "editor": "Jeffrey C. Witt",
+                "service": {
+                  "@id":"http://exist.scta.info/exist/apps/scta-app/document/lectio1/critical/transcription",
+                  "format": "appplication/xml"
+                }
+            }
+        },
+      "manifestations": [
+        {
+            "@id": "http://scta.info/api/presentation/1.0/lectio1/reims",
+            "canonicalId": "http://scta.info/resource/lectio1/reims",
+            "type": "manifestation",
+            "title": "Reims Manuscript for lectio 1 in Plaoul Commentary",
+            "manifestationType": "manuscript",
+            "manifest": "http://scta.info/iiif/codex/reims/manifest",
+            "canvases": [
+              "http://scta.info/iiif/reims/canvas/R1r",
+              "http://scta.info/iiif/reims/canvas/R1v",
+              "http://scta.info/iiif/reims/canvas/R2r",
+              "http://scta.info/iiif/reims/canvas/R2v"
+              ]
+        },
+        {
+            "@id": "http://scta.info/api/presentation/1.0/lectio1/vat",
+            "canonicalId": "http://scta.info/resource/lectio1/vat",
+            "type": "manifestation",
+            "title": "Vatican Manuscript for lectio 1 in Plaoul Commentary",
+            "manifestationType": "manuscript",
+            "manifest": "http://scta.info/iiif/codex/vat/manifest",
+            "canvases": [
+              "http://scta.info/iiif/vat/canvas/5r",
+              "http://scta.info/iiif/vat/canvas/5v",
+              "http://scta.info/iiif/vat/canvas/6r",
+              "http://scta.info/iiif/vat/canvas/6v",
+              "http://scta.info/iiif/vat/canvas/7r"
+              ]
+        },
+        {
+            "@id": "http://scta.info/api/presentation/1.0/lectio1/svict",
+            "canonicalId": "http://scta.info/resource/lectio1/svict",
+            "type": "manifestation",
+            "title": "St. Victor Manuscript for lectio 1 in Plaoul Commentary",
+            "manifestationType": "manuscript",
+            "manifest": "http://scta.info/iiif/codex/svict/manifest",
+            "canvases": [
+              "http://scta.info/iiif/reims/svict/187r",
+              "http://scta.info/iiif/reims/svict/187v",
+              "http://scta.info/iiif/reims/svict/188r",
+              "http://scta.info/iiif/reims/svict/188v"
+              ]
+        },
+        {
+            "@id": "http://scta.info/api/presentation/1.0/lectio1/sorb",
+            "canonicalId": "http://scta.info/resource/lectio1/sorb",
+            "type": "manifestation",
+            "title": "Sorbonne Manuscript for lectio 1 in Plaoul Commentary",
+            "manifestationType": "manuscript",
+            "manifest": "http://scta.info/iiif/codex/sorb/manifest",
+            "canvases": [
+              "http://scta.info/iiif/sorb/canvas/2r",
+              "http://scta.info/iiif/sorb/canvas/2v",
+              "http://scta.info/iiif/sorb/canvas/3r",
+              "http://scta.info/iiif/sorb/canvas/3v",
+              "http://scta.info/iiif/sorb/canvas/4r"
+              ]
+        },
+        {
+            "@id": "http://scta.info/api/presentation/1.0/lectio1/critical",
+            "canonicalId": "http://scta.info/resource/lectio1/critical",
+            "type": "manifestation",
+            "title": "Critical Edition for lectio 1 in Plaoul Commentary",
+            "manifestationType": "critical"
+        }
+      ],
+      "blocks": [
+        {
+          "@id": "http://scta.info/presentation/1.0/l1-cpspfs",
+          "canonicalId": "http://scta.info/resource/l1-cpspfs",
+          "type": "expression",
+          "title": "paragraph 1",
+          "canonicalManifestation":
+            {
+                "@id": "http://scta.info/api/presentation/1.0/l1-eipdlt/critical",
+                "canonicalId": "http://scta.info/resource/l1-cpspfs/critical",
+                "title": "Critical edition for paragraph 1 in Plaoul Commentary",
+                "type": "manifestation",
+                "status": "Draft",
+                "editor": "Jeffrey C. Witt",
+                "canonicalTranscription":
+                {
+                    "@id": "http://scta.info/api/presentation/1.0/l1-cpspfs/critical/transcription",
+                    "title": "Critical Edition Transcription for paragraph 1 in Plaoul Commentary",
+                    "status": "Draft",
+                    "editor": "Jeffrey C. Witt",
+                    "service": {
+                      "@id":"http://exist.scta.info/exist/apps/scta-app/document/l1-cpspfs/critical/transcription",
+                      "format": "appplication/xml"
+                    }
+                }
+            },
+          "manifestations": [
+            {
+                "@id": "http://scta.info/api/presentation/1.0/l1-cpspfs/reims",
+                "canonicalId": "http://scta.info/resource/l1-cpspfs/reims",
+                "type": "manifestation",
+                "title": "Reims Manuscript for paragraph 1 in Plaoul Commentary",
+                "manifestationType": "manuscript",
+                "canvases": [
+                  "http://scta.info/iiif/reims/canvas/R1r#xywh=118,117,657,438"
+                 ]
+            },
+            {
+                "@id": "http://scta.info/api/presentation/1.0/l1-cpspfs/vat",
+                "canonicalId": "http://scta.info/resource/l1-cpspfs/vat",
+                "type": "manifestation",
+                "title": "Vatican Manuscript for paragraph 1 in Plaoul Commentary",
+                "manifestationType": "manuscript",
+                "canvases": [
+                  "http://scta.info/iiif/vat/canvas/V5r#xywh=851,1458,650,347"
+                ]
+            },
+            {
+                "@id": "http://scta.info/api/presentation/1.0/l1-cpspfs/svict",
+                "canonicalId": "http://scta.info/resource/l1-cpspfs/svict",
+                "type": "manifestation",
+                "title": "St. Victor Manuscript for paragraph 1 in Plaoul Commentary",
+                "manifestationType": "manuscript",
+                "canvases": [
+                  "http://scta.info/iiif/svict/canvas/SV187r#xywh=156,200,650,428"
+                ]
+            },
+            {
+                "@id": "http://scta.info/api/presentation/1.0/l1-cpspfs/sorb",
+                "canonicalId": "http://scta.info/resource/l1-cpspfs/sorb",
+                "type": "manifestation",
+                "title": "Sorbonne Manuscript for paragraph 1 in Plaoul Commentary",
+                "manifestationType": "manuscript",
+                "canvases": [
+                  "http://scta.info/iiif/sorb/canvas/S2r#xywh=199,274,650,325"
+                ]
+            },
+            {
+                "@id": "http://scta.info/api/presentation/1.0/l1-cpspfs/critical",
+                "canonicalId": "http://scta.info/resource/critical",
+                "type": "manifestation",
+                "title": "Critical Edition for paragraph 1 in Plaoul Commentary",
+                "manifestationType": "manuscript"
+            }
+          ]
+        },
+        {
+          "@id": "http://scta.info/api/presentation/1.0/l1-eipdlt",
+          "canonicalId": "http://scta.info/resource/l1-eipdlt",
+          "type": "expression",
+          "title": "paragraph 2",
+          "canonicalManifestation":
+            {
+                "@id": "http://scta.info/api/presentation/1.0/l1-eipdlt/critical",
+                "canonicalId": "http://scta.info/resource/l1-eipdlt/critical",
+                "title": "Critical edition for paragraph 2 in Plaoul Commentary",
+                "type": "manifestation",
+                "status": "Draft",
+                "editor": "Jeffrey C. Witt",
+                "canonicalTranscription":
+                {
+                    "@id": "http://scta.info/api/presentation/1.0/l1-eipdlt/critical/transcription",
+                    "title": "Critical Edition Transcription for paragraph 2 in Plaoul Commentary",
+                    "status": "Draft",
+                    "editor": "Jeffrey C. Witt",
+                    "service": {
+                      "@id":"http://exist.scta.info/exist/apps/scta-app/document/l1-cpspfs/critical/transcription",
+                      "format": "appplication/xml"
+                    }
+                }
+            },
+          "manifestations": [
+            {
+                "@id": "http://scta.info/api/presentation/1.0/l1-eipdlt/reims",
+                "canonicalId": "http://scta.info/resource/l1-eipdlt/reims",
+                "type": "manifestation",
+                "title": "Reims Manuscript for paragraph 2 in Plaoul Commentary",
+                "manifestationType": "manuscript",
+                "canvases": [
+                  "http://scta.info/iiif/reims/canvas/R1r#xywh=152,492,631,502"
+                ]
+            },
+            {
+                "@id": "http://scta.info/api/presentation/1.0/l1-eipdlt/vat",
+                "type": "manifestation",
+                "title": "Vatican Manuscript for paragraph 2 in Plaoul Commentary",
+                "manifestationType": "manuscript",
+                "canvases": [
+                  "http://scta.info/iiif/vat/canvas/V5r#xywh=851,1728,650,232"
+                ]
+            },
+            {
+                "@id": "http://scta.info/api/presentation/1.0/l1-eipdlt/svict",
+                "canonicalId": "http://scta.info/resource/l1-eipdlt/svict",
+                "type": "manifestation",
+                "title": "St. Victor Manuscript for paragraph 2 in Plaoul Commentary",
+                "manifestationType": "manuscript",
+                "canvases": [
+                  "http://scta.info/iiif/svict/canvas/SV187r#xywh=180,564,650,488"
+                ]
+            },
+            {
+                "@id": "http://scta.info/api/presentation/1.0/l1-eipdlt/sorb",
+                "canonicalId": "http://scta.info/resource/l1-eipdlt/sorb",
+                "type": "manifestation",
+                "title": "Sorbonne Manuscript ffor paragraph 2 in Plaoul Commentary",
+                "manifestationType": "manuscript",
+                "canvases": [
+                  "http://scta.info/iiif/sorb/canvas/S2r#xywh=199,562,650,629"
+                ]
+            },
+            {
+                "@id": "http://scta.info/api/presentation/1.0/l1-eipdlt/critical",
+                "canonicalId": "http://scta.info/resource/l1-eipdlt/critical",
+                "type": "manifestation",
+                "title": "Critical Edition for paragraph 2 in Plaoul Commentary",
+                "manifestationType": "manuscript"
+            }
+          ]
+        },
+        {
+          "@id": "http://scta.info/presentation/1.0/l1-shoatd",
+          "canonicalId": "http://scta.info/resource/l1-shoatd",
+          "type": "expression",
+          "title": "Paragraph 3",
+          "canonicalManifestation":
+            {
+                "@id": "http://scta.info/api/presentation/1.0/l1-shoatd/critical",
+                "canonicalId": "http://scta.info/resource/critical",
+                "title": "Critical edition for paragraph 3 in Plaoul Commentary",
+                "type": "manifestation",
+                "status": "Draft",
+                "editor": "Jeffrey C. Witt",
+                "canonicalTranscription":
+                {
+                    "@id": "http://scta.info/api/presentation/1.0/l1-shoatd/critical/transcription",
+                    "title": "Critical Edition Transcription for paragraph 3 in Plaoul Commentary",
+                    "status": "Draft",
+                    "editor": "Jeffrey C. Witt",
+                    "service": {
+                      "@id":"http://exist.scta.info/exist/apps/scta-app/document/l1-shoatd/critical/transcription.xml",
+                      "format": "appplication/xml"
+                    }
+                }
+          },
+          "manifestations": [
+            {
+                "@id": "http://scta.info/api/presentation/1.0/l1-shoatd/reims",
+                "canonicalId": "http://scta.info/resource/l1-shoatd/reims",
+                "type": "manifestation",
+                "title": "Reims Manuscript for paragraph 3 in Plaoul Commentary",
+                "manifestationType": "manuscript",
+                "canvases": "http://scta.info/iiif/reims/canvas/R1r#xywh=168,957,631,758"
+            },
+            {
+                "@id": "http://scta.info/api/presentation/1.0/l1-shoatd/vat",
+                "type": "manifestation",
+                "title": "Vatican Manuscript for paragraph 3 in Plaoul Commentary",
+                "manifestationType": "manuscript",
+                "canvases": [
+                  "http://scta.info/iiif/vat/canvas/V5v#xywh=206,670,650,928"
+                ]
+            },
+            {
+                "@id": "http://scta.info/api/presentation/1.0/l1-shoatd/svict",
+                "canonicalId": "http://scta.info/resource/l1-shoatd/svict",
+                "type": "manifestation",
+                "title": "St. Victor Manuscript for paragraph 3 in Plaoul Commentary",
+                "manifestationType": "manuscript",
+                "canvases": [
+                  "http://scta.info/iiif/svict/canvas/SV187r#xywh=180,974,650,779"
+                ]
+            },
+            {
+                "@id": "http://scta.info/api/presentation/1.0/l1-shoatd/sorb",
+                "canonicalId": "http://scta.info/resource/l1-shoatd/sorb",
+                "type": "manifestation",
+                "title": "Sorbonne Manuscript ffor paragraph 3 in Plaoul Commentary",
+                "manifestationType": "manuscript",
+                "canvases": [
+                  "http://scta.info/iiif/sorb/canvas/S2r#xywh=196,1123,650,897",
+                  "http://scta.info/iiif/sorb/canvas/S2r#xywh=849,313,650,151"
+                 ]
+            },
+            {
+                "@id": "http://scta.info/api/presentation/1.0/l1-shoatd/critical",
+                "canonicalId": "http://scta.info/resource/l1-shoatd/critical",
+                "type": "manifestation",
+                "title": "Critical Edition for paragraph 3 in Plaoul Commentary",
+                "manifestationType": "manuscript"
+            }
+          ]
+        },
+        {
+            "@id": "http://scta.info/presentation/1.0/l1-usaafe",
+            "canonicalId": "http://scta.info/resource/l1-usaafe",
+            "type": "expression",
+            "title": "Paragraph 4",
+            "canonicalManifestation":
+            {
+                "@id": "http://scta.info/api/presentation/1.0/l1-usaafe/critical",
+                "canonicalId": "http://scta.info/resource/l1-usaafe/critical",
+                "title": "Critical edition for paragraph 4 in Plaoul Commentary",
+                "type": "manifestation",
+                "status": "Draft",
+                "editor": "Jeffrey C. Witt",
+                "canonicalTranscription":
+                {
+                    "@id": "http://scta.info/api/presentation/1.0/l1-usaafe/critical/transcription",
+                    "title": "Critical Edition Transcription for paragraph 4 in Plaoul Commentary",
+                    "status": "Draft",
+                    "editor": "Jeffrey C. Witt",
+                    "service": {
+                      "@id":"http://exist.scta.info/exist/apps/scta-app/document/l1-usaafe/critical/transcription",
+                      "format": "appplication/xml"
+                    }
+                }
+            },
+          "manifestations": [
+            {
+                "@id": "http://scta.info/api/presentation/1.0/l1-usaafe/reims",
+                "canonicalId": "http://scta.info/resource/l1-usaafe/reims",
+                "type": "manifestation",
+                "title": "Reims Manuscript for paragraph 4 in Plaoul Commentary",
+                "manifestationType": "manuscript",
+                "canvases": [
+                  "http://scta.info/iiif/reims/canvas/R1r#xywh=177,1668,631,149",
+                  "http://scta.info/iiif/reims/canvas/R1r#xywh=786,176,631,916"
+                  ]
+            },
+            {
+                "@id": "http://scta.info/api/presentation/1.0/l1-usaafe/vat",
+                "canonicalId": "http://scta.info/resource/l1-usaafe/vat",
+                "type": "manifestation",
+                "title": "Vatican Manuscript for paragraph 4 in Plaoul Commentary",
+                "manifestationType": "manuscript",
+                "canvases": [
+                  "http://scta.info/iiif/vat/canvas/V5v#xywh=206,1502,650,181"
+                ]
+            },
+            {
+                "@id": "http://scta.info/api/presentation/1.0/l1-usaafe/svict",
+                "canonicalId": "http://scta.info/resource/l1-usaafe/svict",
+                "type": "manifestation",
+                "title": "St. Victor Manuscript for paragraph 4 in Plaoul Commentary",
+                "manifestationType": "manuscript",
+                "canvases": [
+                  "http://scta.info/iiif/svict/canvas/SV187r#xywh=180,1707,650,219",
+                  "http://scta.info/iiif/svict/canvas/SV187r#xywh=820,252,650,816"
+                ]
+            },
+            {
+                "@id": "http://scta.info/api/presentation/1.0/l1-usaafe/sorb",
+                "canonicalId": "http://scta.info/resource/l1-usaafe/sorb",
+                "type": "manifestation",
+                "title": "Sorbonne Manuscript ffor paragraph 4 in Plaoul Commentary",
+                "manifestationType": "manuscript",
+                "canvases": [
+                  "http://scta.info/iiif/sorb/canvas/S2r#xywh=836,398,650,1223"
+                ]
+            },
+            {
+                "@id": "http://scta.info/api/presentation/1.0/l1-usaafe/critical",
+                "canonicalId": "http://scta.info/resource/l1-usaafe/critical",
+                "type": "manifestation",
+                "title": "Critical Edition for paragraph 4 in Plaoul Commentary",
+                "manifestationType": "manuscript"
+            }
+          ]
+        },
+        {
+            "@id": "http://scta.info/presentation/1.0/l1-uaqriv",
+            "canonicalId": "http://scta.info/resource/l1-uaqriv",
+            "type": "expression",
+            "title": "Paragraph 5",
+            "canonicalManifestation":
+            {
+                "@id": "http://scta.info/api/presentation/1.0/l1-uaqriv/critical",
+                "canonicalId": "http://scta.info/resource/l1-uaqriv/critical",
+                "title": "Critical edition for paragraph 5 in Plaoul Commentary",
+                "type": "manifestation",
+                "status": "Draft",
+                "editor": "Jeffrey C. Witt",
+                "canonicalTranscription":
+                {
+                    "@id": "http://scta.info/api/presentation/1.0/l1-uaqriv/critical/transcription",
+                    "title": "Critical Edition Transcription for paragraph 5 in Plaoul Commentary",
+                    "status": "Draft",
+                    "editor": "Jeffrey C. Witt",
+                    "service": {
+                      "@id":"http://exist.scta.info/exist/apps/scta-app/document/l1-uaqriv/critical/transcription",
+                      "format": "appplication/xml"
+                    }
+                }
+            },
+          "manifestations": [
+            {
+                "@id": "http://scta.info/api/presentation/1.0/l1-uaqriv/reims",
+                "canonicalId": "http://scta.info/resource/l1-uaqriv/reims",
+                "type": "manifestation",
+                "title": "Reims Manuscript for paragraph 5 in Plaoul Commentary",
+                "manifestationType": "manuscript",
+                "canvases": [
+                  "http://scta.info/iiif/reims/canvas/R1r#xywh=799,1010,631,537"
+                ]
+            },
+            {
+                "@id": "http://scta.info/api/presentation/1.0/l1-uaqriv/vat",
+                "canonicalId": "http://scta.info/resource/l1-uaqriv/vat",
+                "type": "manifestation",
+                "title": "Vatican Manuscript for paragraph 5 in Plaoul Commentary",
+                "manifestationType": "manuscript",
+                "canvases": [
+                  "http://scta.info/iiif/vat/canvas/V5v#xywh=206,1640,650,341",
+                  "http://scta.info/iiif/vat/canvas/V5v#xywh=206,1640,650,341"
+                ]
+            },
+            {
+                "@id": "http://scta.info/api/presentation/1.0/l1-uaqriv/svict",
+                "canonicalId": "http://scta.info/resource/l1-uaqriv/svict",
+                "type": "manifestation",
+                "title": "St. Victor Manuscript for paragraph 5 in Plaoul Commentary",
+                "manifestationType": "manuscript",
+                "canvases": [
+                  "http://scta.info/iiif/svict/canvas/SV187r#xywh=824,989,650,546"
+                ]
+            },
+            {
+                "@id": "http://scta.info/api/presentation/1.0/l1-uaqriv/sorb",
+                "canonicalId": "http://scta.info/resource/l1-uaqriv/sorb",
+                "type": "manifestation",
+                "title": "Sorbonne Manuscript ffor paragraph 5 in Plaoul Commentary",
+                "manifestationType": "manuscript",
+                "canvases": [
+                  "http://scta.info/iiif/sorb/canvas/S2r#xywh=827,1555,650,481"
+                ]
+            },
+            {
+                "@id": "http://scta.info/api/presentation/1.0/l1-uaqriv/critical",
+                "canonicalId": "http://scta.info/resource/l1-uaqriv/critical",
+                "type": "manifestation",
+                "title": "Critical Edition for paragraph 5 in Plaoul Commentary",
+                "manifestationType": "manuscript"
+            }
+          ]
+        },
+        {
+            "@id": "http://scta.info/api/presentation/1.0/l1-pveain",
+            "canonicalId": "http://scta.info/resource/l1-pveain",
+            "type": "expression",
+            "title": "Paragraph 6",
+            "canonicalManifestation":
+            {
+                "@id": "http://scta.info/api/presentation/1.0/l1-pveain/critical",
+                "title": "Critical edition for paragraph 6 in Plaoul Commentary",
+                "type": "manifestation",
+                "status": "Draft",
+                "editor": "Jeffrey C. Witt",
+                "canonicalTranscription":
+                {
+                    "@id": "http://scta.info/api/presentation/1.0/l1-pveain/critical/transcription",
+                    "title": "Critical Edition Transcription for paragraph 6 in Plaoul Commentary",
+                    "status": "Draft",
+                    "editor": "Jeffrey C. Witt",
+                    "service": {
+                      "@id":"http://exist.scta.info/exist/apps/scta-app/document/l1-pveain/critical/transcription",
+                      "format": "appplication/xml"
+
+
+                    }
+                }
+            },
+          "manifestations": [
+            {
+                "@id": "http://scta.info/api/presentation/1.0/l1-pveain/reims",
+                "canonicalId": "http://scta.info/resource/l1-pveain/reims",
+                "type": "manifestation",
+                "title": "Reims Manuscript for paragraph 6 in Plaoul Commentary",
+                "manifestationType": "manuscript",
+                "canvases": [
+                  "http://scta.info/iiif/reims/canvas/R1r#xywh=813,1479,611,216",
+                  "http://scta.info/iiif/reims/canvas/R1r#xywh=217,180,650,551"
+                ]
+            },
+            {
+                "@id": "http://scta.info/api/presentation/1.0/l1-pveain/vat",
+                "canonicalId": "http://scta.info/resource/l1-pveain/vat",
+                "type": "manifestation",
+                "title": "Vatican Manuscript for paragraph 6 in Plaoul Commentary",
+                "manifestationType": "manuscript",
+                "canvases": [
+                  "http://scta.info/iiif/vat/canvas/V5v#xywh=848,364,650,30"
+                ]
+            },
+            {
+                "@id": "http://scta.info/api/presentation/1.0/l1-pveain/svict",
+                "canonicalId": "http://scta.info/resource/l1-pveain/svict",
+                "type": "manifestation",
+                "title": "St. Victor Manuscript for paragraph 6 in Plaoul Commentary",
+                "manifestationType": "manuscript",
+                "canvases": [
+                  "http://scta.info/iiif/svict/canvas/SV187r#xywh=824,1454,650,254"
+                ]
+            },
+            {
+                "@id": "http://scta.info/api/presentation/1.0/l1-pveain/sorb",
+                "canonicalId": "http://scta.info/resource/l1-pveain/sorb",
+                "type": "manifestation",
+                "title": "Sorbonne Manuscript ffor paragraph 6 in Plaoul Commentary",
+                "manifestationType": "manuscript",
+                "canvases": "http://scta.info/iiif/sorb/canvas/S2v#xywh=364,408,650,273"
+            },
+            {
+                "@id": "http://scta.info/api/presentation/1.0/l1-pveain/critical",
+                "canonicalId": "http://scta.info/resource/l1-pveain/critical",
+                "type": "manifestation",
+                "title": "Critical Edition for paragraph 6 in Plaoul Commentary",
+                "manifestationType": "manuscript"
+            }
+          ]
+        }
+      ],
+      "ranges": [
+        {
+          "@id": "http://scta.info/api/presentation/1.0/l1-section1",
+          "canonicalId": "http://scta.info/resource/l1-section1",
+          "type": "expression",
+          "ranges": [
+            "http://scta.info/api/presentation/1.0/l1-section1.1",
+            "http://scta.info/api/presentation/1.0/l1-section1.2"
+          ]
+        },
+        {
+          "@id": "http://scta.info/api/presentation/1.0/l1-section1.1",
+          "canonicalId": "http://scta.info/resource/l1-section1.1",
+          "type": "expression",
+          "blocks": [
+            "http://scta.info/presentation/1.0/l1-cpspfs",
+            "http://scta.info/api/presentation/1.0/l1-eipdlt"
+          ]
+        },
+        {
+          "@id": "http://scta.info/api/presentation/1.0/l1-section1.2",
+          "canonicalId": "http://scta.info/resource/l1-section1.2",
+          "type": "expression",
+          "blocks": [
+            "http://scta.info/presentation/1.0/l1-shoatd",
+            "http://scta.info/api/presentation/1.0/l1-eipdlt",
+            "http://scta.info/presentation/1.0/l1-usaafe",
+            "http://scta.info/presentation/1.0/l1-uaqriv",
+            "http://scta.info/api/presentation/l1-pveain"
+          ]
+        }
+      ]
+    }
