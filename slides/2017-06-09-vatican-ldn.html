@@ -41,6 +41,18 @@ transition: slide
   ![ldn-breakdown](/assets/images/ldn-example.png)
 </section>
 <section data-markdown>
+  ### Example Service Block in Manifest
+```json
+"service":
+{
+  "@context": "http://www.w3.org/ns/ldp#inbox",
+  "@id": "http://sims-dev.library.upenn.edu:8084/iiif/notifications?target=http://library.upenn.edu/iiif/mscodex855/manifest",
+  "profile": "http://www.w3.org/ns/ldp#inbox",
+  "label": "Linked Data Notifications inbox"
+}
+```
+</section>
+<section data-markdown>
   ### Notification of TOC for Harvard ms. lat. 245
 
 ```json
@@ -97,12 +109,13 @@ transition: slide
 </section>
 <section data-markdown>
   > In our context, as a small library team with a sizeable collection that spans many centuries,
-  we don’t typically have curatorial staff with top knowledge about each and every manuscript.
-  Incorporating external enrichments would be extremely interesting for us,
-  but it is more than a technical intervention.
-  By doing so, we also make an institutional statement, and typically,
-  we would seek corroboration from researchers we know.”
-  -- Dries Moreels, January 24, 2017
+   we don’t typically have curatorial staff with top knowledge about each and every manuscript.
+   Incorporating external enrichments would be extremely valuable for us,
+   but that is more than a technical intervention.
+   By doing so, we also make an institutional statement, and typically,
+   we would seek corroboration from other researchers.”
+   January 24, 2017
+   -- Dries Moreels, January 24, 2017
 </section>
 <section data-markdown>
   ### An alternative form of supplemental data consumption: letting the user decide
