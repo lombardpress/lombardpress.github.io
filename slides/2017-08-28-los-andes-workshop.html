@@ -1,0 +1,407 @@
+---
+layout: slide
+title: Los Andes Textual Editing Workshop
+description: A workshop on textual editing with TEI
+theme: white
+transition: slide
+---
+<style>
+.xml-block {background-color: lightgray;}
+.element {color: red;}
+.attribute {color: blue;}
+.indent1 {padding-left: 20px;}
+.indent2 {padding-left: 20px;}
+</style>
+
+
+<section data-markdown>
+
+  <h3>Los Andes Textual Editing Workshop</h3>
+  <hr/>
+  <p>Jeffrey C. Witt (Loyola University Maryland) | @jeffreycwitt</p>
+  <hr/>
+  <p>2017 Universidad de Los Andes, Bogotá, Columbia, August 28th-30th, 2017</p>
+  <p>Slide Deck: <a href="http://lombardpress.org/slides/2017-08-28-los-andes-workshop">http://lombardpress.org/slides/2017-08-28-los-andes-workshop</a></p>
+
+</section>
+
+
+<section>
+  <section data-markdown>
+    # Goals
+  </section>
+  <section data-markdown>
+    ##1. To understand Semantic Encoding as distinct from Visual encoding
+
+    a. To be able to weigh the pros and cons of each method and to accurately assess the additional stages required by each approach in order to achieve different end goals.
+  </section>
+  <section data-markdown>
+    ##2.	To understand what XML and TEI
+
+    a.	To be able to understand the relationship between XML and semantic encoding
+
+    b.	To be able to under the between XML and TEI
+
+    c.	To understand the relationship between TEI and TEI Customization is
+  </section>
+  <section data-markdown>
+    ##3.	To be able to encode a document in XML and TEI and to understand the basic rules of XML encoding.
+
+  </section>
+  <section data-markdown>
+    ##4.	To be able to do simple styling of an XML or TEI document in order to create different “presentations” of that document
+
+    a.	To understand various options for presenting and representing an XML/TEI text; to have a sense of the kinds of tools available
+  </section>
+  <section data-markdown>
+    ##5.	To be able to publish a simple edition to the web
+
+    a.	To be able get a simple tei edition published online
+  </section>
+  <section data-markdown>
+    ##6.	To have an understanding of “advanced” textual encoding practices.
+
+    a.  To understand how to basic encoding of common features of a critical edition,
+    such as a critical apparatus, an apparatus fontium, word choice, diplomatic transcriptions
+
+    a.	To know what resources are available both to guide your encoding and to help you present your encoded texts.
+  </section>
+</section>
+<section>
+  <section data-markdown>
+    # Schedule
+    [Click here](/events/2017-08-28-los-andes-workshop)
+  </section>
+  <section data-markdown>
+
+  </section>
+</section>
+<section>
+  <section data-markdown>
+    # Visual versus Semantic Encoding
+  </section>
+  <section data-markdown>
+    ### Activity
+
+    1) With a pen or pencil, draw a box around examples of these data types
+    and give each data type a “label”
+
+    2) figure out how many different kinds of data are on this page
+
+    3) identify or explain how these data types
+    are communicated to you as a human reader.
+
+    4) identify what kinds of relationships between data types are communicated
+    and how is this communicated
+
+    5) Were there any data types or relationships presented in ambiguous or unclear ways?
+    What made these features ambiguous?
+
+  </section>
+</section>
+<section>
+  <section data-markdown>
+    # What is XML and how to Use It
+
+  </section>
+  <section>
+		<h2>Basic Rules of XML</h2>
+	</section>
+
+	<section>
+		<p>XML semantically identifies pieces of data using opening and closing tags which are enclosed with angle brackets.</p>
+
+		<div class="xml-block">
+			<span class="element">&lt;div&gt;</span>This is a division<span class="element">&lt;/div&gt;</span>
+		</div>
+		<br/>
+		<div class="xml-block">
+			<span class="element">&lt;div&gt;</span>This is a paragraph <span class="element">&lt;/div&gt;</span>
+		</div>
+
+	</section>
+
+	<section>
+
+	<h2>Tags cannot be cross-nested.</h2>
+
+	<p>wrong</p>
+
+	<div class="xml-block">
+		<span class="element">&lt;div&gt;</span>Overlap is <span class="element">&lt;emphasis&gt;</span>not allowed!<span class="element">&lt;/div&gt;</span><span class="element">&lt;/emphasis&gt;</span>
+	</div>
+
+
+	<p>correct</p>
+
+	<div class="xml-block">
+		<span class="element">&lt;div&gt;</span>This is <span class="element">&lt;emphasis&gt;</span>correct<span class="element">&lt;/emphasis&gt;</span><span class="element">&lt;/div&gt;</span>
+	</div>
+
+	<p>Tags must be either siblings of another set of tags or children of a set of tags.</p>
+
+	</section>
+
+	<section>
+
+	<h2>In XML talk, all tags are called 'elements'</h2>
+	<h3>In Aristotle talk, elements are like subjects that can take on differentiating accidents.</h3>
+
+	<p>In addition to containing text and other elements, elements can take on "attributes".</p>
+
+	<div class="xml-block">
+		<span class="element">&lt;quote <span class="attribute">type="paraphrase"</span>&gt;</span>This a paraphrased quotation <span class="element">&lt;/quote&gt;</span>
+	</div>
+	<br/>
+	<div class="xml-block">
+			<span class="element">&lt;div <span class="attribute">type="articulus"</span>&gt;</span>This is an article division <span class="element">&lt;/div&gt;</span>
+	</div>
+	</section>
+	<section>
+		<h2>All elements must be contained inside one Root Element</h2>
+	</section>
+	<section>
+	<p>The result of following these rules is a document whose content is nicely organized into a tree structure.</p>
+	<img src="http://www.ultraslavonic.info/intro-to-xml/tree_root_at_top.png"/>
+	</section>
+	<section>
+	<img src="http://www.ultraslavonic.info/intro-to-xml/tree_root_on_left.png"/>
+	</section>
+  <section>
+		<h2>Activity</h2>
+    <p>Use Oxygen to begin encoding our sample texts</p>
+
+    <p>To start a new file, open oxygen, select file->new, select "xml document"</p>
+
+    <p>
+      Then start encoding.
+      Remember you can create your own tags to describe your data.
+      Just follow these basic rules: <a href="https://www.w3schools.com/xml/xml_syntax.asp">https://www.w3schools.com/xml/xml_syntax.asp</a>
+    <p>
+
+	</section>
+</section>
+
+<section>
+  <section data-markdown>
+    # Styling with Cascading Style Sheets (CSS)
+
+    Because we've encoded our text semantically,
+    we can now use this logic to programmatically style and restyle our text.
+
+    Styles can be added by linking a stylesheet to our XML document like so:
+
+    <pre>
+      &lt;?xml-stylesheet type=&quot;text/css&quot; href=&quot;../css/default.css&quot;?&gt;
+    </pre>
+
+
+
+
+  </section>
+
+  <section>
+    <h3>CSS Treats every element as block</h3>
+    <img src="https://i.stack.imgur.com/cHqTR.png"/>
+
+  </section>
+  <section data-markdown>
+    ## Each block can be modified with an number of properties using the CSS Syntax
+
+    ![css-syntax](https://www.w3schools.com/css/selector.gif)
+
+    ```css
+    body {
+      display: block;
+      margin: 10px;
+      border: 1px black;
+      padding: 2px;
+
+    }
+
+    ```
+  </section>
+  <section data-markdown>
+    # Activity
+
+    1. In Oxygen, open a new css file (file->new->css).
+
+    2. Save the file as mystyles.css.
+
+    3. Add a link to this file at the top of your xml document like so: <pre>
+      &lt;?xml-stylesheet type=&quot;text/css&quot; href=&quot;../css/default.css&quot;?&gt;
+    </pre>
+
+    4. Use this resource [https://www.w3schools.com/css/default.asp](https://www.w3schools.com/css/default.asp) to start adding styles to your xml document.
+
+    5. Open your xml documet in your browser to see how your styles affect your document.
+  </section>
+</section>
+<section>
+  <section data-markdown>
+    # Day 1 Wrap Up
+
+  </section>
+  <section data-markdown>
+
+  </section>
+</section>
+<section>
+  <section data-markdown>
+    # Day 2 Review and Schedule
+
+  </section>
+</section>
+<section>
+  <section data-markdown>
+    # What is TEI and why do we need it?
+  </section>
+	<section>
+		<h2>Question: Where do the element names come from? How do we know what elements or tags we can use?</h2>
+	</section>
+	<section>
+		<h2>The X in XML stands for eXtensible</h2>
+
+		<p>This means that XML actually doesn't specify any set of tags or element names. Anyone can make up their own set of elements and use them however they like.</p>
+
+	</section>
+	<section>
+		<h2>Extensibility provides a lot flexibility</h2>
+
+		<p>It allows different industries and fields to create tags that meet their needs and their data.</p>
+	</section>
+	<section>
+		<h2>Extensibility can also cause confusion</h2>
+
+		<p>If everyone can just make up their own tags, we can create confusion about what different tags mean and the datatypes they are encoding.</p>
+
+		<p>Someone might choose to tag something as <span class="element">&lt;paragraph&gt;</span> and another person might to choose to tag something as <span class="element">&lt;para&gt;</span> and a third person might choose <span class="element">&lt;p&gt;</span>.</p>
+
+		<p>How do we avoid this confusion?</p>
+
+		<p>Enter TEI</p>
+	</section>
+	<section>
+		<h2>TEI: a predefined set of elements designed by and for humanities scholars and textual editors</h2>
+	</section>
+	<section>
+		<h2>About TEI and the TEI Guidelines</h2>
+    <h3>Activity</h3>
+    <p>Explore the TEI Guidelines <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html">http://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html</a></p>
+	</section>
+	<section>
+		<h2>The core structure of a TEI Document</h2>
+
+		<div class="xml-block" style="text-align: left;">
+			<span class="element">&lt;TEI&gt;</span>
+			<br/>
+			<span class="element indent1" style="padding-left: 10px">&lt;teiHeader&gt;</span>The place for information about the author, the editor, publisher, sources used, and other types of metadata<span class="element">&lt;/teiHeader&gt</span>
+			<br/>
+			<span class="element indent1" style="padding-left: 10px">&lt;text&gt;</span><br/>
+			<span class="element indent2" style="padding-left: 40px">&lt;body&gt;</span>
+			The place for division and paragraph elements and of course the text itself<span class="element">&lt;/body&gt;</span><br/>
+			<span class="element indent1" style="padding-left: 20px">&lt;/text&gt;</span>
+			<br/>
+			<span class="element">&lt;/TEI&gt;</span>
+		</div>
+	</section>
+</section>
+<section>
+	<section>
+		<h2>Creating a new TEI file with Oxygen</h2>
+		<p>How to use the TEI templates</p>
+	</section>
+	<section>
+		<h2>Adding to the TeiHeader</h2>
+	</section>
+</section>
+
+<section>
+  <section data-markdown>
+    # Activity: Encoding and Styling with TEI
+  </section>
+</section>
+<section>
+  <section data-markdown>
+    # Publishing an edition online with github pages
+
+  </section>
+  <section data-markdown>
+    # Create a github account
+
+    [http://github.com](https://tei-web-editor.herokuapp.com/)
+
+  </section>
+  <section data-markdown>
+    ## Head over to the TEI-Web-Editor
+
+    ### Login with your new github credentials
+
+    [https://tei-web-editor.herokuapp.com/](https://tei-web-editor.herokuapp.com/)
+
+  </section>
+  <section data-markdown>
+    ### Fork the TEI SIMPLE REPOSITORY
+
+    1. Open
+
+    2. Select the Simple TEI Edition Link
+
+    3. Create a new branch called "gh-pages"
+
+    4. Open the file xml/index.xml
+
+    5. Add a new pargraph
+
+    6. Save your changes
+
+    7. View your file on the web at: [you-user-name].github.io/simple-tei-edition
+
+  </section>
+
+</section>
+<section>
+  <section data-markdown>
+    # Day 2 Wrap Up
+
+  </section>
+  <section data-markdown>
+
+  </section>
+</section>
+<section>
+  <section data-markdown>
+    # Day 3 Review and Schedule
+
+  </section>
+  <section data-markdown>
+
+  </section>
+</section>
+<section>
+  <section data-markdown>
+    # TEI and TEI Customizations
+
+  </section>
+  <section data-markdown>
+
+  </section>
+</section>
+<section>
+  <section data-markdown>
+    # Advanced TEI: Apparatus Criticus, Apparatus Fonitum, and Diplomatic Transcriptions
+
+  </section>
+  <section data-markdown>
+
+  </section>
+</section>
+<section>
+  <section data-markdown>
+    # Day 3 Wrap Up
+
+  </section>
+  <section data-markdown>
+
+  </section>
+</section>
