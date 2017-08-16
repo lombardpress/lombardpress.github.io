@@ -11,3 +11,4 @@ gem 'jekyll-babel'
 gem 'jekyll-redirect-from'
 
 gem 'rack-rewrite'
+gem 'github-pages'
