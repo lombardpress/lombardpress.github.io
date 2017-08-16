@@ -9,7 +9,7 @@
 title: LombardPress
 email: jeffreycwitt@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  
+
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://lombardpress.github.io" # the base hostname & protocol for your site
 twitter_username: jeffreycwitt
@@ -25,6 +25,6 @@ exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'vendor', 'Procfile', 'Rakefil
 
 
 # gems
-gems:
+plugins:
   - jekyll-babel
   - jekyll-redirect-from
