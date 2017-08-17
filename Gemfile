@@ -5,7 +5,7 @@ gem "jekyll", "~> 3.4.0"
 gem 'kramdown'
 gem 'rack-jekyll'
 gem 'rake'
-gem 'puma'
+#gem 'puma'
 
 gem 'jekyll-babel'
 gem 'jekyll-redirect-from'
