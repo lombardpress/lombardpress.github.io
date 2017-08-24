@@ -15,7 +15,7 @@ transition: slide
 </style>
 
 
-<section data-markdown>
+<section>
 
   <h3>Los Andes Textual Editing Workshop</h3>
   <hr/>
@@ -32,12 +32,12 @@ transition: slide
     # Goals
   </section>
   <section data-markdown>
-    ##1. To understand Semantic Encoding as distinct from Visual encoding
+    ### 1. To understand Semantic Encoding as distinct from Visual encoding
 
     a. To be able to weigh the pros and cons of each method and to accurately assess the additional stages required by each approach in order to achieve different end goals.
   </section>
   <section data-markdown>
-    ##2.	To understand what XML and TEI
+    ### 2.	To understand what XML and TEI
 
     a.	To be able to understand the relationship between XML and semantic encoding
 
@@ -46,21 +46,21 @@ transition: slide
     c.	To understand the relationship between TEI and TEI Customization is
   </section>
   <section data-markdown>
-    ##3.	To be able to encode a document in XML and TEI and to understand the basic rules of XML encoding.
+    ### 3.	To be able to encode a document in XML and TEI and to understand the basic rules of XML encoding.
 
   </section>
   <section data-markdown>
-    ##4.	To be able to do simple styling of an XML or TEI document in order to create different “presentations” of that document
+    ### 4.	To be able to do simple styling of an XML or TEI document in order to create different “presentations” of that document
 
     a.	To understand various options for presenting and representing an XML/TEI text; to have a sense of the kinds of tools available
   </section>
   <section data-markdown>
-    ##5.	To be able to publish a simple edition to the web
+    ### 5.	To be able to publish a simple edition to the web
 
     a.	To be able get a simple tei edition published online
   </section>
   <section data-markdown>
-    ##6.	To have an understanding of “advanced” textual encoding practices.
+    ### 6.	To have an understanding of “advanced” textual encoding practices.
 
     a.  To understand how to basic encoding of common features of a critical edition,
     such as a critical apparatus, an apparatus fontium, word choice, diplomatic transcriptions
@@ -79,17 +79,17 @@ transition: slide
     # Visual versus Semantic Encoding
   </section>
   <section data-markdown>
-    ### Activity
+    #### Activity
 
     1) With a pen or pencil, draw a box around examples of these data types
-    and give each data type a “label”
+    and give each data type a “label”.
 
-    2) figure out how many different kinds of data are on this page
+    2) Figure out how many different kinds of data are on this page.
 
-    3) identify or explain how these data types
+    3) Identify or explain how these data types
     are communicated to you as a human reader.
 
-    4) identify what kinds of relationships between data types are communicated
+    4) Identify what kinds of relationships between data types are communicated
     and how is this communicated
 
     5) Were there any data types or relationships presented in ambiguous or unclear ways?
@@ -99,7 +99,7 @@ transition: slide
 </section>
 <section>
   <section data-markdown>
-    # What is XML and how to Use It
+    ## What is XML and how to Use It
 
   </section>
   <section>
@@ -182,7 +182,7 @@ transition: slide
 
 <section>
   <section data-markdown>
-    # Styling with Cascading Style Sheets (CSS)
+    ## Styling with Cascading Style Sheets (CSS)
 
     Because we've encoded our text semantically,
     we can now use this logic to programmatically style and restyle our text.
@@ -220,15 +220,14 @@ transition: slide
     ```
   </section>
   <section data-markdown>
-    # Activity
+    ### Activity
 
     1. In Oxygen, open a new css file (file->new->css).
 
-    2. Save the file as mystyles.css.
+    2. Save the file as `css/mystyles.css`.
 
-    3. Add a link to this file at the top of your xml document like so: <pre>
-      &lt;?xml-stylesheet type=&quot;text/css&quot; href=&quot;../css/default.css&quot;?&gt;
-    </pre>
+    3. Add a link to this file at the top of your xml document like so: `
+      &lt;?xml-stylesheet type=&quot;text/css&quot; href=&quot;../css/mystyles.css&quot;?&gt;`
 
     4. Use this resource [https://www.w3schools.com/css/default.asp](https://www.w3schools.com/css/default.asp) to start adding styles to your xml document.
 
@@ -237,22 +236,23 @@ transition: slide
 </section>
 <section>
   <section data-markdown>
-    # Day 1 Wrap Up
+    ## Day 1 Wrap Up
 
   </section>
 </section>
 <section>
   <section data-markdown>
-    # Day 2 Review and Schedule
+    ## Day 2 Review and Schedule
 
   </section>
 </section>
 <section>
   <section data-markdown>
-    # What is TEI and why do we need it?
+    ## What is TEI and why do we need it?
   </section>
 	<section>
-		<h2>Question: Where do the element names come from? How do we know what elements or tags we can use?</h2>
+		<h3>Question: Where do the element names come from?</h3>
+    <h3>How do we know what elements or tags we can use?</h3>
 	</section>
 	<section>
 		<h2>The X in XML stands for eXtensible</h2>
@@ -304,25 +304,25 @@ transition: slide
 <section>
 	<section>
 		<h2>Creating a new TEI file with Oxygen</h2>
-		<p>How to use the TEI templates</p>
+		<p>In oxygen: select new->Framework Templates->TEI P5->All</p>
 	</section>
-	<section>
-		<h2>Adding to the TeiHeader</h2>
-	</section>
-</section>
-
-<section>
   <section data-markdown>
-    # Activity: Encoding and Styling with TEI
+    ### Activity:
+
+    Use the text we worked with yesterday, and begin to encoded them according to the TEI guidlines, working to make a valid TEI document.
+
+    Use the guidines to look up new elements: <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html">http://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html</a>
+
+    Once, you have a valid document, create a new style sheet, and create a new presentation of your document
   </section>
 </section>
 <section>
   <section data-markdown>
-    # Publishing an edition online with github pages
+    ## Publishing an edition online with github pages
 
   </section>
   <section data-markdown>
-    # Create a github account
+    ## Create a github account
 
     [http://github.com](https://tei-web-editor.herokuapp.com/)
 
@@ -392,7 +392,7 @@ transition: slide
 </section>
 <section>
   <section data-markdown>
-    # Advanced TEI: Apparatus Fonitum
+    # Advanced TEI: Apparatus Fontium
   </section>
   <section data-markdown>
     # Activity
@@ -436,8 +436,5 @@ transition: slide
 <section>
   <section data-markdown>
     # Day 3 Wrap Up
-  </section>
-  <section data-markdown>
-
   </section>
 </section>
