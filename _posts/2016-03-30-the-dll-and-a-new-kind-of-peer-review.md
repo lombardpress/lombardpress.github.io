@@ -52,7 +52,7 @@ It is my opinion that editorial work on Latin critical editions is on the cusp o
 
 So let me turn to that argument now.
 
-## II. Large scale corpus analysis 
+## II. Large scale corpus analysis
 
 My research interest is centered squarely on a large corpus of medieval and renaissance commentaries on the *Sentences* of Peter Lombard written in the 12th century. There are somewhere between 1000 and 1400 medieval and renaissance commentaries, constituting hundreds of thousands of pages, surviving in thousands of manuscripts and fragments scattered in libraries throughout the world.
 
@@ -120,7 +120,7 @@ A great 6 volume edition of this text was done in the late 70’s and early 80�
 
 The height of absurdity is that today it is much easier to obtain a copy of this text that was published in 1522 or even a manuscript on Gallica than it is to obtain a copy of the modern text published in the last century. And even if we could do something with it, it will require a great deal of work to OCR this text and re-encode it in preparation from processing.
 
-![Rinini-15221.png]({{ site.baseurl }}/assets/images/Rinini-15221.png)
+![Rinini-15221.png]({{ site.baseurl }}/assets/images/Rimini-1522.png)
 
 I think we can be sure we have reached a critical point of crises, when traditional publication actually serves to make editorial work less “public” rather than more public.
 
@@ -176,7 +176,7 @@ The point to make as we look at these particular representations is that these v
 
 This de-coupling allows us to re-use the data again and again for a variety of purposes and opens up the possibility for this data to be used for purposes not yet seen.
 
-## V. The point of failure 
+## V. The point of failure
 
 Finally, let me conclude by addressing the critical point of failure.
 
