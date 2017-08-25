@@ -283,11 +283,13 @@ transition: slide
 		<h2>About TEI and the TEI Guidelines</h2>
     <h3>Activity</h3>
     <p>Explore the TEI Guidelines <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html">http://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html</a></p>
+    <p>Tutorials: <a href="http://teibyexample.org/">http://teibyexample.org/</a></p>
 	</section>
 	<section>
-		<h2>The core structure of a TEI Document</h2>
+		<h2>The Core Structure of a TEI Document</h2>
+    <p>See: <a href="http://teibyexample.org/modules/TBED01v00.htm?target=generalstructure#generalstructure">http://teibyexample.org/modules/TBED01v00.htm?target=generalstructure#generalstructure</a></p>
 
-		<div class="xml-block" style="text-align: left;">
+		<div class="xml-block" style="text-align: left; font-size: 18px">
 			<span class="element">&lt;TEI&gt;</span>
 			<br/>
 			<span class="element indent1" style="padding-left: 10px">&lt;teiHeader&gt;</span>The place for information about the author, the editor, publisher, sources used, and other types of metadata<span class="element">&lt;/teiHeader&gt</span>
@@ -300,6 +302,65 @@ transition: slide
 			<span class="element">&lt;/TEI&gt;</span>
 		</div>
 	</section>
+  <section>
+		<h2>The Core Structure of the TEI Header</h2>
+    <p>See: <a href="http://teibyexample.org/modules/TBED02v00.htm">http://teibyexample.org/modules/TBED02v00.htm</a></p>
+		<div class="xml-block" style="text-align: left; font-size: 18px">
+			<span class="element">&lt;teiHeader&gt;</span>
+			<br/>
+			<span class="element indent1" style="padding-left: 10px">&lt;fileDesc&gt;</span>
+			<br/>
+			<span class="element indent2" style="padding-left: 20px">&lt;titleStmt&gt;</span>
+      <br/>
+			<span class="element indent3" style="padding-left: 40px">&lt;title&gt;</span>Title of Document<span class="element">&lt;/title&gt;</span>
+      <br/>
+      <span class="element indent2" style="padding-left: 20px">&lt;/titleStmt&gt;</span>
+      <br/>
+      <span class="element indent2" style="padding-left: 20px">&lt;publicationStmt&gt;</span>
+      <br/>
+      <span class="element indent3" style="padding-left: 40px">&lt;p&gt;</span>Simple statement about publisher here<span class="element">&lt;/p&gt;</span>
+      <br/>
+      <span class="element indent2" style="padding-left: 20px">&lt;/publicationStmt&gt;</span>
+      <br/>
+      <span class="element indent2" style="padding-left: 20px">&lt;sourceDesc&gt;</span>
+      <br/>
+      <span class="element indent3" style="padding-left: 40px">&lt;p&gt;</span>Description of source being represented in tei<span class="element">&lt;/p&gt;</span>
+      <br/>
+      <span class="element indent2" style="padding-left: 20px">&lt;/sourceDesc&gt;</span>
+      <br/>
+			<span class="element indent1" style="padding-left: 10px">&lt;/fileDesc&gt;</span>
+			<br/>
+			<span class="element">&lt;/teiHeader&gt;</span>
+		</div>
+  </section>
+  <section>
+		<h2>The Core Prose Structure</h2>
+    <p>See: <a href="http://teibyexample.org/modules/TBED03v00.htm?target=structure#structure
+">http://teibyexample.org/modules/TBED03v00.htm?target=structure#structure</a></p>
+		<div class="xml-block" style="text-align: left; font-size: 18px">
+			<span class="element">&lt;body&gt;</span>
+			<br/>
+			<span class="element indent1" style="padding-left: 10px">&lt;div&gt;</span>
+			<br/>
+			<span class="element indent2" style="padding-left: 20px">&lt;head&gt;</span>header of section<span class="element">&lt;/head&gt;</span>
+      <br/>
+      <span class="element indent3" style="padding-left: 20px">&lt;p&gt;</span>Text goes here<span class="element">&lt;/p&gt;</span>
+      <br/>
+      <span class="element indent3" style="padding-left: 20px">&lt;p&gt;</span>More text goes here<span class="element">&lt;/p&gt;</span>
+      <br/>
+      <span class="element indent2" style="padding-left: 10px">&lt;/div&gt;</span>
+      <br/>
+      <span class="element indent1" style="padding-left: 10px">&lt;div&gt;</span>
+			<br/>
+			<span class="element indent2" style="padding-left: 20px">&lt;head&gt;</span>header of section<span class="element">&lt;/head&gt;</span>
+      <br/>
+      <span class="element indent3" style="padding-left: 20px">&lt;p&gt;</span>Text goes here<span class="element">&lt;/p&gt;</span>
+      <br/>
+      <span class="element indent2" style="padding-left: 10px">&lt;/div&gt;</span>
+			<br/>
+			<span class="element">&lt;/body&gt;</span>
+		</div>
+  </section>
 </section>
 <section>
 	<section>
@@ -311,9 +372,13 @@ transition: slide
 
     Use the text we worked with yesterday, and begin to encoded them according to the TEI guidlines, working to make a valid TEI document.
 
-    Use the guidines to look up new elements: <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html">http://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html</a>
+    Use the guidines to look up new elements:
+    <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html">http://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html</a>
+    and <a href="http://teibyexample.org/">http://teibyexample.org/</a>
 
-    Once, you have a valid document, create a new style sheet, and create a new presentation of your document
+    Once, you have a valid document, create a new style sheet, and create a new presentation of your document.
+
+    Experiment with conversions of your file using Oxgarage: [http://www.tei-c.org/oxgarage/](http://www.tei-c.org/oxgarage/)
   </section>
 </section>
 <section>
