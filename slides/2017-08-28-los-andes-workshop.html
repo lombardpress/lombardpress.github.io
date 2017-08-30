@@ -465,24 +465,43 @@ transition: slide
 </section>
 <section>
   <section data-markdown>
-    # Day 3 Review and Schedule
+    # Day 3
 
   </section>
 </section>
 <section>
   <section data-markdown>
-    # TEI and TEI Customizations
+    ### Advanced TEI Techniques
+
+    1. Diplomatic Transcriptions
+    2. Recording Names, Places, Interpretations, et alia
+    3. Recording Citations (Apparatus Fontium)
+    4. Recording Variations (Apparatus Criticus)
+
+
   </section>
 </section>
 <section>
   <section data-markdown>
-    # Advanced TEI: Diplomatic Transcriptions
+    ### Diplomatic Transcriptions
+
+    TEI Guidelines: [http://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html#PHST](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html#PHST)
+
+    Question: Why isn't TEI always enough?
 
   </section>
   <section data-markdown>
-    # Activity
+    ###  TEI Customizations
 
-    Using the Page 2 of the "Billy Bud" manuscript, in the "examples" folder,
+    EpiDoc: [http://www.stoa.org/epidoc/gl/latest/app-alltrans.html](http://www.stoa.org/epidoc/gl/latest/app-alltrans.html)
+
+    LombardPress-Schema Diplomatic: [http://lombardpress.org/schema/docs/diplomatic/](http://lombardpress.org/schema/docs/diplomatic/)]
+  </section>
+  <section data-markdown>
+    ### Activity
+
+    Using Page 2 of the "Billy Bud" manuscript, in the "examples" folder
+    -- [https://drive.google.com/open?id=0ByU6rbuuJtxGSFFYbjdWZjg1VzQ](https://drive.google.com/open?id=0ByU6rbuuJtxGSFFYbjdWZjg1VzQ) --
     use one or all of the following guidelines to encode a diplomatic transcription
     of the manuscript page.
 
@@ -494,45 +513,100 @@ transition: slide
 </section>
 <section>
   <section data-markdown>
-    # Advanced TEI: Apparatus Fontium
+    ### Recording Names, Places, Interpretations, et alia
+
+    TEI has different elements to help you group different types of text classifications.
   </section>
   <section data-markdown>
-    # Activity
+    ### For example:
 
-    In this activity,
-    use the TEI-WEB-EDITOR [https://tei-web-editor.herokuapp.com/](https://tei-web-editor.herokuapp.com/)
-    that we worked with yesterday.
+    * [listPerson](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-listPerson.html)
+      - person
+    * [listBibl](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-listBibl.html)
+      - bibl
+    * [taxonomy](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-taxonomy.html)
+      - category
+    * [interGroup](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-interpGrp.html)
+      - interp
 
-    Open the file called: `/xml/lbp-1.0.0-critical-edition.xml`
+    These lists can be added in various places within your TEI document.
+  </section>
+  <section data-markdown>
+    #### These classifications -- with the help of referring attributes -- can be used to characterize various elements in your text.
 
-    Follow the LombardPress-Critical Schema for creating an apparatus fontium [http://lombardpress.org/schema/docs/critical/#apparatus-fontium](http://lombardpress.org/schema/docs/critical/#apparatus-fontium)
+    For example:
 
-    Then view your file on githubpages at [your-username].github.io/critical.html.
+```xml
+&lt;listPerson&gt;
+  &lt;person xml:id="Bob1"&gt;
+  &lt;persName&gt;Bob Smith&lt;/persName&gt;
+  &lt;/person&gt;
+&lt;/listPerson&gt;
+&lt;!-- --&gt;
+&lt;p&gt;Text dicussion a &lt;name ref="#Bob1"&gt;Mr Smith&lt;/name&gt;&lt;/p&gt;
+```
 
-    Hover over the places you've marked with a citation, and view those citations in the bottom of of the browser window.
 
   </section>
 </section>
 <section>
   <section data-markdown>
-    # Advanced TEI: Apparatus Criticus
+    ### Apparatus Fontium
+
+    Using the `&lt;cit&gt;` element is a common way to group a quotation with bibliographic reference. For example:
+
+    ```xml
+    &lt;cit&gt;
+      &lt;quote&gt;Quoted text&lt;/quote&gt;
+      &lt;bibl&gt;Augustine, Book V&lt;/bibl&gt;
+    &lt;/cit&gt;
+    ```
+
+    See [http://lombardpress.org/schema/docs/critical/#apparatus-fontium](http://lombardpress.org/schema/docs/critical/#apparatus-fontium)
   </section>
   <section data-markdown>
-    # Activity
+    ### Activity
 
-    In this activity,
-    use the TEI-WEB-EDITOR [https://tei-web-editor.herokuapp.com/](https://tei-web-editor.herokuapp.com/)
-    that we worked with yesterday.
+    Using the [TEI-WEB-EDITOR](https://tei-web-editor.herokuapp.com/) that we worked with yesterday...
+    * Open the file called: `/xml/lbp-1.0.0-critical-edition.xml`
+    * Follow the LombardPress-Critical Schema for creating an apparatus fontium [http://lombardpress.org/schema/docs/critical/#apparatus-fontium](http://lombardpress.org/schema/docs/critical/#apparatus-fontium)
+    * Then view your file on githubpages at [your-username].github.io/simple-tei-edition/critical.html.
+    * Hover over the places you've marked with a citation, and view those citations in the bottom of the browser.
 
-    Open the file called: `/xml/lbp-1.0.0-critical-edition.xml`
+  </section>
+</section>
+<section>
+  <section data-markdown>
+    ### Apparatus Criticus
 
-    Follow the LombardPress-Critical Schema for creating an apparatus fontium [http://lombardpress.org/schema/docs/critical/#apparatus-criticus](http://lombardpress.org/schema/docs/critical/#apparatus-criticus)
+    Using the `&lt;app&gt;` a variation in witnesses can be recorded as follows:
 
-    Then view your file on githubpages at [your-username].github.io/critical.html.
+    ```xml
+    &lt;app&gt;
+      &lt;lem>fides&lt;/quote&gt;
+      &lt;rdg wit="#V"&gt;fidei&lt;/bibl&gt;
+    &lt;/cit&gt;
+    ```
+    See the TEI Guidelines: [http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TC.html](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TC.html)
+    See the Lbp-Schema for an example of a customization of these guidelines [http://lombardpress.org/schema/docs/critical/#apparatus-criticus](http://lombardpress.org/schema/docs/critical/#apparatus-criticus)
+  </section>
 
-    Hover over the places you've marked with a citation, and view those citations in the bottom of of the browser window.
+  <section data-markdown>
+    ### Activity
 
-    To see, a print out view. Save a copy of your file to your desktop. Make sure it validates in Oxygen and then upload for conversion at [http://print.lombardpress.org](http://print.lombardpress.org) or [http://52.214.200.219/](http://52.214.200.219/)
+    Using the [TEI-WEB-EDITOR](https://tei-web-editor.herokuapp.com/) that we worked with yesterday...
+    * Open the file called: `/xml/lbp-1.0.0-critical-edition.xml`
+    * Follow the LombardPress-Critical Schema for creating an apparatus fontium [http://lombardpress.org/schema/docs/critical/#apparatus-criticus](http://lombardpress.org/schema/docs/critical/#apparatus-criticus)
+    * [more instructions on next slide]
+
+  </section>
+  <section data-markdown>
+    ### Activity Continued
+
+    * Then view your file on githubpages at [your-username].github.io/critical.html.
+    * Hover over the places you've marked with a citation, and view those citations in the bottom of of the browser window.
+    * To see, a print out view. Save a copy of your file to your desktop. Make sure it validates in Oxygen and then upload for conversion at [http://print.lombardpress.org](http://print.lombardpress.org) or [http://52.214.200.219/](http://52.214.200.219/)
+
   </section>
 </section>
 <section>
