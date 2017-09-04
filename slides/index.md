@@ -3,11 +3,12 @@ layout: page
 title: Available Decks
 description: Index of available decks
 ---
-- [Los Andes Textual Edition Workshop, Universidad de Los Andes, Bogota, Colombia](2017-08-28-los-andes-workshop)
-- ["The Scholastic Commentaries and Texts Archive: Creating the Foundation of a Critical Corpus", Porto Alegre, July 25, 2017](2017-07-25-SIEPM-Brazil)
+
+- ["Texts as Networks - reconceiving the medieval corpus in a linked data world"Los Andes Textual Edition Workshop, Universidad de Los Andes, Bogota, Colombia, August 31, 2017](2017-08-31-los-andes-text-as-networks)
+- [Los Andes Textual Edition Workshop, Universidad de Los Andes, Bogota, Colombia, August 28-30, 2017](2017-08-28-los-andes-workshop)
 - ["The Scholastic Commentaries and Texts Archive: Creating the Foundation of a Critical Corpus", Porto Alegre, July 25, 2017](2017-07-25-SIEPM-Brazil)
 - [APIs for texts: exploratory examples](2017-06-08-text-apis)
-- [The Promise and Challenge of Dating Sharing Between Scholars and Libraries: An LDN Solution](2017-06-09-vatican-ldn)
+- [The Promise and Challenge of Data Sharing Between Scholars and Libraries: An LDN Solution](2017-06-09-vatican-ldn)
 - ["The Scholastic Commentaries and Texts Archive: reconceiving the medieval corpus in a Linked Data world", Washington and Lee University, May 8, 2017](2017-05-08-wlu-scta-linked-data)
 - ["The Scholastic Commentaries and Texts Archive: reconceiving the medieval corpus in a Linked Data world", Washington and Lee University, May 8, 2017](2017-05-08-wlu-scta-linked-data)
 - Data Sharing Between Research Groups and Libraries, University of Pennsylvania, Philadelphia, March 16-17, 2017
