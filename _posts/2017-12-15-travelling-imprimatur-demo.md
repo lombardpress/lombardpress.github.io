@@ -20,7 +20,7 @@ Van Zundert describes acts of "paradigmatic regression" as:
 >
 >> (Joris van Zundert, "Barely Beyond the Book?" in *Digital Scholarly Editing: Theories and Practices*, eds. Matthew James Driscoll and Elena Pierazzo, (http://dx.doi.org/10.11647/OBP.0095.05), 83-106, 85)
 
-I start with this idea because today many acts of publishing an edition online, it seems to me, embody an act of paradigmatic regression.
+I start with this idea because today many acts of publishing an edition online embody an act of paradigmatic regression.
 
 The concept we are familiar with from the print world is that an edition is a thing that is experienced in one place. To experience a particular edition is to experience the presentation of this edition as represented in a particular published physical book. The experience of this particular edition is therefore exhausted by the presentation found in this printed book because this edition can be experienced no where else.
 
@@ -32,14 +32,14 @@ That is, all too often, we tend to see the essence of our edition as something t
 
 And accordingly, the way we think about review, quality control, and the imprimatur for this text continues to follow the old paradigm. A text is considered reviewed when a review is given for this particular online presentation of the edition. Thereby, the party responsible for this presentation on this particular website gains an unnecessary and often unearned monopoly over the reviewed and authoritative version of the text and the uses that can be made of it.
 
-Thus, if you want to see the reviewed text, one is needlessly forced to view that edition in one place and in one context only. Further uses and representations of this edition are prohibited precisely because the approval of the text is tied to a particular publisher of this text rather than to the text itself. The authority and veracity of the imprimatur is once again tied to the source of the presentation, that is, the publisher or the website making the text visible, rather than to the data itself.
+Thus, if you want to see the reviewed text, one is needlessly forced to view that edition in one place and in one context only. Further uses and representations of this edition are prohibited precisely because the approval of the text is tied to a particular publication of this text rather than to the text itself. The authority and veracity of the imprimatur is once again tied to the source of the presentation, that is, the publisher or the website making the text visible, rather than to the data itself.
 
-The big difference between the print enactment of this paradigm and the digital is that in the latter case the imprimatur is **needlessly and unnecessarily** tied to the publisher rather than the text. It is no longer the medium that requires us to do this, but our "paradigmatic regression" to an older model with which we are already familiar and comfortable.
+The big difference between the print enactment of this paradigm and the digital is that, in the latter case, the imprimatur is **needlessly and unnecessarily** tied to the publisher rather than the text. It is no longer the medium that requires us to do this, but our "paradigmatic regression" to an older model with which we are already familiar and comfortable.
 
-The digital medium makes it possible for us to decouple the imprimatur of a particular edition from whoever is publishing the text or whatever website in a given moment is presenting that text. In this way, the reviewed text becomes free for anyone to publish and free for anyone to make new and innovative uses of, without ever loses its identity as the reviewed and authoritative text.
+The digital medium makes it possible for us to decouple the imprimatur of a particular edition from whoever is publishing the text or whatever website at a given moment is presenting that text. In this way, the reviewed text becomes free for anyone to publish and free for anyone to make new and innovative uses of without ever loses its identity as the reviewed and authoritative text.
 
 # Demonstration
 
-In the follow screen cast, I want to offer some demonstrations of this new paradigm in action and how this kind of "traveling imprimatur" can work in the real world. While still a work in progress, it is important to recognize that this is already operational de facto technologically possible. The main obstacles to progress therefore lie, not in technological problems, but rather in generating the social and political will to adopt a new paradigm.
+In the follow screen cast, I want to offer some demonstrations of this new paradigm in action and how this kind of "traveling imprimatur" can work in the real world. While still a work in progress, it is important to recognize that this is already operational and de facto technologically possible. The main obstacles to progress therefore lie, not in technological problems, but rather in generating the social and political will to adopt a new paradigm.
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/oNzciuTgjr8" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
