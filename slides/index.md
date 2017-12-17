@@ -4,7 +4,8 @@ title: Available Decks
 description: Index of available decks
 ---
 
-- ["Texts as Networks - reconceiving the medieval corpus in a linked data world"Los Andes Textual Edition Workshop, Universidad de Los Andes, Bogota, Colombia, August 31, 2017](2017-08-31-los-andes-text-as-networks)
+- ["Editing Holcot: Laying the Groundwork for the Future Use and Reuse of Holcot’s Corpus", Paris, France, January 5, 2018](http://lombardpress.org/slides/2018-01-05-holcot-use-and-reuse)
+- ["Texts as Networks - reconceiving the medieval corpus in a linked data world" Los Andes Textual Edition Workshop, Universidad de Los Andes, Bogota, Colombia, August 31, 2017](2017-08-31-los-andes-text-as-networks)
 - [Los Andes Textual Edition Workshop, Universidad de Los Andes, Bogota, Colombia, August 28-30, 2017](2017-08-28-los-andes-workshop)
 - ["The Scholastic Commentaries and Texts Archive: Creating the Foundation of a Critical Corpus", Porto Alegre, July 25, 2017](2017-07-25-SIEPM-Brazil)
 - [APIs for texts: exploratory examples](2017-06-08-text-apis)
