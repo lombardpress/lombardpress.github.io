@@ -3,6 +3,7 @@ layout: post
 title:  Using a thoughtful workflow to support collaboration on text transcriptions
 date:   2015-04-20
 permalink: using-a-thoughtful-workflow-to-support-collaboration-on-text-transcriptions/
+tags: depreciated
 ---
 
 Working at the source code level opens up several new collaboration possibilities. Most importantly is the opportunity to use GIT and to leverage existing GIT workflows.

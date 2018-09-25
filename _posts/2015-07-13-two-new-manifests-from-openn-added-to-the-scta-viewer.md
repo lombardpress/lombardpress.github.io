@@ -3,6 +3,7 @@ layout: post
 title: Two new manifests from Openn added to the SCTA viewer
 date: 2015-07-13
 permalink: /two-new-manifests-from-openn-added-to-the-scta-viewer/
+tags: depreciated
 ---
 
 I just added two new IIIF manifests for witnesses of *Sentences* commentaries to the SCTA Image Viewer made available through UPenn's [OPenn](http://openn.library.upenn.edu/Collections.html) project and, of course, [IIIF](http://iiif.io).
@@ -17,7 +18,7 @@ Just paste these manifest links into any IIIF viewer and view the texts:
 * http://scta.info/iiif/pl-penn1147/manifest
 * http://scta.info/iiif/pl-bnf15705/manifest
 
-I also added a manifest for an anonymous fragment of a *Sentences* commentary, UPenn codex 727, IIIF manifest: 
+I also added a manifest for an anonymous fragment of a *Sentences* commentary, UPenn codex 727, IIIF manifest:
 
 * http://scta.info/iiif/anon1-penn727/manifest
 

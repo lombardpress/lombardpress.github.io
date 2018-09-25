@@ -9,6 +9,7 @@ redirect_from:
   - 2016/06/12/DTS-modeling-proposal/
   - 2016/06/12/dts-modeling-proposal
   - 2016/06/12/dts-modeling-proposal/
+tags: depreciated
 ---
 
 # Introduction
@@ -216,7 +217,7 @@ Let’s start with a top level **WorkGroup**. A simple request for a top level *
 
 This can be displayed as follows:
 
-![top level work group]({{ site.baseurl }}/assets/images/2016-06-30-DTS-modeling-proposal/top-level-workGroup.png)
+![top level work group]({{ site.assets_url }}top-level-workGroup.png)
 
 In the next serialization, we show a sample from the next (or second) level **WorkGroup**
 
@@ -283,7 +284,7 @@ In the next serialization, we show a sample from the next (or second) level **Wo
 
 The following image, shows a rendering of the above **WorkGroup**, where the client has chosen to show all the **Expressions** contained by a **WorkGroup**.
 
-![top level work group]({{ site.baseurl }}/assets/images/2016-06-30-DTS-modeling-proposal/workGroup-with-expressions.png)
+![top level work group]({{ site.assets_url }}workGroup-with-expressions.png)
 
 The next serialization shows the jsonld response for a top level **Expression**:
 
@@ -428,7 +429,7 @@ The next serialization shows the jsonld response for a top level **Expression**:
 
 Here’s how a client might consume that information to provide information about nested parts:
 
-![top level work group]({{ site.baseurl }}/assets/images/2016-06-30-DTS-modeling-proposal/expression-with-items.png)
+![top level work group]({{ site.assets_url }}expression-with-items.png)
 
 Finally, we can illustrate what the jsonld might look like for a non top-level **Expression**, such as an **Expression** with a *structureType=structureItem*
 
@@ -509,15 +510,15 @@ Finally, we can illustrate what the jsonld might look like for a non top-level *
 
 And this information can be used as follows:
 
-![item text view]({{ site.baseurl }}/assets/images/2016-06-30-DTS-modeling-proposal/item-text-view.png)
+![item text view]({{ site.assets_url }}item-text-view.png)
 
 But this same information can be used for a different view, such as a view of available **Manifestations**:
 
-![available manifestations]({{ site.baseurl }}/assets/images/2016-06-30-DTS-modeling-proposal/available-manifestations-at-item-level.png)
+![available manifestations]({{ site.assets_url }}available-manifestations-at-item-level.png)
 
 Likewise, the client should be able to treat every **Expression**, at any level in the hierarchy, the same way while adjusting for properties unique to that *structureType*. So if the resource id points to a *structureBlock* (or paragraph) instead of a *structureItem*, we get a display that automatically adjusts.
 
-![block level display]({{ site.baseurl }}/assets/images/2016-06-30-DTS-modeling-proposal/block-expression-display.png)
+![block level display]({{ site.assets_url }}block-expression-display.png)
 
 # 3. Appendices
 

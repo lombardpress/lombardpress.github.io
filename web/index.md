@@ -14,11 +14,11 @@ It's currently in private alpha testing, and we hope to move it to public beta t
 
 Below are some screen shots of the reading environment
 
-![Screen-Shot-2015-06-17-at-1.56.39-PM.png]({{ site.baseurl }}/assets/images/Screen-Shot-2015-06-17-at-1.56.39-PM.png)
+![Screen-Shot-2015-06-17-at-1.56.39-PM.png]({{ site.assets_url }}Screen-Shot-2015-06-17-at-1.56.39-PM.png)
 
-![Screen-Shot-2015-06-17-at-2.03.54-PM.png]({{ site.baseurl }}/assets/images/Screen-Shot-2015-06-17-at-2.03.54-PM.png)
+![Screen-Shot-2015-06-17-at-2.03.54-PM.png]({{ site.assets_url }}Screen-Shot-2015-06-17-at-2.03.54-PM.png)
 
-![Screen-Shot-2015-09-07-at-8.41.40-AM.png]({{ site.baseurl }}/assets/images/Screen-Shot-2015-09-07-at-8.41.40-AM.png)
+![Screen-Shot-2015-09-07-at-8.41.40-AM.png]({{ site.assets_url }}Screen-Shot-2015-09-07-at-8.41.40-AM.png)
 
 # 2.0.0 (in alpha testing)
 

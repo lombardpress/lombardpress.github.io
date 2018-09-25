@@ -14,6 +14,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://lombardpress.github.io" # the base hostname & protocol for your site
 twitter_username: jeffreycwitt
 github_username:  lombardpress
+assets_url: "https://s3.amazonaws.com/lum-faculty-jcwitt-public/"
 
 
 permalink: pretty

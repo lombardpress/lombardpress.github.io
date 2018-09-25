@@ -3,6 +3,7 @@ layout: post
 title:  5 new manuscripts from e-codices added to the SCTA image viewer
 date:   2015-06-10
 permalink: /5-new-manuscripts-from-e-codices-added-the-scta-image-viewer/
+tags: depreciated
 ---
 
 Five new manuscripts containing whole or partial Sentences commentaries have been added to the SCTA image viewer from various libraries throughout Switzerland.

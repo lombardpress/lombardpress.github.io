@@ -3,6 +3,7 @@ layout: post
 title:  Digital Scholarly Editions and API Consuming Applications
 date:   2016-11-02
 comments: true
+tags: depreciated
 ---
 
 # Digital Scholarly Editions and API Consuming Applications

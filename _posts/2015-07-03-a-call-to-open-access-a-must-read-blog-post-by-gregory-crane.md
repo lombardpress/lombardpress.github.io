@@ -3,6 +3,7 @@ layout: post
 title: A call to open access - a must read blog post by Gregory Crane
 date: 2015-07-03
 permalink: /a-call-to-open-access-a-must-read-blog-post-by-gregory-crane/
+tags: depreciated
 ---
 
 I want to commend the following article by Gregory Crane:

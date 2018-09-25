@@ -4,6 +4,7 @@ title:  Creating an aggregated dataset from distributed sources - a report from 
 date:   2016-08-25
 comments: true
 tags: featured
+tags: depreciated
 ---
 
 The following is a report and summary of the main proposal discussed at the "Linked Data and the Medieval Scholastic Tradition," workshop held at the University of Basel in August 17-19, 2016.
@@ -24,7 +25,7 @@ Third and finally, because data creation interfaces, data storage, and data disp
 
 We have summarized the basic problem of data siloing in the following graphic.
 
-![data-silo-example](/assets/images/2016-08-25-basel-workshop-report/data-silo-example.png)
+![data-silo-example]({{ site.assets_url }}data-silo-example.png)
 
 # A Proposal
 
@@ -38,7 +39,7 @@ This RDF meta data can then function as switch board for all display application
 
 The below graphic illustrates how the data silos seen above have been transformed into a web of criss-crossing connections.
 
-![united-data-set-example](/assets/images/2016-08-25-basel-workshop-report/united-data-set-example.png)
+![united-data-set-example]({{ site.assets_url }}united-data-set-example.png)
 
 # Demonstration
 
@@ -48,11 +49,11 @@ The RCS database has been collecting its own set of prosopographical data for au
 
 In the proposed setup, the RCS project would be asked to publish a data feed as well as any other html data presentations it desired to present. These data feeds should be constructed according to a common standard such as the emerging Open Annotation standards. But for the present it was enough for RCS to simply publish its information in a simple XML feed. See below:
 
-![united-data-set-example](/assets/images/2016-08-25-basel-workshop-report/feed.png)
+![united-data-set-example]({{ site.assets_url }}feed.png)
 
 Once made available, we simply needed to register the address of this feed with SCTA build script, and all of this information becomes available to every other project via the SCTA RDF triple store. For example, here is the LombardPress display page for the author Herveus Natalis.
 
-![united-data-set-example](/assets/images/2016-08-25-basel-workshop-report/lbp-name-view.png)
+![united-data-set-example]({{ site.assets_url }}lbp-name-view.png)
 
 On the right you can see two different data feeds, one from the RCS database and one from Dbpedia. The LombardPress client does not have its own database, instead it queries the public SCTA RDF dataset for the information it needs. There it can find aggregated information about an individual author (such as the life events original recorded by the RCS team) or links to information about this author in other datasets (such as Dbpedia and the Dbpedia abstract).
 
@@ -60,10 +61,10 @@ If every research team begins to prioritize data publication as much as html or 
 
 What's more, each research group that contributes information (via an information feed) to the aggregated SCTA dataset can also get new information that enhances its own particular website or presentational output. For example, the RCS dataset is focused on name and manuscript identification. But another research group has focused on procuring lists of questions contained within Sentences commentaries. For example view, the question list below seen in the LombardPress viewer.
 
-![united-data-set-example](/assets/images/2016-08-25-basel-workshop-report/lbp-question-list.png)
+![united-data-set-example]({{ site.assets_url }}lbp-question-list.png)
 
 Once the SCTA RDF dataset has recorded the association between the SCTA RDF ID and the ids used in other datasets, the RCS data set can send a request for all of these question lists and display them in its own viewer without ever having to recreate this data in its own data store. In the example below, you can see the RCS viewer re-using this same information in its own display.
 
-![united-data-set-example](/assets/images/2016-08-25-basel-workshop-report/QQList.png)
+![united-data-set-example]({{ site.assets_url }}QQList.png)
 
 At this stage, this work is a proposal and work-in-progress. Therefore, we welcome and openly solicit comments and feedback. Do you have a related data set? We'd love to hear about it and think with your team about we can create an ever deeper connected distributed dataset.

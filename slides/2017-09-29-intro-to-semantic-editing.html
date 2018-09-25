@@ -1,0 +1,350 @@
+---
+layout: slide
+title: Introduction to Semantic Editing
+description: A workshop on textual editing with XML and TEI
+date: 2017-09-29
+theme: white
+transition: slide
+tags: workshop
+place: "Harvard University, Cambridge, MA"
+---
+
+<style>
+.xml-block {background-color: lightgray;}
+.element {color: red;}
+.attribute {color: blue;}
+.indent1 {padding-left: 20px;}
+.indent2 {padding-left: 20px;}
+</style>
+
+
+<section>
+
+  <h3>Introduction to Semantic Editing</h3>
+  <hr/>
+  <p>Jeffrey C. Witt (Loyola University Maryland) | @jeffreycwitt</p>
+  <hr/>
+  <p>Harvard University, September 29, 2017</p>
+  <p>Slide Deck: <a href="http://jeffreycwitt.com/slides/2017-09-29-intro-to-semantic-editing">http://jeffreycwitt.com/slides/2017-0=9-29-intro-to-semantic-editing</a></p>
+  <p><a>https://creativecommons.org/licenses/by-nc-sa/4.0/</a></p>
+
+
+</section>
+
+<section data-markdown>
+  # Plan
+
+  1. Introductions
+  2. Semantic Encoding vs. Visual Encoding
+  3. The Basic Rules of XML
+  4. TEI and Why We Need
+  5. Collaboration with Git and Github
+  6. Hands on Work
+
+</section>
+
+<section>
+  <section data-markdown>
+    ## Visual versus Semantic Encoding
+  </section>
+  <section data-markdown>
+    #### Activity
+
+    1) With a pen or pencil, draw a box around examples of these data types
+    and give each data type a “label”.
+
+    2) Figure out how many different kinds of data are on this page.
+
+    3) Identify or explain how these data types
+    are communicated to you as a human reader.
+
+    4) Identify what kinds of relationships between data types are communicated
+    and how this is communicated.
+
+    Question: Were there any data types or relationships presented in ambiguous or unclear ways?
+    What made these features ambiguous?
+
+  </section>
+</section>
+<section>
+  <section data-markdown>
+    ## What is XML and How to Use It
+
+  </section>
+  <section data-markdown>
+    ## What is XML
+
+    XML stands for eXtensible Markup Language and it is a specific technology or tool designed to allow us to semantically describe a text, document, or any kind of structured information.
+
+  </section>
+  <section data-markdown>
+    ## Advantages of XML
+
+    1. It is a well established technology with a long history
+    2. It is well supported.
+    3. It is system independent.
+
+  </section>
+  <section>
+		<h2>Basic Rules of XML</h2>
+	</section>
+
+	<section>
+		<p>XML semantically identifies pieces of data using opening and closing tags which are enclosed with angle brackets.</p>
+
+		<div class="xml-block">
+			<span class="element">&lt;div&gt;</span>This is a division<span class="element">&lt;/div&gt;</span>
+		</div>
+		<br/>
+		<div class="xml-block">
+			<span class="element">&lt;div&gt;</span>This is a paragraph <span class="element">&lt;/div&gt;</span>
+		</div>
+
+	</section>
+
+	<section>
+
+	<h2>Tags cannot be cross-nested.</h2>
+
+	<p>wrong</p>
+
+	<div class="xml-block">
+		<span class="element">&lt;div&gt;</span>Overlap is <span class="element">&lt;emphasis&gt;</span>not allowed!<span class="element">&lt;/div&gt;</span><span class="element">&lt;/emphasis&gt;</span>
+	</div>
+
+
+	<p>correct</p>
+
+	<div class="xml-block">
+		<span class="element">&lt;div&gt;</span>This is <span class="element">&lt;emphasis&gt;</span>correct<span class="element">&lt;/emphasis&gt;</span><span class="element">&lt;/div&gt;</span>
+	</div>
+
+	<p>Tags must be either siblings of another set of tags or children of a set of tags.</p>
+
+	</section>
+
+	<section>
+
+	<h2>In XML talk, all tags are called 'elements'</h2>
+	<h3>In Aristotle talk, elements are like subjects that can take on differentiating accidents.</h3>
+
+	<p>In addition to containing text and other elements, elements can take on "attributes".</p>
+
+	<div class="xml-block">
+		<span class="element">&lt;quote <span class="attribute">type="paraphrase"</span>&gt;</span>This a paraphrased quotation <span class="element">&lt;/quote&gt;</span>
+	</div>
+	<br/>
+	<div class="xml-block">
+			<span class="element">&lt;div <span class="attribute">type="articulus"</span>&gt;</span>This is an article division <span class="element">&lt;/div&gt;</span>
+	</div>
+	</section>
+	<section>
+		<h2>All elements must be contained inside one Root Element</h2>
+	</section>
+	<section>
+	<p>The result of following these rules is a document whose content is nicely organized into a tree structure.</p>
+	<img src="http://www.ultraslavonic.info/intro-to-xml/tree_root_at_top.png"/>
+	</section>
+	<section>
+	<img src="http://www.ultraslavonic.info/intro-to-xml/tree_root_on_left.png"/>
+	</section>
+  <section>
+		<h2>Summary of Basic Rules</h2>
+    <p>
+      <a href="https://www.w3schools.com/xml/xml_syntax.asp">https://www.w3schools.com/xml/xml_syntax.asp</a>
+    </p>
+  </section>
+</section>
+<section>
+  <section data-markdown>
+    ## What Is TEI and Why Do We Need It?
+  </section>
+	<section>
+		<h3>Question: Where do the element and attribute names come from?</h3>
+    <h3>How do we know what elements or attributes we can use?</h3>
+	</section>
+	<section>
+		<h2>The X in XML stands for eXtensible</h2>
+		<p>
+      This means that XML actually does not specify any set of tags or element names.
+      Anyone can make up their own set of elements and use them however they like.
+    </p>
+
+	</section>
+	<section>
+		<h2>Extensibility provides a lot flexibility</h2>
+    <p>It allows different industries and fields to create tags that meet their needs and their data.</p>
+	</section>
+	<section>
+		<h2>Extensibility can also cause confusion</h2>
+
+		<p>If everyone can just make up their own tags,
+      we can create confusion about what different tags mean
+      and the datatypes they are encoding.
+    </p>
+
+		<p>
+      Someone might choose to tag something
+      as <span class="element">&lt;paragraph&gt;</span>
+      and another person might choose to tag something
+      as <span class="element">&lt;para&gt;</span> and a
+      third person might choose <span class="element">&lt;p&gt;</span>.
+    </p>
+
+		<p>How do we avoid this confusion?</p>
+
+		<p>Enter TEI</p>
+	</section>
+	<section>
+		<h2>TEI: a predefined set of elements designed by and for humanities scholars and textual editors</h2>
+    <p>TEI is designed to privilege the descriptive markup of a text over presentational markup</p>
+	</section>
+	<section>
+		<h2>About TEI and the TEI Guidelines</h2>
+    <h3>Activity</h3>
+    <p>Explore the TEI Guidelines <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html">http://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html</a></p>
+    <hr/>
+    <p>Question: What element (or elements) should I use to identify the manuscript I'm transcribing?</p>
+    <p>Question: What element should I use to encode a new page, a new column, or a new line in a manuscript?</p>
+    <p>Question: What element (or elements) should I use to record a scribal correction?</p>
+	</section>
+	<section>
+		<h2>The Core Structure of a TEI Document</h2>
+    <p>See: <a href="http://teibyexample.org/modules/TBED01v00.htm?target=generalstructure#generalstructure">http://teibyexample.org/modules/TBED01v00.htm?target=generalstructure#generalstructure</a></p>
+
+		<div class="xml-block" style="text-align: left; font-size: 18px">
+			<span class="element">&lt;TEI&gt;</span>
+			<br/>
+			<span class="element indent1" style="padding-left: 10px">&lt;teiHeader&gt;</span>The place for information about the author, the editor, publisher, sources used, and other types of metadata<span class="element">&lt;/teiHeader&gt</span>
+			<br/>
+			<span class="element indent1" style="padding-left: 10px">&lt;text&gt;</span><br/>
+			<span class="element indent2" style="padding-left: 40px">&lt;body&gt;</span>
+			The place for division and paragraph elements and of course the text itself<span class="element">&lt;/body&gt;</span><br/>
+			<span class="element indent1" style="padding-left: 20px">&lt;/text&gt;</span>
+			<br/>
+			<span class="element">&lt;/TEI&gt;</span>
+		</div>
+	</section>
+  <section>
+		<h2>The Core Structure of the TEI Header</h2>
+    <p>See: <a href="http://teibyexample.org/modules/TBED02v00.htm">http://teibyexample.org/modules/TBED02v00.htm</a></p>
+		<div class="xml-block" style="text-align: left; font-size: 18px">
+			<span class="element">&lt;teiHeader&gt;</span>
+			<br/>
+			<span class="element indent1" style="padding-left: 10px">&lt;fileDesc&gt;</span>
+			<br/>
+			<span class="element indent2" style="padding-left: 20px">&lt;titleStmt&gt;</span>
+      <br/>
+			<span class="element indent3" style="padding-left: 40px">&lt;title&gt;</span>Title of Document<span class="element">&lt;/title&gt;</span>
+      <br/>
+      <span class="element indent2" style="padding-left: 20px">&lt;/titleStmt&gt;</span>
+      <br/>
+      <span class="element indent2" style="padding-left: 20px">&lt;publicationStmt&gt;</span>
+      <br/>
+      <span class="element indent3" style="padding-left: 40px">&lt;p&gt;</span>Simple statement about publisher here<span class="element">&lt;/p&gt;</span>
+      <br/>
+      <span class="element indent2" style="padding-left: 20px">&lt;/publicationStmt&gt;</span>
+      <br/>
+      <span class="element indent2" style="padding-left: 20px">&lt;sourceDesc&gt;</span>
+      <br/>
+      <span class="element indent3" style="padding-left: 40px">&lt;p&gt;</span>Description of source being represented in tei<span class="element">&lt;/p&gt;</span>
+      <br/>
+      <span class="element indent2" style="padding-left: 20px">&lt;/sourceDesc&gt;</span>
+      <br/>
+			<span class="element indent1" style="padding-left: 10px">&lt;/fileDesc&gt;</span>
+			<br/>
+			<span class="element">&lt;/teiHeader&gt;</span>
+		</div>
+  </section>
+  <section>
+		<h2>The Core Prose Structure</h2>
+    <p>See: <a href="http://teibyexample.org/modules/TBED03v00.htm?target=structure#structure
+">http://teibyexample.org/modules/TBED03v00.htm?target=structure#structure</a></p>
+		<div class="xml-block" style="text-align: left; font-size: 18px">
+			<span class="element">&lt;body&gt;</span>
+			<br/>
+			<span class="element indent1" style="padding-left: 10px">&lt;div&gt;</span>
+			<br/>
+			<span class="element indent2" style="padding-left: 20px">&lt;head&gt;</span>header of section<span class="element">&lt;/head&gt;</span>
+      <br/>
+      <span class="element indent3" style="padding-left: 20px">&lt;p&gt;</span>Text goes here<span class="element">&lt;/p&gt;</span>
+      <br/>
+      <span class="element indent3" style="padding-left: 20px">&lt;p&gt;</span>More text goes here<span class="element">&lt;/p&gt;</span>
+      <br/>
+      <span class="element indent2" style="padding-left: 10px">&lt;/div&gt;</span>
+      <br/>
+      <span class="element indent1" style="padding-left: 10px">&lt;div&gt;</span>
+			<br/>
+			<span class="element indent2" style="padding-left: 20px">&lt;head&gt;</span>header of section<span class="element">&lt;/head&gt;</span>
+      <br/>
+      <span class="element indent3" style="padding-left: 20px">&lt;p&gt;</span>Text goes here<span class="element">&lt;/p&gt;</span>
+      <br/>
+      <span class="element indent2" style="padding-left: 10px">&lt;/div&gt;</span>
+			<br/>
+			<span class="element">&lt;/body&gt;</span>
+		</div>
+  </section>
+</section>
+<section>
+  <section data-markdown>
+    # Collaboration with Github and Git
+
+    * Git is a version control software
+    * Github is a collaboration platform that relies on Git.
+
+  </section>
+  <section data-markdown class="medium">
+    ## Git Branches
+
+    Git and Github allows us all to work on the same file system and then seamlessly bring our collective work together,
+    while at the same time tracking every change in a version history.
+
+    A key component of this workflow is the concept of branches.
+
+    Each user can create a "branch" (or copy) of a "repository".
+
+    They can then make changes to their own branch without fear of overwriting anyone else's changes.
+
+    However, because these branches retain a connection to the main "stem",
+    an adminstrator can easily view all these branches and merge them together.
+
+  </section>
+  <section data-markdown>
+    ## TEI Web Editor
+
+    The TEI Web Editor is simplified editor that tries to make it as easy as possible
+    for an editor to create a branch, get to work, and submit their changes.
+
+  </section>
+</section>
+<section>
+  <section data-markdown>
+    ## Hands On Work
+
+    Some questions to consider while you work:
+
+    * Am I engaging in Descriptive markup or Presentation markup?
+    * What TEI elements best express the underlying logic of my texts (rather than merely how I want it to look)?
+    * What special features about my texts do I want to record?
+    * What unique encoding challenges do my documents present?
+    * How can I make sure I am recording this information in the same way as my other team members?
+
+  </section>
+</section>
+<section data-markdown class="small">
+  #### Additional Resources
+
+Resources for Diplomatic Transcriptions
+- TEI Guidelines [http://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html#PHST](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html#PHST)
+- EpiDoc [http://www.stoa.org/epidoc/gl/latest/app-alltrans.html](http://www.stoa.org/epidoc/gl/latest/app-alltrans.html)
+- LombardPress [http://lombardpress.org/schema/docs/diplomatic/](http://lombardpress.org/schema/docs/diplomatic/)
+
+Resources for Critical Transcriptions
+- TEI Guidelines [http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TC.html](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TC.html)
+- LombardPress [http://lombardpress.org/schema/docs/critical/#apparatus-criticus](http://lombardpress.org/schema/docs/critical/#apparatus-criticus)
+
+General Guides
+- The Official Guidelines [http://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html)
+- Tutorials [http://teibyexample.org](http://teibyexample.org)
+- A simple conversion tool [http://www.tei-c.org/oxgarage/](http://www.tei-c.org/oxgarage/)
+</section>

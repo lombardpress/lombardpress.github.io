@@ -5,6 +5,7 @@ date:   2016-10-22
 comments: true
 tags: featured
 description: How we create dynamic IIIF collections and manifests for distributed content that correspond to author and texts within the SCTA catalogue.
+tags: depreciated
 ---
 
 # Introduction
@@ -30,17 +31,17 @@ The following screen shots show what our dynamic collections and manifests can o
 
 In the first screen shot, you can see that we can produce a manifest of the codex 686 in the University of Pennsylvania collection (complements of [OPENN](http://openn.library.upenn.edu/)).
 
-![Penn-Rothwell-Manifest](/assets/images/2016-10-22-dynamic-manifests/Penn-Rothwell-Manifest.png)
+![Penn-Rothwell-Manifest]({{ site.assets_url }}Penn-Rothwell-Manifest.png)
 
 As you can see, this codex contains approximately 232 pages. But as a researcher working on the text of William of Rothwell, my interest is not in this codex directly, but rather all the Manifestations to Rothwell's texts. Thus I need first the capability to build dynamic collections that can show all Manifestations of this Text/Expression. Second, I also need the capability to build dynamic manifests that can provide the user with only those pages that include the relevant part of Rothwell's text.
 
 As one can see in the image below, the Penn text contains considerably fewer pages that correspond to the Rothwell text than are found in the codex as a whole. The rest of the pages correspond to an entirely different text. Nor do I want to be confined to Penn manuscripts only, since this same Expression also has Manifestations in the e-codices collection and Royal Danish Library.
 
-![Rothwell-Text](/assets/images/2016-10-22-dynamic-manifests/RothwellText.png)
+![Rothwell-Text]({{ site.assets_url }}RothwellText.png)
 
 Further, it is quite likely that I'm not even interested in the entirety of Rothwell's commentary. Rather I may only be interested in Book 1 of his commentary. In the screen shot below, we give users the options to create a dynamic collection for only Book 1 of Rothwell's commentary. What should be noticed here is that this collection no longer includes a manifest from the Royal Danish Library. This is because this particular manuscript only contains book 4 of Rothwell's commentary. Thus, if we only gave the researcher a collection of entire codices that contain some part of Rothwell's text, he or she would be immediately misled to think that there are three manifestations of the text that they are interested in rather two. Through dynamic collections like this, we hope to help scholars avoid the tedious labor of finding the material of actual interest and, in turn, help them find exactly what they need and then get to work.
 
-![Rothwell-Book1](/assets/images/2016-10-22-dynamic-manifests/Rothwell-Book1.png)
+![Rothwell-Book1]({{ site.assets_url }}Rothwell-Book1.png)
 
 # Example 2: Custom Query Manifests
 
@@ -87,7 +88,7 @@ SELECT ?top_level ?top_level_title ?surface ?surface_title ?isurface ?canvas ?ca
 
 The screen shot below shows a number of examples using the above query to build dynamic manifests that include content from multiple providers in the same manifest.
 
-![custom-manifests](/assets/images/2016-10-22-dynamic-manifests/custom-manifests.png)
+![custom-manifests]({{ site.assets_url }}custom-manifests.png)
 
 While the SPARQL query is complicated, it allows us to ask the computer a question and to construct a manifest in response, rather than having to use a GUI to manually create such a manifest. A query like the one shown above could be used for all kinds of amazing research and pedagogical purposes. For example, we could ask the data set to construct a manifest for every page that contains a marginal note and then order those results by date. Such a query could be used to study how citation and reference practices changed over time. Again, we could ask the data set to shows us a manifest of every instance of the name Augustine, and then sort those pages by date, regions, and scribal hand, so that we could see how spellings and abbreviations of Augustine changed over time.
 

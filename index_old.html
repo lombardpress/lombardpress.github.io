@@ -1,0 +1,68 @@
+---
+layout: page
+title: LombardPress
+permalink: /index-old
+---
+
+
+<div class="home">
+<p>LombardPress is the publishing component of a digital ecosystem designed to help faciliate a new kind of editing and publication of historical texts.</p>
+
+<p>The primary focus of LombardPress is to faciliate the publication, dissemination, and study of scholastic commentaries and texts. LombardPress applications are designed to use and publish information made available via emerging scholarly standards and API. In particular, we rely on the <a href="http://scta.info">Scholastic Commentaries and Text Archive (SCTA)</a> ontology and database and the <a href="http://iiif.io">International Image Interoperability Framework</a> API. Because these applications are built to understand common standards, these publication resources are designed to be resuable for any data set that follows the same standards for data creation and dissimenation. For more information see our <a href="/about/">about page</a>.</p>
+
+<hr/>
+  <div class="column-wrapper">
+    <div class="left-column">
+      <h2 class="page-heading">Most Recent Posts</h2>
+      <ul class="post-list">
+        {% for post in site.posts limit:5 %}
+          {% unless post.tags contains 'draft' %}
+          <li>
+            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            {% if post.description %}
+              <span class="post-desc">{{post.description}}</span>
+            {% endif %}
+          </li>
+          {% endunless %}
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="right-column">
+      <h2 class="page-heading">Featured Posts</h2>
+      <ul class="post-list">
+        {% for post in site.posts %}
+          {% if post.tags contains 'featured' %}
+          <li>
+            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+              {% if post.description %}
+              <span class="post-desc">{{post.description}}</span>
+            {% endif %}
+          </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div>
+    <hr/>
+    <h2 class="page-heading">All Posts</h2>
+    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+    <ul class="post-list">
+    {% for post in site.posts %}
+      {% unless post.tags contains 'draft' %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        {% if post.description %}
+          <span class="post-desc">{{post.description}}</span>
+        {% endif %}
+      </li>
+      {% endunless %}
+    {% endfor %}
+    </ul>
+  </div>
+
+</div>

@@ -3,6 +3,7 @@ layout: post
 title:  Creating IIIF Manifests
 date:   2015-06-01
 permalink: /creating-iiif-manifests/
+tags: depreciated
 ---
 
 In this post I wanted to share the readme file for the custom script I've made to auto generate IIIF manifests that will be ingested into Sentences Commentary Text Archive and used by the SCTA Image Viewer and by the LombardPress publishing site that will integrate manuscript witnesses into the critical editions Sentences commentaries.
@@ -49,7 +50,7 @@ Filename “/input/config-jdso-bnf3155.rb”
         msslug: "jdso-bnf3114",
         msabbrev: "P",
         manifestLabel: "John Duns Scotus - Ordinatio - Paris, Bibliotheque Nationale de France, ms. lat. 3114",
-        manifestDescription: "Witness to Book 4 John Duns Scotus Ordinatio Commentary on the Sentences", 
+        manifestDescription: "Witness to Book 4 John Duns Scotus Ordinatio Commentary on the Sentences",
         seeAlso: "http://gallica.bnf.fr/ark:/12148/btv1b90659708/",
         author: "John Duns Scotus",
         logo: "http://upload.wikimedia.org/wikipedia/fr/thumb/8/84/Logo_BnF.svg/1280px-Logo_BnF.svg.png",
@@ -63,7 +64,7 @@ Filename “/input/config-jdso-bnf3155.rb”
         viewingDirection: "left-to-right",
 
         #Canvas Info
-        canvasWidth: 1414, 
+        canvasWidth: 1414,
         canvasHeight: 1054,
         type: "double", # indicates if images are single sides or facing pages.
         i: 1, # starting folio
@@ -74,7 +75,7 @@ Filename “/input/config-jdso-bnf3155.rb”
 
 
         #Image Info
-        imageFormat: "image/jpeg", 
+        imageFormat: "image/jpeg",
         imageWidth: 1414,
         imageHeight: 1054,
 
@@ -83,7 +84,7 @@ Filename “/input/config-jdso-bnf3155.rb”
         image_context: "http://iiif.io/api/image/1/context.json",
         image_service_profile: "http://iiif.io/api/image/1/level2.json",
         image_service_base: "http://gallica.bnf.fr/iiif/ark:/12148/btv1b90659708/",
-        image_service_count: 5, 
+        image_service_count: 5,
         image_service_skip_array: [7, 22, 23, 62, 65, 67],
 
 
@@ -118,13 +119,13 @@ Below is the class and method definitions that knows how to use this information
                 @seeAlso = confighash[:seeAlso]
                 @author = confighash[:author]
                 @logo = confighash[:logo]
-                @attribution = confighash[:attribution] 
+                @attribution = confighash[:attribution]
 
                 @viewingDirection = confighash[:viewingDirection]
 
                 @numberOfFolios = confighash[:numberOfFolios]
                 @canvasWidth = confighash[:canvasWidth]
-                @canvasHeight = confighash[:canvasHeight] 
+                @canvasHeight = confighash[:canvasHeight]
                 @imageFormat = confighash[:imageFormat]
                 @imageWidth = confighash[:imageWidth]
                 @imageHeight = confighash[:imageHeight]
@@ -141,7 +142,7 @@ Below is the class and method definitions that knows how to use this information
                 @image_service_profile = confighash[:image_service_profile]
                 @image_service_base = confighash[:image_service_base]
                 @image_service_count = confighash[:image_service_count]
-                @image_service_skip_array = confighash[:image_service_skip_array] 
+                @image_service_skip_array = confighash[:image_service_skip_array]
 
                 @annotationListIdBase = confighash[:annotationListIdBase]
 
@@ -198,7 +199,7 @@ Below is the class and method definitions that knows how to use this information
 
                     ## begin a series of checks to see if certain folios or image servide ids need to be skipped
 
-                    ## first check: has a folio or folios been skipped in the actual numeration of the manuscript. 
+                    ## first check: has a folio or folios been skipped in the actual numeration of the manuscript.
                     ## if true, then skip these folio numbers in the canvaas creation
                     while @folio_skip_array.include? @i
                         @i += 1
@@ -211,14 +212,14 @@ Below is the class and method definitions that knows how to use this information
                     @image_service_count +=1
                   end
 
-                  ## Third Check: check to see if a folio number has been repeated in the actual manuscript foliation and create the foliation 
+                  ## Third Check: check to see if a folio number has been repeated in the actual manuscript foliation and create the foliation
                   ## this currently varies on whether or not the available images are single pages (which is the ideal)
                   ## or if the images are facing pages.
-                  ## if an folio numeration is repeated create the folio label "folio number" + "bis" 
+                  ## if an folio numeration is repeated create the folio label "folio number" + "bis"
                   ## if the folio is a single page add the side designation (e.g. "r" or "v")
 
                   if @type == "single"
-                    if defined? @folio_bis_array 
+                    if defined? @folio_bis_array
                       #checks to see if the verso side of the first instance has already been logged.
                       if @already_used_folios.include? @i
                         fol = @i.to_s + "bis" + @side
@@ -233,14 +234,14 @@ Below is the class and method definitions that knows how to use this information
                       if @already_used_folios.include? @i
                         fol = @i.to_s + "bis"
                       else
-                        fol = @i 
+                        fol = @i
                       end
                     else
                       fol = @i  
                     end
-                  end 
+                  end
 
-                  ## Fourth Check: Identify the image service and create service ids specifically designed for each service. 
+                  ## Fourth Check: Identify the image service and create service ids specifically designed for each service.
                   ## New servicesids should be added for each new image-service ui pattern
 
                   if @serviceType == "Gallica"
@@ -312,13 +313,13 @@ Below is the class and method definitions that knows how to use this information
                   canvasArray << canvas
 
                   ## Begin preparation for next iteration.
-                  ## if canvases are being created for each side of a leaf, side designation needs to flipped from "r to v" 
-                  ## or from "v" to "r" with uptick in the folio counter 
+                  ## if canvases are being created for each side of a leaf, side designation needs to flipped from "r to v"
+                  ## or from "v" to "r" with uptick in the folio counter
                   ## also needs to account for folio numerations that are repeated and need to be marked as "bis"
 
 
                   if @type == "single"
-                    if defined? @folio_bis_array 
+                    if defined? @folio_bis_array
                       if @folio_bis_array.include? @i
                         @i = @i
                           if @side == "v"
@@ -349,7 +350,7 @@ Below is the class and method definitions that knows how to use this information
                       end
                     end
                   else
-                    if defined? @folio_bis_array 
+                    if defined? @folio_bis_array
                       if @folio_bis_array.include? @i
                                 @i = @i
                         @folio_bis_array.delete(@i)
@@ -367,7 +368,7 @@ Below is the class and method definitions that knows how to use this information
                 end
                 return canvasArray
             end
-        end 
+        end
     end
 
 Finally ruby has a nice command line gem that I use to call this function.
@@ -378,7 +379,7 @@ File /bin/manifest looks like this:
 
     require "thor"
 
-    class Manifest < Thor 
+    class Manifest < Thor
         desc "version", "ask for WittManifestTool version"
         def version
             puts "version 0.0.1"

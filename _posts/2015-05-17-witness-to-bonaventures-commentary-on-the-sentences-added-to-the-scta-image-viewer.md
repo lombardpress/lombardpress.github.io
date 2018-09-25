@@ -3,6 +3,7 @@ layout: post
 title:  Witness to Bonaventure's Commentary on the Sentences added to the SCTA Image Viewer.
 date:   2015-05-17
 permalink: /witness-to-bonaventures-commentary-on-the-sentences-added-to-the-scta-image-viewer/
+tags: depreciated
 ---
 
 Today, I added Harvard's Ms. Lat 265 to the SCTA Image Viewer. This manuscript is a witness to Book II of St. Bonaventure's Commentary on the Sentences of Peter Lombard. It can be viewed here:

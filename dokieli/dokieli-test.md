@@ -39,4 +39,4 @@ If each resource within the SCTA catalogue has an "inbox" property, then, when t
 
 For example, when the [LombardPress-Web](http://scta.lombardpress.org) application displays the primary source text and the user asks for information about this text, a request can be made to the appropriate inbox, and a list of related articles can be displayed along side the target section of text. Such a display might look like the following.
 
-![Lbp-side-panel](/assets/images/lbp-side-display.png)
+![Lbp-side-panel]({{ site.assets_url }}lbp-side-display.png)

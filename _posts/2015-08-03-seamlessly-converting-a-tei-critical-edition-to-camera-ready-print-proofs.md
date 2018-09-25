@@ -3,6 +3,7 @@ layout: post
 title: Seamlessly converting a TEI critical edition to camera-ready print proofs
 date: 2015-08-03
 permalink: /seamlessly-converting-a-tei-critical-edition-to-camera-ready-print-proofs/
+tags: depreciated
 ---
 
 While I think it's best to work on your text directly in TEI, it can often be really nice to see your text in a well format print layout as you work. This can be really useful in a complicated document where the angle brackets and nesting elements make it hard to read and proof the actual text.

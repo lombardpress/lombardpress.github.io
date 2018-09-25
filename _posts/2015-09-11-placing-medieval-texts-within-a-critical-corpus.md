@@ -3,6 +3,7 @@ layout: post
 title:  Placing Medieval Texts within a Critical Corpus - A Case Study on UPenn MS Codex 686
 date:   2015-09-11
 permalink: /placing-medieval-texts-within-a-critical-corpus/
+tags: depreciated
 ---
 
 # Placing Medieval Texts within a Critical Corpus: A Case Study on UPenn MS Codex 686
@@ -67,17 +68,17 @@ I want to do this by focusing on one very interesting manuscript here in the UPe
 
 Let's start by thinking about Rothwell's commentary as an ideal object (represented by the gray box) or what the Functional Requirements for Bibliographic Records (FRBR) calls an exemplar.
 
-![rothwell-exmplar]({{ site.baseurl }}/assets/images/rothwell-exemplar.jpg)
+![rothwell-exmplar]({{ site.assets_url }}rothwell-exemplar.jpg)
 
 From the outset there is a first and immediate level of complexity, which is common to anyone working on manuscripts with multiple witnesses. Upenn codex 686 is one of a set of historical witnesses with sister witnesses in Switzerland, Denmark and elsewhere.
 
-![rothwell-witnesses]({{ site.baseurl }}/assets/images/rothwell-witnesses.jpg)
+![rothwell-witnesses]({{ site.assets_url }}rothwell-witnesses.jpg)
 
 As much as we might care about the exemplar text, we need to keep in mind that it is an ideal text that never materially existed. That means, when we are trying to understand a text within the larger corpus and commentary tradition, we need to be able to keep these witnesses and their relationships both to each other and to the ideal text organized, so that we can (eventually) identify which material sources were referenced and quoted in the later tradition.
 
 Another layer of complexity exists within each of these witnesses. Each of these witnesses contains multiple hierarchies. First and most obviously, they contain an ordered sequence of pages.
 
-![rothwell-witnesses-folios]({{ site.baseurl }}/assets/images/rothwell-witnesses-folios.jpg)
+![rothwell-witnesses-folios]({{ site.assets_url }}rothwell-witnesses-folios.jpg)
 
 These pages needed to be mapped both to the codex as a whole, but also to a second conceptual hierarchy that divides the work. Further these folio sides, recto and verso, need to be mapped to the digital facsimiles and library servers all over the world that serve these images.
 
@@ -93,7 +94,7 @@ The organization within these distinctions (and sometime even at the distinction
 
 The Rothwell example contains distinction divisions, and then question divisions, and finally within those questions we can identify paragraph units.
 
-![hierarchy1]({{ site.baseurl }}/assets/images/hierarchy1.jpg)
+![hierarchy1]({{ site.assets_url }}hierarchy1.jpg)
 
 Mapping this kind of hierarchy to a digitally encoded text is what will allow researchers to focus text searches on distinct books, distinctions, or questions. Merely having a transcription of the text is not yet enough to make these kinds of searches valuable. For example to search for the word "faith" in this commentary is going to give a user overwhelming results, and this is not a very big commentary. Imagine searching for that word throughout the entire corpus.
 
@@ -105,11 +106,11 @@ Rothwell, again, serves as a phenomenal example.
 
 Rothwell's commentary is actually a special kind of commentary known as an "abbreviatio."
 
-![hierarchy2]({{ site.baseurl }}/assets/images/hierarchy2.jpg)
+![hierarchy2]({{ site.assets_url }}hierarchy2.jpg)
 
 It is a distilled compendium of another commentary written by Peter of Tarentaise, later Pope Innocent V.
 
-![hierarchy3]({{ site.baseurl }}/assets/images/hierarchy3.jpg)
+![hierarchy3]({{ site.assets_url }}hierarchy3.jpg)
 
 This means that it's full significance and contribution cannot be understood without first recognizing how it relates to the commentary by Tarentaise. Here a researcher might be interested in the nature of its abbreviation. What did Rothwell choose to include? What did he exclude? What did he change? How does this compare to other abbreviations?
 
@@ -121,13 +122,13 @@ The abbreviation of Adam Wodeham's commentary by the late 14th century thinker H
 
 But Rothewell's commentary differs from the abbreviatio of Wodeham's text in that the abbreviation is much more extensive, such that paragraph parallels can no longer be found. However, once we have mapped the entire hierarchy of each commentary, we can still map parallels at whatever level they occur.
 
-![hierarchy4]({{ site.baseurl }}/assets/images/hierarchy4.jpg)
+![hierarchy4]({{ site.assets_url }}hierarchy4.jpg)
 
 This connection allows us to create an environment that could automatically alert a reader reading a question within Rothwell's commentary that this particular question is an abbreviation of a much longer article. Furthermore, a reading application could be programmed to allow the reader to request the original expanded text and to view it alongside the text in Rothwell's commentary. (We will see this in a moment.) Again, these relationships can also be inverted so a user could be reading an article in Peter of Tarentaise's commentary and be alerted to the fact that an abbreviation of this text exists and—because each section with the hierarchy has a unique de-referenceable id—he or she could request to view a fragment of the related text alongside the full text.
 
 Moving forward, it should be known that relationships of abbreviation only scratch the surface of the way *Sentences* commentaries are inter-connected.
 
-![hierarchy5]({{ site.baseurl }}/assets/images/hierarchy5.jpg)
+![hierarchy5]({{ site.assets_url }}hierarchy5.jpg)
 
 They might also be related by referencing or citing a common authority, like the Bible or Augustine.
 
@@ -139,19 +140,19 @@ Similar kinds of searches and filtering based on quotations can be also used for
 
 Besides the "abbreviatio" relationship, commentaries within the corpus are also frequently linked by their references to one another. Sometimes these references are through direct quotations, but sometimes they are more general references to full paragraphs or entire questions.
 
-![hierarchy6]({{ site.baseurl }}/assets/images/hierarchy6.jpg)
+![hierarchy6]({{ site.assets_url }}hierarchy6.jpg)
 
 You can see how the chain of discovery for a reader of Rothwell might open up. Upon reading a question in Rothwell's commentary, one could be directed to the article it abbreviates in Peter of Tarentaise's commentary. In this text they might find references to Bonaventure's commentary that Rothwell's abbreviatio depends on for meaning but cut because of its abbreviated nature.
 
 Finally, we should try not to lose sight of the fact that all of these commentaries take their original inspiration from Lombard, and therefore ultimately make references back to him, whether through oblique references or through directly quoting Lombard.
 
-![hierarchy7]({{ site.baseurl }}/assets/images/hierarchy7.jpg)
+![hierarchy7]({{ site.assets_url }}hierarchy7.jpg)
 
 But once these links are made, this also means that a reading environment could help readers trace connections across 5 centuries from a given passage in Lombard's text to the various ways that passage has been quoted, referenced, and discussed through the history of the tradition.
 
 In the end, this kind of organization leads to a highly complex web (dramatically simplified here for purposes of illustration).
 
-![web]({{ site.baseurl }}/assets/images/web.jpg)
+![web]({{ site.assets_url }}web.jpg)
 
 In sum, this web allow users and applications, working in tandem, to follow that web in multiple directions to discover existing connections, to read and study the text in a more informative context, and hopefully to make new connections.
 <h3>A Note on the Value of Collaborative Discovery</h3>
@@ -165,7 +166,7 @@ If we could link all this work together, it would be possible to combine what in
 
 Let me for a moment try to help you see this in action.
 
-![Screen-Shot-2015-09-07-at-1.03.42-PM]({{ site.baseurl }}/assets/images/Screen-Shot-2015-09-07-at-1.03.42-PM.png)
+![Screen-Shot-2015-09-07-at-1.03.42-PM]({{ site.assets_url }}Screen-Shot-2015-09-07-at-1.03.42-PM.png)
 
 What you see here is a little program I have written that is effectively crawling thousands of discrete texts and millions of Latin words submitted by editors of all stripes: editors in Berlin, Bogota, and even undergraduates at my own university. These texts are submitted to a central repository, or the *Sentences Commentary Text Archive*, and this script crawls each text and effectively draws machine-readable connections between them.
 
@@ -177,7 +178,7 @@ Now let's focus on a few slides that represent early development of a reading en
 
 First, we might look quickly at the ways we can view the images of the individual witnesses of this text.
 
-![Screen-Shot-2015-09-10-at-9.06.05-PM]({{ site.baseurl }}/assets/images/Screen-Shot-2015-09-10-at-9.06.05-PM.png)
+![Screen-Shot-2015-09-10-at-9.06.05-PM]({{ site.assets_url }}Screen-Shot-2015-09-10-at-9.06.05-PM.png)
 
 View these comparisons live: [http://mirador.scta.info/#b653ab58-885e-4e17-b758-4874c052fb98](http://mirador.scta.info/#b653ab58-885e-4e17-b758-4874c052fb98)
 
@@ -185,11 +186,11 @@ Here we can bring the witnesses from Aarau, Copenhagen, and Philadelphia side by
 
 We can also bring together witnesses of the Rothwell text and the Peter of Tarentaise text different image servers.
 
-![Screen-Shot-2015-06-10-at-12.46.19-PM]({{ site.baseurl }}/assets/images/Screen-Shot-2015-06-10-at-12.46.19-PM.png)
+![Screen-Shot-2015-06-10-at-12.46.19-PM]({{ site.assets_url }}Screen-Shot-2015-06-10-at-12.46.19-PM.png)
 
 Second, we might look at the Rothwell text itself.
 
-![Screen-Shot-2015-09-07-at-8.41.40-AM]({{ site.baseurl }}/assets/images/Screen-Shot-2015-09-07-at-8.41.40-AM.png)
+![Screen-Shot-2015-09-07-at-8.41.40-AM]({{ site.assets_url }}Screen-Shot-2015-09-07-at-8.41.40-AM.png)
 
 Here we've requested information about paragraph 3, and we learn that this entire paragraph is an abbreviation of article 3 of Peter of Tarentaise's commentary. If we click on view text in the left side panel, we can view that entire article without leaving the page.
 
@@ -197,11 +198,11 @@ The bottom window has queried the database, identified where the referenced text
 
 If we click on that link we will be taken directly to the text of Peter of Tarentaise, where we can continue our investigation.
 
-![Screen-Shot-2015-09-07-at-8.45.38-AM]({{ site.baseurl }}/assets/images/Screen-Shot-2015-09-07-at-8.45.38-AM.png)
+![Screen-Shot-2015-09-07-at-8.45.38-AM]({{ site.assets_url }}Screen-Shot-2015-09-07-at-8.45.38-AM.png)
 
 Here we can read the full article and become interested in important paragraphs and discussions that the Rothwell text cut out. For example, we can request information about paragraph 31. Here we note that paragraph 31 references a quotation from Augustine and a passage from Lombard's <em>Sentences</em> itself. Again, we can request a quick view of that text in the bottom window or we can select to focus in on that text itself.
 
-![Screen-Shot-2015-09-07-at-11.50.49-AM]({{ site.baseurl }}/assets/images/Screen-Shot-2015-09-07-at-11.50.49-AM.png)
+![Screen-Shot-2015-09-07-at-11.50.49-AM]({{ site.assets_url }}Screen-Shot-2015-09-07-at-11.50.49-AM.png)
 
 Here we would be taken directly to paragraph 2 and we can learn further information, first we can discover that this paragraph quotes the very same quotation that the Tarentaise text referred to. We can also see that this information panel shows the inverse relationship, namely that it is referenced by the commentary of Tarentaise. Finally, we can see that another commentary, the commentary of Peter Gracilis, also references this text.
 
@@ -209,6 +210,6 @@ In short, the work of two separate editors has been collected through the RDF ex
 
 Now imagine we reversed this investigation. Someone might be reading the text of Lombard and take an interest in this particular paragraph. By selecting the paragraph information list, they would get a list of every paragraph in every other commentary that quotes or references or discusses this paragraph. And without leaving the page they are on, they would be able to view the referring text with a simple click or they could jump to the text itself.
 
-![Screen-Shot-2015-09-07-at-11.50.57-AM]({{ site.baseurl }}/assets/images/Screen-Shot-2015-09-07-at-11.50.57-AM.png)
+![Screen-Shot-2015-09-07-at-11.50.57-AM]({{ site.assets_url }}Screen-Shot-2015-09-07-at-11.50.57-AM.png)
 
-![Screen-Shot-2015-09-07-at-11.51.02-AM]({{ site.baseurl }}/assets/images/Screen-Shot-2015-09-07-at-11.51.02-AM.png)
+![Screen-Shot-2015-09-07-at-11.51.02-AM]({{ site.assets_url }}Screen-Shot-2015-09-07-at-11.51.02-AM.png)

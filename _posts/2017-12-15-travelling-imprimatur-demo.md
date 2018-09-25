@@ -4,6 +4,7 @@ title:  Traveling Imprimatur Demonstration
 date:   2017-12-15
 comments: true
 description: A demonstration and proof of concept of the traveling imprimatur.
+tags: depreciated
 ---
 
 In this demo, I'd like to show some of the early realizations of a system of quality control and imprimatur that can travel with an edition, freeing it from the confines of a particular publisher or particular presentation. In an [earlier post](http://lombardpress.org/2016/05/19/the-traveling-imprimatur), I described an early conception of this idea as a "traveling imprimatur", but of late I have had some requests for live demonstrations of how this might work in production rather than just in theory. So here I want to offer a few more thoughts about why this idea is important before offering a video demonstration of this idea working in production.

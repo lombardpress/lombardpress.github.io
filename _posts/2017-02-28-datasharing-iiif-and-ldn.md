@@ -4,6 +4,7 @@ title:  IIIF and Linked Data Notifications - Thoughts and Reflections
 date:   2017-02-28
 comments: true
 description: A write up of ongoing reflections about how to use Linked Data Notifications to help facilitate data sharing between related IIIF resources.
+tags: depreciated
 ---
 
 A post by Jeffrey Witt (@jeffreycwitt)
@@ -34,11 +35,11 @@ Again, the SCTA has transcriptions and complicated ranges for manuscripts in the
 
 Ideally, we would like to achieve something like the following:
 
-![ldn-visualization](/assets/images/ldn-visualizations.png)
+![ldn-visualization]({{ site.assets_url }}ldn-visualizations.png)
 
 Or
 
-![ldn-visualization](/assets/images/ldn-visualizations1.png)
+![ldn-visualization]({{ site.assets_url }}ldn-visualizations1.png)
 
 # New attempts with Linked Data Notifications
 
@@ -77,7 +78,7 @@ Here is a range announcement. The "object" property is taking a single object th
 
 Sending notification is a simple post request.
 
-![bash_send_notification](/assets/images/bash_send_notification.png)
+![bash_send_notification]({{ site.assets_url }}bash_send_notification.png)
 
 # The Inbox
 
@@ -85,15 +86,15 @@ Sending notification is a simple post request.
 
 On a generic GET request to the inbox endpoint, the inbox should return a list of received notifications.
 
-![unfiltered_notifications](/assets/images/unfiltered_notifications.png)
+![unfiltered_notifications]({{ site.assets_url }}unfiltered_notifications.png)
 
 On a GET request for a particular notification, the notification itself should be returned.
 
-![single_notifications](/assets/images/single_notifications.png)
+![single_notifications]({{ site.assets_url }}single_notifications.png)
 
 I have also modified this inbox, so a user/client could request a list of resources related to a particular manifest (or other resource).
 
-![filtered_announcements](/assets/images/filtered_announcements.png)
+![filtered_announcements]({{ site.assets_url }}filtered_announcements.png)
 
 Now, theoretically, UPenn, Harvard, or Cambridge, could just send a request to this inbox to see if there are any announcements about resources related to their own manifests.
 

@@ -12,9 +12,9 @@ The public repository for LombardPress print can be found at: [http://github.org
 
 Example covers and typeset pages can be seen here
 
-![graciliscover.png]({{ site.baseurl }}/assets/images/graciliscover.png)
+![graciliscover.png]({{ site.assets_url }}graciliscover.png)
 
-![example-lbp-print-output.png]({{ site.baseurl }}/assets/images/example-lbp-print-output.png)
+![example-lbp-print-output.png]({{ site.assets_url }}example-lbp-print-output.png)
 
 A demo of this conversion can be found here:
 

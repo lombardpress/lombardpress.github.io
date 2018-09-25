@@ -3,6 +3,7 @@ layout: post
 title:  The Digital Latin Library and a New Kind of Peer Review
 date:   2016-03-30
 permalink: /the-dll-and-a-new-kind-of-peer-review/
+tags: depreciated
 ---
 
 Below is a transcript of my presentation at the:
@@ -74,27 +75,27 @@ Finally, we may just want to answer simple questions about the corpus. Is this w
 
 These are amazing possibilities and they are technically feasible possibilities. I’m working hard to try to lay that foundation through the construction of metadata database that I call that *Sentences Commentary Text Archive*.
 
-![SCTASCHEMA2.png]({{ site.baseurl }}/assets/images/SCTASCHEMA2.png)
+![SCTASCHEMA2.png]({{ site.assets_url }}SCTASCHEMA2.png)
 
 The *Sentences Commentary Text Archive* has mapped out a complex data-model, implemented as RDF and made available as a public SPARQL endpoint that any web application can then query and use.
 
 This data model and the associated metadata is what allows us to quickly organize the corpus and then offer the kinds of search results discussed above.
 
-![plaoul-wordcount.png]({{ site.baseurl }}/assets/images/plaoul-wordcount.png)
+![plaoul-wordcount.png]({{ site.assets_url }}plaoul-wordcount.png)
 
 Thus (as seen above) we can begin to accomplish the simple work of calculating the total size of the corpus, and then begin comparing the sizes of different works within that corpus.
 
 Further, we can start producing statistical analysis of quotations used within the corpus, or calculate the frequency of names used, or the frequency of bible verses used.
 
-![quoteResults.png]({{ site.baseurl }}/assets/images/quoteResults.png)
+![quoteResults.png]({{ site.assets_url }}quoteResults.png)
 
-![Screen-Shot-2016-03-24-at-10.52.18-AM.png]({{ site.baseurl }}/assets/images/Screen-Shot-2016-03-24-at-10.52.18-AM.png)
+![Screen-Shot-2016-03-24-at-10.52.18-AM.png]({{ site.assets_url }}Screen-Shot-2016-03-24-at-10.52.18-AM.png)
 
-![Screen-Shot-2016-03-24-at-10.52.34-AM.png]({{ site.baseurl }}/assets/images/Screen-Shot-2016-03-24-at-10.52.34-AM.png)
+![Screen-Shot-2016-03-24-at-10.52.34-AM.png]({{ site.assets_url }}Screen-Shot-2016-03-24-at-10.52.34-AM.png)
 
 Finally, we can use that same data model to link the text to manuscript facsimiles, and then allow a user to move from search results to the manuscript page on which those search results occur.
 
-![Screen-Shot-2016-03-24-at-10.56.15-AM.png]({{ site.baseurl }}/assets/images/Screen-Shot-2016-03-24-at-10.56.15-AM.png)
+![Screen-Shot-2016-03-24-at-10.56.15-AM.png]({{ site.assets_url }}Screen-Shot-2016-03-24-at-10.56.15-AM.png)
 
 In short, with our data model, we are trying to lay the foundation for all of this possibility. And in many ways this technical infrastructure has already been actualized.
 
@@ -116,11 +117,11 @@ The best example I have of this absurdity is the critical edition of Gregory of 
 
 A great 6 volume edition of this text was done in the late 70’s and early 80’s. Today, not only is this data not able to be re-used and studied in the context of the entire corpus. It is incredibly difficult to even access the text as a reader.
 
-![Rimini-Book-Prices1.png]({{ site.baseurl }}/assets/images/Rimini-Book-Prices1.png)
+![Rimini-Book-Prices1.png]({{ site.assets_url }}Rimini-Book-Prices1.png)
 
 The height of absurdity is that today it is much easier to obtain a copy of this text that was published in 1522 or even a manuscript on Gallica than it is to obtain a copy of the modern text published in the last century. And even if we could do something with it, it will require a great deal of work to OCR this text and re-encode it in preparation from processing.
 
-![Rinini-15221.png]({{ site.baseurl }}/assets/images/Rimini-1522.png)
+![Rinini-15221.png]({{ site.assets_url }}Rimini-1522.png)
 
 I think we can be sure we have reached a critical point of crises, when traditional publication actually serves to make editorial work less “public” rather than more public.
 
@@ -144,33 +145,33 @@ First and foremost we need the field, not any given publisher to define the unde
 
 We are attempting to do this with what we call the LombardPress schema v1.0.0 designed especially to meet the idiosyncrasies of *Sentences* Commentaries.
 
-![lombardPress-schema.png]({{ site.baseurl }}/assets/images/lombardPress-schema.png)
+![lombardPress-schema.png]({{ site.assets_url }}lombardPress-schema.png)
 
 At the same time, there is overlap with the concerns of other Latin critical editions, and we are looking to the recommendations of the Digital Latin Library to adopt encoding practices that prioritize compatibility and interoperability wherever possible.
 
 Second, through our data-model, we aim to identify each discrete section of all *Sentences* commentary and develop corresponding “official” git repositories that anyone can fork, work on, and then submit through a pull request for preliminary review. In this way, editorial work can be done in a decentralized way, but the results can be easily brought together.
 
-![pullrequests.png]({{ site.baseurl }}/assets/images/pullrequests.png)
+![pullrequests.png]({{ site.assets_url }}pullrequests.png)
 
-![pull-request-example.png]({{ site.baseurl }}/assets/images/pull-request-example.png)
+![pull-request-example.png]({{ site.assets_url }}pull-request-example.png)
 
 Third, we are working very hard on a versioning system to describe the unique state of any given edition and to develop an enumerated list of “status” values, so that a text can be easily be identified in its encoded (non-presentation form) as “draft”, “public-draft”, “out-for-review-draft”, and “peer-reviewed”.
 
-![editionStatus.png]({{ site.baseurl }}/assets/images/editionStatus.png)
+![editionStatus.png]({{ site.assets_url }}editionStatus.png)
 
-![print-version-number.png]({{ site.baseurl }}/assets/images/print-version-number.png)
+![print-version-number.png]({{ site.assets_url }}print-version-number.png)
 
 Fourth and finally, we are working hard to develop stylesheets and reusable processing instructions so that encoded editions can be automatically converted to printed books and integrated into sophisticated reading web applications.
 
-![graciliscover.png]({{ site.baseurl }}/assets/images/graciliscover.png)
+![graciliscover.png]({{ site.assets_url }}graciliscover.png)
 
-![print-text-example.png]({{ site.baseurl }}/assets/images/print-text-example.png)
+![print-text-example.png]({{ site.assets_url }}print-text-example.png)
 
-![Screen-Shot-2015-06-17-at-1.57.30-PM.png]({{ site.baseurl }}/assets/images/Screen-Shot-2015-06-17-at-1.57.30-PM.png)
+![Screen-Shot-2015-06-17-at-1.57.30-PM.png]({{ site.assets_url }}Screen-Shot-2015-06-17-at-1.57.30-PM.png)
 
-![Screen-Shot-2015-06-17-at-1.56.39-PM.png]({{ site.baseurl }}/assets/images/Screen-Shot-2015-06-17-at-1.56.39-PM.png)
+![Screen-Shot-2015-06-17-at-1.56.39-PM.png]({{ site.assets_url }}Screen-Shot-2015-06-17-at-1.56.39-PM.png)
 
-![Screen-Shot-2015-06-17-at-2.03.54-PM.png]({{ site.baseurl }}/assets/images/Screen-Shot-2015-06-17-at-2.03.54-PM.png)
+![Screen-Shot-2015-06-17-at-2.03.54-PM.png]({{ site.assets_url }}Screen-Shot-2015-06-17-at-2.03.54-PM.png)
 
 The point to make as we look at these particular representations is that these various representations are only possible because the underlying data is radically divorced from this presentation, independently reviewed, and available in publicly accessible version controlled repositories.
 
@@ -186,7 +187,7 @@ This is precisely where the RSA’s collaboration with the DLL is most needed. W
 
 It is my hope that someday, the *imprimatur* we are accustomed to seeing on the front of a printed book will be replaced by the kind of “badges” one now sees on open source github repositories.
 
-![code-badges.png]({{ site.baseurl }}/assets/images/code-badges.png)
+![code-badges.png]({{ site.assets_url }}code-badges.png)
 
 Such indicators would offer users and applications with quick ways to access and filter reviewed and un-reviewed material, and thereby pass the status of a given edition on to the end user who can then decide for themselves how much trust to place in a particular edition.
 

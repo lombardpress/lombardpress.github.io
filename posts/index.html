@@ -1,0 +1,45 @@
+---
+layout: page
+title:  "Posts"
+date:   2017-01-28 13:55:28 -0500
+permalink: posts
+---
+
+<div class="home">
+  <p>Note:
+    In order to maintiain this site as the <em>official</em> organizational page of LombardPress,
+    personal blogs posts, experimental ideas, or other musings have been moved to my personal site.
+
+    Any subsequent posts here will be only limited to official LombardPress announcements
+    and news (such as software release announcments, etc.)
+
+    Links to existing posts that have been transitioned will remain available here, but marked as depreciated.
+    For convenience a link to the same post at jeffreycwitt.com
+    is posted below alongside the original link at lombardpress.org.
+
+    <ul class="post-list">
+    {% for post in site.posts %}
+
+      <li>
+        <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        <span style="display: block; padding-left: 10px">{{post.description}}</span>
+        <span style="display: block; padding-left: 10px">{{post.place}}</span>
+        <span style="display: block; padding-left: 10px">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <span style="display: block; padding-left: 10px">
+          Tags:
+        {% for tag in post.tags %}
+          {{ tag }}
+        {% endfor %}
+        </span>
+        {% if post.tags contains "depreciated" %}
+        <span style="display: block; padding-left: 10px">
+          Alternative URL: <a href="http://jeffreycwitt.com{{ post.url }}">jeffreycwitt.com{{ post.url }}</a>
+        </span>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+
+</div>

@@ -3,7 +3,7 @@ layout: post
 title:  Surfaces, Canvases, and Zones
 date:   2016-08-09
 comments: true
-tags: featured
+tags: featured depreciated
 ---
 
 # Introduction
@@ -151,4 +151,4 @@ Basic information required by IIIF should be listed here
 
 Below is a simplified visualization of the kinds of structures outlined above.
 
-![surface-visualization](/assets/images/scta-ontology-surface-visualization.png)
+![surface-visualization]({{ site.assets_url }}scta-ontology-surface-visualization.png)

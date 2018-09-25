@@ -3,7 +3,8 @@ layout: post
 title:  IIIF, Webmentions, and Collaboration between Institutions and Research Communities
 date: 2016-04-16
 description: A demonstration and documentation of data sharing between research groups and institutions using Webmentions. This project was supported by a generous Implementation Grant from the IIIF Consortium
-tags: featured
+tags: featured depreciated
+
 ---
 
 A post by Jeffrey C. Witt (LombardPress and SCTA) and Rafael Schwemmer (text & bytes)
@@ -128,70 +129,70 @@ If validation is successful, the receiver will return an HTTP code 202 (Accepted
 
 The above protocol has been successfully implemented by the *Scholastic Commentaries and Texts Archive* (SCTA) and e-codices. At present, whenever the SCTA's database ingests new information about a manuscript that e-codices is making available via the IIIF API, the SCTA sends out a new webmention notification about supplemental information.
 
-![commandline-webmention.png]({{ site.baseurl }}/assets/images/2016-04-16-iiif-webmentions/commandline-webmention.png)
+![commandline-webmention.png]({{ site.assets_url }}2016-04-16-iiif-webmentions/commandline-webmention.png)
 
 Once this webmention is sent, receiving institutions can rely on the standards of the supplement specification to parse the published data and incorporate it into their own systems in the manner that best fits their workflow. Below we offer an example of how e-codices receives, parses, and uses the published supplemental information.
 
 In this first screen shot, the e-codices admin interface alerts their administrators that a new webmention has been received.
 
-![Webmentions-ecod-1-webmentions-notification]({{ site.baseurl }}/assets/images/2016-04-16-iiif-webmentions/Webmentions-ecod-1-webmentions-notification.png)
+![Webmentions-ecod-1-webmentions-notification]({{ site.assets_url }}2016-04-16-iiif-webmentions/Webmentions-ecod-1-webmentions-notification.png)
 
 The received webmention is logged in a queue which allows administrators to quickly choose which supplemental information they want to allow into the system and any webmentions they want to reject outright.
 
-![Webmentions-ecod-2-webmentions-queue]({{ site.baseurl }}/assets/images/2016-04-16-iiif-webmentions/Webmentions-ecod-2-webmentions-queue.png)
+![Webmentions-ecod-2-webmentions-queue]({{ site.assets_url }}2016-04-16-iiif-webmentions/Webmentions-ecod-2-webmentions-queue.png)
 
 Before accepting a webmention into the system, an administrator can preview the supplemental information. Here is an example of the preview of the SCTA "search within" service that e-codices learned about via a IIIF webmention:
 
-![Webmentions-ecod-3a-webmention-preview.searchWithin]({{ site.baseurl }}/assets/images/2016-04-16-iiif-webmentions/Webmentions-ecod-3a-webmention-preview.searchWithin.png)
+![Webmentions-ecod-3a-webmention-preview.searchWithin]({{ site.assets_url }}2016-04-16-iiif-webmentions/Webmentions-ecod-3a-webmention-preview.searchWithin.png)
 
 Here is a SCTA range list or table of contents that e-codices learned about via a IIIF webmention:
 
-![Webmentions-ecod-3b-webmention-preview-rangelist]({{ site.baseurl }}/assets/images/2016-04-16-iiif-webmentions/Webmentions-ecod-3b-webmention-preview-rangelist.png)
+![Webmentions-ecod-3b-webmention-preview-rangelist]({{ site.assets_url }}2016-04-16-iiif-webmentions/Webmentions-ecod-3b-webmention-preview-rangelist.png)
 
 Once reviewed, the administrator can accept a supplement. This will remove it from the queue and log it as a supplement officially accepted by e-codices.
 
 Once accepted, the administrator still has the option to select which supplements to use when building official e-codices manifests.
 
-![Webmentions-ecod-4-iiif-supplements]({{ site.baseurl }}/assets/images/2016-04-16-iiif-webmentions/Webmentions-ecod-4-iiif-supplements.png)
+![Webmentions-ecod-4-iiif-supplements]({{ site.assets_url }}2016-04-16-iiif-webmentions/Webmentions-ecod-4-iiif-supplements.png)
 
 When a supplement is accepted for use, e-codices manifests will now include supplemental information provided by the *Scholastic Commentaries and Texts Archive*.
 
 For example, it will include a service declaration for the SCTA search service for this manifest:
 
-![Webmentions-ecod-5-searchWithin-manifest]({{ site.baseurl }}/assets/images/2016-04-16-iiif-webmentions/Webmentions-ecod-5-searchWithin-manifest.png)
+![Webmentions-ecod-5-searchWithin-manifest]({{ site.assets_url }}2016-04-16-iiif-webmentions/Webmentions-ecod-5-searchWithin-manifest.png)
 
 And it will include a set of ranges provided by the *Scholastic Commentaries and Texts Archive*.:
 
-![Webmentions-ecod-6-rangelist-manifest]({{ site.baseurl }}/assets/images/2016-04-16-iiif-webmentions/Webmentions-ecod-6-rangelist-manifest.png)
+![Webmentions-ecod-6-rangelist-manifest]({{ site.assets_url }}2016-04-16-iiif-webmentions/Webmentions-ecod-6-rangelist-manifest.png)
 
 Finally, we can compare how the user would experience this same manifest in a IIIF viewer before and after the accepted webmentions.
 
 Before the accepted webmentions, e-codices offers the users the simple ability to view the manuscript images.
 
-![miradorview-before]({{ site.baseurl }}/assets/images/2016-04-16-iiif-webmentions/miradorview-before.png)
+![miradorview-before]({{ site.assets_url }}2016-04-16-iiif-webmentions/miradorview-before.png)
 
 After the webmentions have been processed, the user can now experience e-codices' own collection in a richer way.
 
 With a table of contents:
 
-![mirador-view-after-toc]({{ site.baseurl }}/assets/images/2016-04-16-iiif-webmentions/mirador-view-after-toc.png)
+![mirador-view-after-toc]({{ site.assets_url }}2016-04-16-iiif-webmentions/mirador-view-after-toc.png)
 
 With a transcription search service:
 
-![mirador-view-after-search]({{ site.baseurl }}/assets/images/2016-04-16-iiif-webmentions/mirador-view-after-search.png)
+![mirador-view-after-search]({{ site.assets_url }}2016-04-16-iiif-webmentions/mirador-view-after-search.png)
 
 With transcription annotations:
 
-![mirador-view-after-annotations]({{ site.baseurl }}/assets/images/2016-04-16-iiif-webmentions/mirador-view-after-annotations.png)
+![mirador-view-after-annotations]({{ site.assets_url }}2016-04-16-iiif-webmentions/mirador-view-after-annotations.png)
 
 With the possibility of adding multiple layers of annotations, including translations and comments:
 
-![mirador-annotations]({{ site.baseurl }}/assets/images/2016-04-16-iiif-webmentions/mirador_annotations.png)
+![mirador-annotations]({{ site.assets_url }}2016-04-16-iiif-webmentions/mirador_annotations.png)
 
 These screen shots clearly show the benefits that libraries and holding institutions can receive when exposing their images via IIIF. After exposing them to the world of scholars, scholarly communities, via webmentions, can return to these libraries rich information about these resources: information that can dramatically enrich a users experience with those resources.
 
 # Possibilities
 
-![map-slide]({{ site.baseurl }}/assets/images/2016-04-16-iiif-webmentions/map-slide-image.png)
+![map-slide]({{ site.assets_url }}2016-04-16-iiif-webmentions/map-slide-image.png)
 
 Finally, it is worth noting the scope of possibilities that comes with this kind of information. In the case of medieval *Sentences* Commentaries, we currently know of approximately 1,000 to 1,400 extant texts. If each commentary survives in at least one witness (and many survive in several), this means that the there are potentially thousands of manuscripts scattered throughout world libraries. Further, witnesses for a single commentary are typically scattered throughout world libraries. This means that the same metadata organized by the *Scholastic Commentaries and Texts Archive*. can be re-used multiple times to provide each holding library with a transcription for their particular witness of a text and a table of contents that structures the witness. Rather than each library redundantly collecting and then siloing this data for themselves, we can leverage the editorial work **already being done** by scholars and editors of these texts, and then distribute that data, via web-mentions, to all world libraries that have a related item in their collection.
